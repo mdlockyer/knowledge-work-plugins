@@ -16,7 +16,7 @@ Install from [claude.com/plugins](https://claude.com/plugins/).
 
 ```bash
 claude plugin marketplace add mdlockyer/knowledge-work-plugins
-claude plugin install small-business@knowledge-work-plugins-fork
+claude plugin install small-business@knowledge-work-plugins-no-mcp
 ```
 
 ## How it works

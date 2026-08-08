@@ -49,7 +49,7 @@ Install from **Settings → Plugins** or copy a plugin folder into your Cowork p
 claude plugin marketplace add <this-repo-url>
 
 # install a plugin
-claude plugin install productivity@knowledge-work-plugins-fork
+claude plugin install productivity@knowledge-work-plugins-no-mcp
 ```
 
 Once installed, skills activate automatically and slash commands are available (e.g. `/sales:call-prep`, `/data:write-query`, `/finance:reconciliation`).

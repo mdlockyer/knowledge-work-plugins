@@ -16,17 +16,17 @@ description: >
   </example>
 
   <example>
-  Context: Discovery found brand documents on Notion and Confluence that need deep analysis.
-  user: "Analyze the brand materials found during discovery"
-  assistant: "I'll do a deep analysis of each discovered document..."
+  Context: Discovery gathered brand documents that need deep analysis.
+  user: "Analyze the brand materials from discovery"
+  assistant: "I'll do a deep analysis of each document..."
   <commentary>
-  Discovery report identified key documents. The document-analysis agent fetches
-  full content from connected platforms and extracts structured brand elements.
+  Discovery report identified key documents. The document-analysis agent extracts
+  structured brand elements from user-provided documents.
   </commentary>
   </example>
 model: sonnet
 color: green
-# tools not restricted -- this agent needs tools to fetch documents from connected platforms
+# tools not restricted -- this agent analyzes user-provided documents
 maxTurns: 15
 ---
 
@@ -47,7 +47,7 @@ When invoked, you receive a list of documents to analyze. For each document:
 4. **Flag** contradictions between sources
 5. **Score** confidence based on evidence quality and consistency
 
-When documents are stored on connected platforms (Notion, Confluence, Google Drive, Box, SharePoint), use the available tools to fetch their content.
+When documents are provided as files or pasted content, read and analyze them directly.
 
 ## Output Format
 

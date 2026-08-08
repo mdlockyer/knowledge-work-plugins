@@ -1,23 +1,11 @@
 ---
 name: draft-outreach
-description: Research a prospect then draft personalized outreach. Uses web research by default, supercharged with enrichment and CRM. Trigger with "draft outreach to [person/company]", "write cold email to [prospect]", "reach out to [name]".
+description: Research a prospect then draft personalized outreach. Uses web research and whatever context the user provides. Trigger with "draft outreach to [person/company]", "write cold email to [prospect]", "reach out to [name]".
 ---
 
 # Draft Outreach
 
-Research first, then draft. This skill never sends generic outreach - it always researches the prospect first to personalize the message. Works standalone with web search, supercharged when you connect your tools.
-
-## Connectors (Optional)
-
-| Connector | What It Adds |
-|-----------|--------------|
-| **Enrichment** | Verified email, phone, background details |
-| **CRM** | Prior relationship context, existing contacts |
-| **Email** | Create draft directly in your inbox |
-
-> **No connectors?** Web research works great. I'll output the email text for you to copy.
-
----
+Research first, then draft. This skill never sends generic outreach - it always researches the prospect first to personalize the message. Works from web search plus whatever context the user provides.
 
 ## How It Works
 
@@ -27,16 +15,15 @@ Research first, then draft. This skill never sends generic outreach - it always 
 |                                                                   |
 |  Step 1: RESEARCH (always happens first)                         |
 |  - Web search (default)                                           |
-|  - + Enrichment (if enrichment tools connected)                  |
-|  - + CRM (if CRM connected)                                      |
+|  - + User-provided context (enrichment, CRM history)            |
 |                                                                   |
 |  Step 2: DRAFT (based on research)                               |
 |  - Personalized opening (from research)                          |
 |  - Relevant hook (their priorities)                              |
 |  - Clear CTA                                                      |
 |                                                                   |
-|  Step 3: DELIVER (based on connectors)                           |
-|  - Email draft (if email connected)                              |
+|  Step 3: DELIVER                                                  |
+|  - Email draft (always)                                           |
 |  - Copy for LinkedIn (always)                                    |
 |  - Output to user (always)                                        |
 +------------------------------------------------------------------+
@@ -100,8 +87,8 @@ Research first, then draft. This skill never sends generic outreach - it always 
 
 ## Email Draft Status
 
-[Draft created - check ~~email]
-[Email not connected - copy email above]
+[Draft created — ready to send in your email client]
+[No email address found - copy email above]
 [No email found - use LinkedIn approach]
 
 ---
@@ -137,8 +124,7 @@ Input patterns:
 **Use research-prospect skill internally:**
 ```
 1. Web search for company + person
-2. If Enrichment connected: Get verified contact info, background
-3. If CRM connected: Check for prior relationship
+2. If the user provides enrichment or CRM context: use it for verified contact info, background, prior relationship
 ```
 
 **Must find before drafting:**
@@ -193,27 +179,16 @@ Thanks for connecting! [Value-first: insight, article, observation]
 ### Step 5: Create Email Draft
 
 ```
-If email connector available:
-1. Create draft with to, subject, body
-2. Return draft link
+1. Write the email with to, subject, body
+2. Output the full email text for the user to copy into their email client
 3. Note: "Draft created - review and send"
-
-If not available:
-1. Output email text
-2. Note: "Copy to your email client"
 ```
 
 ---
 
-## Capability by Connector
+## Capabilities
 
-| Capability | Web Only | + Enrichment | + CRM | + Email |
-|------------|----------|--------------|-------|---------|
-| Personalized opening | Basic | Deep | With history | Same |
-| Verified email | No | Yes | Yes | Yes |
-| Background details | Public only | Full | Full | Full |
-| Prior relationship | No | No | Yes | Yes |
-| Auto-create draft | No | No | No | Yes |
+Everything here works from web research plus whatever context the user provides. If the user shares enrichment data (verified email, firmographics) or CRM history (prior relationship, past conversations), incorporate it for deeper personalization.
 
 ---
 
@@ -436,5 +411,5 @@ Best,
 ---
 
 ## Email Draft Status
-Draft created - check ~~email
+Draft created — ready to send in your email client
 ```

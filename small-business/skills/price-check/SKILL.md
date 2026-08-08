@@ -4,19 +4,18 @@ description: Produces a margin-by-product table and three pricing-scenario data 
 allowed-tools: Read, WebFetch, Bash
 ---
 
-Run the pricing analysis. Pull cost and revenue data, build the margin table, and model three pricing scenarios — so the owner can see the numbers clearly before deciding what to charge.
+Run the pricing analysis. Gather cost and revenue data, build the margin table, and model three pricing scenarios — so the owner can see the numbers clearly before deciding what to charge.
 
 Parse arguments:
 - `PRODUCT_NAME` (optional) — specific product or service to analyze; if omitted, analyze all active products
 
 ## Step 1 — Current margin baseline
 
-Using the `margin-analyzer` skill workflow:
+Using the `margin-analyzer` skill workflow (CSV exports or owner-provided figures):
 
-1. Pull QuickBooks revenue by product/service for the last 90 days.
-2. Pull COGS or direct costs per product from QuickBooks (if categorized).
-3. Pull PayPal gross sales for the same products to cross-validate.
-4. Calculate current gross margin per product: (revenue − COGS) ÷ revenue.
+1. Gather revenue by product/service for the last 90 days.
+2. Gather COGS or direct costs per product (if categorized).
+3. Calculate current gross margin per product: (revenue − COGS) ÷ revenue.
 
 Build the margin table:
 
@@ -52,15 +51,15 @@ Produce a plain-language brief (for price increase scenarios) the owner can use 
 - Three key message options (direct, value-focused, empathetic)
 - Suggested timing and channel (email, invoice note, in-person)
 
-## Connector failures
+## Data gaps
 
-If QuickBooks is unreachable, stop — margin analysis requires QB revenue and cost data. If PayPal is missing, run from QB-only and note "PayPal not connected — cross-validation against PayPal sales skipped."
+If cost data is missing, stop and ask the owner for a cost breakdown — margin analysis requires revenue and cost data. If only revenue data is available, note "cross-validation against payment processor data skipped — single source" in the output.
 
 ## Approval gates
 
 - **Never recommend a specific price.** Provide data views only — pricing decisions belong to the owner.
-- **Flag if COGS data is incomplete** (many QB setups don't track per-product COGS) and note the gap.
-- **Never update any prices in QB, PayPal, or any connected system.**
+- **Flag if COGS data is incomplete** (many bookkeeping setups don't track per-product COGS) and note the gap.
+- **Never update any prices in the owner's accounting or payment systems.**
 
 ## Output
 

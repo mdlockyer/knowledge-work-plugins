@@ -7,7 +7,7 @@ User message:
 > the roadmap for our checkout experience. We want 5+ years of PM experience,
 > ideally with a fintech or payments background. Remote-friendly, NYC preferred.
 > Comp is $160–185k base. Three interview rounds: recruiter screen, hiring manager
-> deep-dive, and a panel with two senior PMs. Send the offer via DocuSign when
+> deep-dive, and a panel with two senior PMs. Send the offer once the letter is ready.
 > we get there."
 
 ---
@@ -24,7 +24,7 @@ User message:
 | Location | Remote-friendly, NYC preferred |
 | Compensation | $160–185k base |
 | Interview process | 3 rounds: recruiter screen, HM deep-dive, senior PM panel (2 people) |
-| Offer delivery | DocuSign |
+| Offer delivery | Word doc + e-signature (owner sends) |
 
 Claude confirms and asks exactly one question:
 > "Got it — hiring packet for a Senior PM on the payments team, $160–185k,
@@ -94,15 +94,12 @@ Based on `references/offer-letter-template.md`. Pre-filled where data is availab
 
 ---
 
-## Phase 6 — Expected browser flow
+## Phase 6 — Expected delivery
 
-1. Claude navigates to `https://app.docusign.com` and confirms login state.
-2. Clicks "Start → Send an Envelope".
-3. Uploads `Senior-PM-Offer-Letter.docx`.
-4. Asks: "What's the candidate's full name and email address?"
-5. Adds candidate as Signer; adds user as CC if requested.
-6. Sets subject: `Offer of Employment — Senior Product Manager at [Company Name]`.
-7. Places Signature and Date Signed fields on the acceptance line.
+1. Claude delivers `Senior-PM-Offer-Letter.docx`.
+2. Walks the user through uploading it to their e-signature tool (e.g. DocuSign).
+3. Provides the send message: "Hi [Candidate First Name], we're thrilled to extend this offer..."
+4. The user reviews, sends, and pastes the envelope link back if they want it tracked in the letter.
 8. Saves as draft — does NOT send.
 9. Returns draft URL and tells the user to review before confirming Send.
 

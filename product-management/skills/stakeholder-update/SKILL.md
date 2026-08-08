@@ -6,8 +6,6 @@ argument-hint: "<update type and audience>"
 
 # Stakeholder Update
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Generate a stakeholder update tailored to the audience and cadence.
 
 ## Usage
@@ -35,28 +33,16 @@ Ask who the update is for:
 - **Customers / external**: Benefits-focused, clear timelines, no internal jargon
 - **Board**: Metrics-driven, strategic, risk-focused, very concise
 
-### 3. Pull Context from Connected Tools
+### 3. Pull Context
 
-If **~~project tracker** is connected:
-- Pull status of roadmap items and milestones
-- Identify completed items since last update
-- Surface items that are at risk or blocked
-- Pull sprint or iteration progress
+If the user provides any of the following, incorporate it:
 
-If **~~chat** is connected:
-- Search for relevant team discussions and decisions
-- Find blockers or issues raised in channels
-- Identify key decisions made asynchronously
+- **Project tracker**: Status of roadmap items and milestones, completed items since last update, items at risk or blocked, sprint/iteration progress
+- **Team discussions**: Relevant discussions and decisions, blockers raised in channels, key decisions made asynchronously
+- **Meeting notes**: Recent meeting notes and discussion summaries, decisions and action items from relevant meetings
+- **Docs / knowledge base**: Recent meeting notes, decision documents, or design reviews
 
-If **~~meeting transcription** is connected:
-- Pull recent meeting notes and discussion summaries
-- Find decisions and action items from relevant meetings
-
-If **~~knowledge base** is connected:
-- Search for recent meeting notes
-- Find decision documents or design reviews
-
-If no tools are connected, ask the user to provide:
+Ask the user to provide:
 - What was accomplished since the last update
 - Current blockers or risks
 - Key decisions made or needed
@@ -81,7 +67,6 @@ Structure the update for the target audience using the templates and frameworks 
 After generating the update:
 - Ask if the user wants to adjust tone, detail level, or emphasis
 - Offer to format for the delivery channel (email, chat post, doc, slides)
-- If **~~chat** is connected, offer to draft the message for sending
 
 ## Update Templates by Audience
 

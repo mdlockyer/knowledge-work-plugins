@@ -12,7 +12,7 @@ claude plugins add knowledge-work-plugins/productivity
 
 This plugin gives Claude a persistent understanding of your work:
 
-- **Task management** — A markdown task list (`TASKS.md`) that Claude reads, writes, and executes against. Add tasks naturally, and Claude tracks status, triages stale items, and syncs with external tools.
+- **Task management** — A markdown task list (`TASKS.md`) that Claude reads, writes, and executes against. Add tasks naturally, and Claude tracks status and triages stale items.
 - **Workplace memory** — A two-tier memory system that teaches Claude your shorthand, people, projects, and terminology. Say "ask todd to do the PSR for oracle" and Claude knows exactly who, what, and which deal.
 - **Visual dashboard** — A local HTML file that gives you a board view of your tasks and a live view of what Claude knows about your workplace. Edit from the board or the file — they stay in sync.
 
@@ -21,8 +21,8 @@ This plugin gives Claude a persistent understanding of your work:
 | Command | What it does |
 |---------|--------------|
 | `/start` | Initialize tasks + memory, open the dashboard |
-| `/update` | Triage stale items, check memory for gaps, sync from external tools if applicable |
-| `/update --comprehensive` | Deep scan email, calendar, chat — flag missed todos and suggest new memories |
+| `/update` | Triage stale items, check memory for gaps, pull in tasks you've pasted or assigned |
+| `/update --comprehensive` | Deep review of your recent activity — flag missed todos and suggest new memories |
 
 ## Skills
 

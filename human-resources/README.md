@@ -1,6 +1,6 @@
 # HR Plugin
 
-A people operations plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Helps with recruiting, onboarding, performance management, policy guidance, and compensation analysis. Works with any HR team — standalone with your input, supercharged when you connect your HRIS, ATS, and other tools.
+A people operations plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Helps with recruiting, onboarding, performance management, policy guidance, and compensation analysis. Works with any HR team — you provide the details and data, and Claude does the rest.
 
 ## Installation
 

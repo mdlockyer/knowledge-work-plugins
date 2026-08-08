@@ -1,6 +1,6 @@
 # CSV Upload Schema
 
-When the owner doesn't have QuickBooks or PayPal connected, they can upload exported CSV files. This document specifies what columns to expect and how to handle variations.
+The owner uploads exported CSV files as the primary data input. This document specifies what columns to expect and how to handle variations.
 
 ## Revenue CSV (transactions export)
 

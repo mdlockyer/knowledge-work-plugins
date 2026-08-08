@@ -1,7 +1,7 @@
 # Example: Professional Services — Marketing Consultant
 
 **Business:** Solo marketing consultant, project-based engagements
-**Connectors:** QuickBooks (invoices + expenses), PayPal (payment collection)
+**Data sources:** CSV exports (invoices + expenses, payment collection)
 **Data:** 9 months of transactions
 
 ---

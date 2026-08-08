@@ -6,8 +6,6 @@ argument-hint: "<update description>"
 
 # Roadmap Update
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Update, create, or reprioritize a product roadmap.
 
 ## Usage
@@ -20,13 +18,12 @@ Update, create, or reprioritize a product roadmap.
 
 ### 1. Understand Current State
 
-If **~~project tracker** is connected:
-- Pull current roadmap items with their statuses, assignees, and dates
-- Identify items that are overdue, at risk, or recently completed
-- Surface any items without clear owners or dates
+If the user provides their project tracker, pull the current roadmap from it:
+- Current roadmap items with their statuses, assignees, and dates
+- Items that are overdue, at risk, or recently completed
+- Items without clear owners or dates
 
-If no project management tool is connected:
-- Ask the user to describe their current roadmap or paste/upload it
+Otherwise, ask the user to describe their current roadmap or paste/upload it.
 - Accept any format: list, table, spreadsheet, screenshot, or prose description
 
 ### 2. Determine the Operation
@@ -91,7 +88,7 @@ If this is an update to an existing roadmap, summarize what changed:
 After generating the roadmap:
 - Offer to format for a specific audience (executive summary, engineering detail, customer-facing)
 - Offer to draft communication about roadmap changes
-- If project management tool is connected, offer to update ticket statuses
+- If the user provides their project management tool data, offer to update ticket statuses
 
 ## Roadmap Frameworks
 

@@ -48,7 +48,7 @@ those operations exist on the current Zoom MCP surface.
 ## Authentication Model
 
 User OAuth is the primary documented path.
-Use user OAuth as the expected auth model for the bundled Zoom MCP servers in this plugin.
+Use user OAuth as the expected auth model for Zoom's MCP servers.
 
 ## Protected Resource Metadata
 

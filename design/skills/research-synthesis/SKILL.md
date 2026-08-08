@@ -6,8 +6,6 @@ argument-hint: "<research data, transcripts, or survey results>"
 
 # /research-synthesis
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Synthesize user research data into actionable insights. See the **user-research** skill for research methods, interview guides, and analysis frameworks.
 
 ## Usage
@@ -70,20 +68,6 @@ Synthesize user research data into actionable insights. See the **user-research*
 ### Methodology Notes
 [How the research was conducted, any limitations or biases to note]
 ```
-
-## If Connectors Available
-
-If **~~user feedback** is connected:
-- Pull support tickets, feature requests, and NPS responses to supplement research data
-- Cross-reference themes with real user complaints and requests
-
-If **~~product analytics** is connected:
-- Validate qualitative findings with usage data and behavioral metrics
-- Quantify the impact of identified pain points
-
-If **~~knowledge base** is connected:
-- Search for prior research studies and findings to compare against
-- Publish the synthesis to your research repository
 
 ## Tips
 

@@ -4,7 +4,7 @@ Quick diagnostic checklist before using the Zoom MCP server.
 
 ## Preflight Checklist
 
-**1. Token exported for the bundled connector?**
+**1. Token exported for the server?**
 ```bash
 echo "${ZOOM_MCP_ACCESS_TOKEN:+set}"
 echo "${ZOOM_DOCS_MCP_ACCESS_TOKEN:+set}"
@@ -56,7 +56,7 @@ meeting assets, or transcript-rich recording content to be useful.
 
 ## Auth Reality Check
 
-Use user OAuth as the documented execution path for Zoom MCP content tools in this plugin.
+Use user OAuth as the documented execution path for Zoom MCP content tools.
 Do not rely on Server-to-Server OAuth as a supported MCP auth model here.
 
 ## Where to Get Help

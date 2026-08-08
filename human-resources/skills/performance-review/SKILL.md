@@ -6,8 +6,6 @@ argument-hint: "<employee name or review cycle>"
 
 # /performance-review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Generate performance review templates and help structure feedback.
 
 ## Usage
@@ -130,16 +128,6 @@ If no mode is specified, ask what type of review they need.
 ### Manager Notes
 [Context the calibration group should know — team changes, org shifts, project impacts]
 ```
-
-## If Connectors Available
-
-If **~~HRIS** is connected:
-- Pull prior review history and goal tracking data
-- Pre-populate employee details and current role information
-
-If **~~project tracker** is connected:
-- Pull completed work and contributions for the review period
-- Reference specific tickets and project milestones as evidence
 
 ## Tips
 

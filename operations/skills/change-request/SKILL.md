@@ -6,8 +6,6 @@ argument-hint: "<change description>"
 
 # /change-request
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Create a structured change request with impact analysis, risk assessment, and rollback plan.
 
 ## Usage
@@ -99,20 +97,6 @@ Apply the assess-plan-execute-sustain framework when building the request:
 |----------|------|--------|
 | [Name] | [Role] | Pending |
 ```
-
-## If Connectors Available
-
-If **~~ITSM** is connected:
-- Create the change request ticket automatically
-- Pull change advisory board schedule and approval workflows
-
-If **~~project tracker** is connected:
-- Link to related implementation tasks and dependencies
-- Track change progress against milestones
-
-If **~~chat** is connected:
-- Draft stakeholder notifications for the communication plan
-- Post change updates to the relevant team channels
 
 ## Tips
 

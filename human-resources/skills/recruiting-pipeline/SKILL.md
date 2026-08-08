@@ -26,6 +26,6 @@ Help manage the recruiting pipeline from sourcing through offer acceptance.
 - **Offer acceptance rate**: Offers extended vs. accepted
 - **Time to fill**: Days from req open to offer accepted
 
-## If ATS Connected
+## If the User Provides ATS Data
 
-Pull candidate data automatically, update statuses, and track pipeline metrics in real time.
+If the user shares candidate data or statuses from their ATS, incorporate it to update the pipeline view and track metrics.

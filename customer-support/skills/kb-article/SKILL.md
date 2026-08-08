@@ -6,8 +6,6 @@ argument-hint: "<resolved issue or ticket>"
 
 # /kb-article
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Draft a publish-ready knowledge base article from a resolved support issue, common question, or documented workaround. Structures the content for searchability and self-service.
 
 ## Usage
@@ -36,9 +34,9 @@ Parse the input to identify:
 
 If a ticket reference is provided, look up the full context:
 
-- **~~support platform**: Pull the ticket thread, resolution, and any internal notes
-- **~~knowledge base**: Check if a similar article already exists (update vs. create new)
-- **~~project tracker**: Check if there's a related bug or feature request
+- **Ticket thread**: The original ticket, resolution, and any internal notes (from the user)
+- **Existing documentation**: Whether a similar article already exists (update vs. create new)
+- **Related work**: Any bug or feature request tied to the issue (if the user has them)
 
 ### 2. Draft the Article
 
@@ -77,7 +75,7 @@ Present the draft with metadata:
 ### 4. Offer Next Steps
 
 After generating the article:
-- "Want me to check if a similar article already exists in your ~~knowledge base?"
+- "Want me to check your existing documentation to see if a similar article already exists?"
 - "Should I adjust the technical depth for a different audience?"
 - "Want me to draft a companion article (e.g., a how-to to go with this troubleshooting guide)?"
 - "Should I create an internal-only version with additional technical detail?"

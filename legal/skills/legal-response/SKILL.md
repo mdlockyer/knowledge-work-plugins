@@ -450,7 +450,7 @@ When helping users create new templates:
 ## Notes
 
 - Always present the draft response for user review before suggesting it be sent
-- If connected to email , offer to create a draft email with the response
+- Offer to draft the email with the response
 - Track response deadlines and offer to set calendar reminders
 - For regulated responses (DSRs, subpoenas), always note the applicable deadline and regulatory requirements
 - Templates should be living documents; suggest updates when the user modifies a templated response, so the template can be improved over time

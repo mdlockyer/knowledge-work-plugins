@@ -6,8 +6,6 @@ argument-hint: "<team or project scope>"
 
 # /capacity-plan
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Analyze team capacity and plan resource allocation.
 
 ## Usage
@@ -95,16 +93,6 @@ Analyze team capacity and plan resource allocation.
 | Hire [X] | [What changes] |
 | Deprioritize [Y] | [What frees up] |
 ```
-
-## If Connectors Available
-
-If **~~project tracker** is connected:
-- Pull current workload and ticket assignments automatically
-- Show upcoming sprint or quarter commitments per person
-
-If **~~calendar** is connected:
-- Factor in PTO, holidays, and recurring meeting load
-- Calculate actual available hours per person
 
 ## Tips
 

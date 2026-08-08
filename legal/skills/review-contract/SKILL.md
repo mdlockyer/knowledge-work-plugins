@@ -304,14 +304,14 @@ Issues that improve the position but can be conceded strategically:
 
 **Negotiation strategy**: Lead with Tier 1 items. Trade Tier 3 concessions to secure Tier 2 wins. Never concede on Tier 1 without escalation.
 
-### Step 8: CLM Routing (If Connected)
+### Step 8: CLM Routing Guidance
 
-If a Contract Lifecycle Management system is connected :
+If the user uses a Contract Lifecycle Management system:
 - Recommend the appropriate approval workflow based on contract type and risk level
 - Suggest the correct routing path (e.g., standard approval, senior counsel, outside counsel)
 - Note any required approvals based on contract value or risk flags
 
-If no CLM is connected, skip this step.
+If the user has no CLM, skip this step.
 
 ## Output Format
 

@@ -6,8 +6,6 @@ argument-hint: "<Figma URL, screenshot, or description>"
 
 # /design-critique
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Get structured design feedback across multiple dimensions.
 
 ## Usage
@@ -101,15 +99,6 @@ If a Figma URL is provided, pull the design from Figma. If a file is referenced,
 2. **[Second priority]** — [Why and how]
 3. **[Third priority]** — [Why and how]
 ```
-
-## If Connectors Available
-
-If **~~design tool** is connected:
-- Pull the design directly from Figma and inspect components, tokens, and layers
-- Compare against the existing design system for consistency
-
-If **~~user feedback** is connected:
-- Cross-reference design decisions with recent user feedback and support tickets
 
 ## Tips
 

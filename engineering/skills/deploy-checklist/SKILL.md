@@ -6,8 +6,6 @@ argument-hint: "[service or release name]"
 
 # /deploy-checklist
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Generate a pre-deployment checklist to verify readiness before shipping.
 
 ## Usage
@@ -56,20 +54,6 @@ Tell me about your deploy and I'll customize the checklist:
 - "We use feature flags" → adds flag verification steps
 - "This includes a database migration" → adds migration-specific checks
 - "This is a breaking API change" → adds consumer notification steps
-
-## If Connectors Available
-
-If **~~source control** is connected:
-- Pull the release diff and list of changes
-- Verify all PRs are approved and merged
-
-If **~~CI/CD** is connected:
-- Check build and test status automatically
-- Verify pipeline is green before deploy
-
-If **~~monitoring** is connected:
-- Pre-fill rollback trigger thresholds from current baselines
-- Set up post-deploy metric watch
 
 ## Tips
 

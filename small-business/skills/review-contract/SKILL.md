@@ -1,21 +1,20 @@
 ---
 name: review-contract
-description: Reviews a contract in plain English, surfaces red flags with severity ratings, and produces a marked-up docx/PDF with suggested redlines. Accepts optional file path or DocuSign envelope ID.
+description: Reviews a contract in plain English, surfaces red flags with severity ratings, and produces a marked-up docx/PDF with suggested redlines. Accepts a file path or upload.
 allowed-tools: Read, WebFetch, Bash
 ---
 
 Run the contract review. Read the document, explain what it says, flag anything risky, and produce marked-up redlines for the owner to use in negotiations.
 
 Parse arguments:
-- `FILE_PATH_OR_DOCUSIGN_ENVELOPE_ID` — path to a local PDF/docx file, or a DocuSign envelope ID; if omitted, check the most recent envelope awaiting signature in DocuSign
+- `FILE_PATH` — path to a local PDF/docx file; if omitted, ask the owner to upload or paste the contract
 
 ## Step 1 — Load the contract
 
 Using the `contract-review` skill workflow:
 
 1. If a file path is given: read the document from Files or Desktop.
-2. If a DocuSign envelope ID is given: pull the document from DocuSign.
-3. If neither: check DocuSign for the most recent envelope with status `waiting for signature` and confirm with the owner before proceeding.
+2. If not: ask the owner to upload the contract as a PDF or docx.
 
 ## Step 2 — Plain-English summary
 
@@ -52,13 +51,13 @@ Reason: {one sentence}
 
 Offer to export this as a marked-up docx or PDF to Files or Desktop.
 
-## Connector failures
+## Missing document
 
-If DocuSign is not connected and no file path was given, ask the owner to upload the contract as a PDF or docx. If DocuSign is connected but the envelope ID is invalid, report the error and ask the owner to check the ID. This command works fully offline with a local file — connectors are optional.
+If no file is provided, ask the owner to upload the contract as a PDF or docx. This command works fully offline with a local file.
 
 ## Approval gates
 
-- **Never sign, send, or modify the actual DocuSign envelope.** Present the review and wait for the owner to act.
+- **Never sign or send anything on the owner's behalf.** Present the review and wait for the owner to act.
 - **Always caveat:** "This is not legal advice. Review with your attorney before signing."
 - **Never delete or overwrite the original document.**
 

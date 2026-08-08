@@ -6,8 +6,6 @@ argument-hint: "<call notes or transcript>"
 
 # /call-summary
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Process call notes or a transcript to extract action items, draft follow-up communications, and update records.
 
 ## Usage
@@ -35,12 +33,6 @@ If a file is referenced: @$1
 │  ✓ Surface objections, concerns, and open questions             │
 │  ✓ Draft customer-facing follow-up email                        │
 │  ✓ Generate internal summary for your team                      │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + Transcripts: Pull recording automatically (e.g. Gong, Fireflies) │
-│  + CRM: Update opportunity, log activity, create tasks          │
-│  + Email: Send follow-up directly from draft                    │
-│  + Calendar: Link to meeting, pull attendee context             │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -138,25 +130,6 @@ Here's what we discussed:
 **What You Need from Us:**
 - Quote for 20 seats at $480/seat/year
 ```
-
----
-
-## If Connectors Available
-
-**Transcripts connected (e.g. Gong, Fireflies):**
-- I'll search for the call automatically
-- Pull the full transcript
-- Extract key moments flagged by the platform
-
-**CRM connected:**
-- I'll offer to update the opportunity stage
-- Log the call as an activity
-- Create tasks for action items
-- Update next steps field
-
-**Email connected:**
-- I'll offer to create a draft in ~~email
-- Or send directly if you approve
 
 ---
 

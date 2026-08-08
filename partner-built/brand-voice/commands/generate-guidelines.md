@@ -10,8 +10,7 @@ Generate comprehensive, LLM-ready brand voice guidelines from whatever sources t
 Process the sources specified in $ARGUMENTS. If none specified, check:
 1. Whether a discovery report was generated in this session
 2. `.claude/brand-voice.local.md` for known brand material locations
-3. Connected platforms (Notion, Confluence, Google Drive, Box, SharePoint, Gong) for existing materials
-4. If nothing is available, suggest running `/brand-voice:discover-brand` first
+3. If nothing is available, suggest running `/brand-voice:discover-brand` first
 
 Follow the guideline-generation skill instructions to:
 1. Identify and classify all available sources (discovery report, documents, transcripts)
@@ -25,4 +24,4 @@ Follow the guideline-generation skill instructions to:
 After generation, guidelines are saved locally so `/brand-voice:enforce-voice` can automatically find them in future sessions.
 
 Supported document formats: PDF, PowerPoint, Word, Markdown, plain text.
-Supported transcript sources: Gong , Granola , Notion meeting notes, manual uploads.
+Supported transcript sources: manual uploads, pasted transcripts or meeting notes.

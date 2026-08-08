@@ -1,6 +1,6 @@
 # Engineering Plugin
 
-A software engineering plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Helps with standups, code review, architecture decisions, incident response, debugging, and technical documentation. Works with any engineering team — standalone with your input, supercharged when you connect your source control, project tracker, and monitoring tools.
+A software engineering plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Helps with standups, code review, architecture decisions, incident response, debugging, and technical documentation. Works with any engineering team — you provide the code, context, or system details, and Claude does the rest.
 
 ## Installation
 
@@ -44,7 +44,7 @@ Domain knowledge Claude uses automatically when relevant:
 /standup
 ```
 
-If your tools are connected, I'll pull your recent commits, PR activity, and ticket updates. Otherwise, tell me what you worked on and I'll format it.
+Tell me what you worked on (or share commits, PRs, and ticket updates) and I'll format it.
 
 ### Code Review
 

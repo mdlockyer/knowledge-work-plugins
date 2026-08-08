@@ -26,12 +26,6 @@ Research your competitors extensively and generate an **interactive HTML battlec
 │  ✓ Clickable tabs for each competitor                           │
 │  ✓ Dark theme, professional styling                             │
 │  ✓ Self-contained HTML file — share or host anywhere            │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + CRM: Win/loss data, competitor mentions in closed deals      │
-│  + Docs: Existing battlecards, competitive playbooks            │
-│  + Chat: Internal intel, field reports from colleagues          │
-│  + Transcripts: Competitor mentions in customer calls           │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -54,19 +48,6 @@ If I already have your seller context from a previous session, I'll confirm and 
 
 ---
 
-## Connectors (Optional)
-
-| Connector | What It Adds |
-|-----------|--------------|
-| **CRM** | Win/loss history against each competitor, deal-level competitor tracking |
-| **Docs** | Existing battlecards, product comparison docs, competitive playbooks |
-| **Chat** | Internal chat intel (e.g. Slack) — what your team is hearing from the field |
-| **Transcripts** | Competitor mentions in customer calls, objections raised |
-
-> **No connectors?** Web research works great. I'll pull everything from public sources — product pages, pricing, blogs, release notes, reviews, job postings.
-
----
-
 ## Output: Interactive HTML Battlecard
 
 The skill generates a **self-contained HTML file** with:
@@ -76,7 +57,7 @@ Overview comparing you vs. all competitors at a glance:
 - Feature comparison grid
 - Pricing comparison
 - Market positioning
-- Win rate indicators (if CRM connected)
+- Win rate indicators (if the user provides win/loss data)
 
 ### 2. Competitor Tabs (Click to Expand)
 Each competitor gets a clickable card that expands to show:
@@ -240,24 +221,26 @@ For each competitor, run:
 8. "[Competitor] careers" — hiring signals (growth areas)
 ```
 
-### Phase 4: Pull Connected Sources (If Available)
+### Phase 4: Incorporate User-Provided Sources (If Available)
+
+Incorporate internal sources the user shares (win/loss reports, battlecards, field notes, call recordings):
 
 ```
-If CRM connected:
-1. Query closed-won deals with competitor field = [Competitor]
-2. Query closed-lost deals with competitor field = [Competitor]
+If win/loss data provided:
+1. Closed-won deals with competitor field = [Competitor]
+2. Closed-lost deals with competitor field = [Competitor]
 3. Extract win/loss patterns
 
-If docs connected:
+If battlecards/positioning docs provided:
 1. Search for "battlecard [competitor]"
 2. Search for "competitive [competitor]"
 3. Pull existing positioning docs
 
-If chat connected:
+If internal intel provided:
 1. Search for "[Competitor]" mentions (last 90 days)
 2. Extract field intel and colleague insights
 
-If transcripts connected:
+If call recordings/notes provided:
 1. Search calls for "[Competitor]" mentions
 2. Extract objections and customer quotes
 ```
@@ -327,7 +310,7 @@ competitor:
   landmines:
     - "[Question that exposes their weakness]"
 
-  win_loss: # If CRM connected
+  win_loss: # If win/loss data provided
     win_rate: "[X]%"
     common_win_factors: "[What predicts wins]"
     common_loss_factors: "[What predicts losses]"

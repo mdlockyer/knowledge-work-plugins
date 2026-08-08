@@ -6,8 +6,6 @@ argument-hint: "<AI workflow or MCP use case>"
 
 # /setup-zoom-mcp
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Plan a Zoom MCP workflow and decide when to use MCP alone versus a hybrid REST API + MCP architecture.
 
 ## Usage
@@ -27,7 +25,7 @@ Plan a Zoom MCP workflow and decide when to use MCP alone versus a hybrid REST A
 ## Output
 
 - Recommended MCP strategy
-- Connector expectations
+- Server expectations
 - Hybrid boundaries if REST is also required
 - Risks and setup notes
 - Relevant skill links

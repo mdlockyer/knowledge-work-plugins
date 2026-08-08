@@ -6,8 +6,6 @@ argument-hint: "<period>"
 
 # /forecast
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Generate a weighted sales forecast with risk analysis and commit recommendations.
 
 ## Usage
@@ -36,12 +34,6 @@ If a file is referenced: @$1
 │  ✓ Risk-adjusted projections (best/likely/worst case)           │
 │  ✓ Commit vs. upside breakdown                                  │
 │  ✓ Gap analysis and recommendations                             │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + CRM: Pull pipeline automatically, real-time data             │
-│  + Historical win rates by stage, segment, deal size            │
-│  + Activity signals for risk scoring                            │
-│  + Automatic refresh and tracking over time                     │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -196,10 +188,9 @@ Tell me if your stages or probabilities are different.
 
 ---
 
-## If CRM Connected
-
-- I'll pull your pipeline automatically
-- Use your actual historical win rates
+If the user provides their pipeline data (export or paste), incorporate it:
+- Pull their pipeline directly from the provided data
+- Use their actual historical win rates
 - Factor in activity recency for risk scoring
 - Track forecast changes over time
 - Compare to previous forecasts

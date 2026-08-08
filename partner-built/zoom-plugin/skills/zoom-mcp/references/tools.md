@@ -1,6 +1,6 @@
 # Tool Reference — Zoom MCP Servers
 
-Tools available on the bundled Zoom MCP servers. Treat the raw server tool names as authoritative.
+Tools available on Zoom's MCP servers. Treat the raw server tool names as authoritative.
 Some MCP clients namespace them in the UI, for example `zoom-mcp:recordings_list` or
 `zoom-docs-mcp:create_file_with_content`.
 
@@ -146,4 +146,4 @@ summary-like, and playback-oriented resources.
 - Discovery happens through MCP protocol `tools/list`, not through a dedicated Zoom utility tool.
 - Re-run `tools/list` whenever you need to confirm whether the current tool list has changed.
 - Do not rely on older examples that use `query`, `startDate`, `endDate`, or `pageSize`; the current live schema uses `q`, `from`, `to`, and `page_size`.
-- Do not rely on older examples that route Docs creation through the main `zoom-mcp` server; Zoom Docs now have a dedicated `zoom-docs-mcp` server in this plugin.
+- Do not rely on older examples that route Docs creation through the main `zoom-mcp` server; Zoom Docs now have a dedicated `zoom-docs-mcp` server.

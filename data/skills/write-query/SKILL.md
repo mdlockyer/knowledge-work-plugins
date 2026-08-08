@@ -45,9 +45,9 @@ If the user's SQL dialect is not already known, ask which they use:
 
 Remember the dialect for future queries in the same session.
 
-### 3. Discover Schema (If Warehouse Connected)
+### 3. Discover Schema (If Warehouse Access Available)
 
-If a data warehouse integration is connected:
+If the user has warehouse or database access available in the session:
 
 1. Search for relevant tables based on the user's description
 2. Inspect column names, types, and relationships
@@ -94,7 +94,7 @@ Provide:
 
 ### 6. Offer to Execute
 
-If a data warehouse is connected, offer to run the query and analyze the results. If the user wants to run it themselves, the query is ready to copy-paste.
+If the user has warehouse access, offer to run the query and analyze the results. If the user wants to run it themselves, the query is ready to copy-paste.
 
 ## Examples
 

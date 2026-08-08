@@ -30,7 +30,7 @@ Parse the user's question and determine:
 
 ### 2. Gather Data
 
-**If a data warehouse integration is connected:**
+**If the user has warehouse or database access available in the session:**
 
 1. Explore the schema to find relevant tables and columns
 2. Write SQL query(ies) to extract the needed data
@@ -38,9 +38,7 @@ Parse the user's question and determine:
 4. If the query fails, debug and retry (check column names, table references, syntax for the specific dialect)
 5. If results look unexpected, run sanity checks before proceeding
 
-**If no data warehouse is connected:**
-
-1. Ask the user to provide data in one of these ways:
+**Otherwise, ask the user to provide data in one of these ways:**
    - Paste query results directly
    - Upload a CSV or Excel file
    - Describe the schema so you can write queries for them to run

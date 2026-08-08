@@ -6,8 +6,6 @@ argument-hint: "<Figma URL, URL, or description>"
 
 # /accessibility-review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Audit a design or page for WCAG 2.1 AA accessibility compliance.
 
 ## Usage
@@ -110,16 +108,6 @@ Audit for accessibility: @$1
 2. **[Major fix]** — Improves [what] for [who]
 3. **[Minor fix]** — Nice to have
 ```
-
-## If Connectors Available
-
-If **~~design tool** is connected:
-- Inspect color values, font sizes, and touch targets directly from Figma
-- Check component ARIA roles and keyboard behavior in the design spec
-
-If **~~project tracker** is connected:
-- Create tickets for each accessibility finding with severity and WCAG criterion
-- Link findings to existing accessibility remediation epics
 
 ## Tips
 

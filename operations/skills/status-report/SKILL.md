@@ -6,8 +6,6 @@ argument-hint: "[weekly | monthly | quarterly] [project or team]"
 
 # /status-report
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Generate a polished status report for leadership or stakeholders. See the **risk-assessment** skill for risk matrix frameworks and severity definitions.
 
 ## Usage
@@ -56,19 +54,6 @@ Generate a polished status report for leadership or stakeholders. See the **risk
 2. [Priority 2]
 3. [Priority 3]
 ```
-
-## If Connectors Available
-
-If **~~project tracker** is connected:
-- Pull project status, completed items, and upcoming milestones automatically
-- Identify at-risk items and overdue tasks
-
-If **~~chat** is connected:
-- Scan recent team discussions for decisions and blockers to include
-- Offer to post the finished report to a channel
-
-If **~~calendar** is connected:
-- Reference key meetings and decisions from the reporting period
 
 ## Tips
 

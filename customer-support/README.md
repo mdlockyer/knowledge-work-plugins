@@ -114,9 +114,9 @@ Claude: [Generates a structured how-to article with prerequisites,
 
 The plugin works out of the box. Provide context manually or extend skills with your own data.
 
-1. **Support platform**: Add your ticketing system for ticket history and customer context
-2. **Knowledge base**: Add your wiki for internal documentation and existing KB articles
-3. **Project tracker**: Add your issue tracker for bug reports and feature requests
-4. **CRM**: Add your CRM for account details and contact information
+1. **Support platform**: Share ticket history and customer context from your ticketing system
+2. **Knowledge base**: Share your wiki for internal documentation and existing KB articles
+3. **Project tracker**: Share your issue tracker for bug reports and feature requests
+4. **CRM**: Share your CRM for account details and contact information
 
-Without these connections, the plugin will ask you to provide context manually and offer frameworks and templates you can fill in with your own data.
+Whatever you don't provide, the plugin will ask for — or offer frameworks and templates you can fill in with your own data.

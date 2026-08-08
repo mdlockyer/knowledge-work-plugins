@@ -6,7 +6,7 @@ Diagnostic guide for the most frequent issues when using the Zoom MCP server.
 
 ### `Access token is required` (`-32001`)
 
-**Cause:** The bundled connector does not have a token available, so no Authorization header is
+**Cause:** The server does not have a token available, so no Authorization header is
 sent to the Zoom MCP endpoint.
 
 **Fix:** Set `ZOOM_MCP_ACCESS_TOKEN` and restart Claude Code or re-enable the plugin.
@@ -105,7 +105,7 @@ sent to the wrong MCP surface.
 **Fix:**
 - confirm the plugin is enabled
 - confirm `ZOOM_MCP_ACCESS_TOKEN` is set
-- restart Claude Code so the bundled MCP server restarts
+- restart Claude Code so the MCP server restarts
 
 ## Parameter and Call-Handling Issues
 

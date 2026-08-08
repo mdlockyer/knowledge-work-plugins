@@ -12,18 +12,12 @@ claude plugins add knowledge-work-plugins/data
 
 This plugin transforms Claude into a data analyst collaborator. It helps you explore datasets, write optimized SQL, build visualizations, create interactive dashboards, and validate analyses before sharing with stakeholders.
 
-### With a Data Warehouse Connection
+Provide your data via paste or file upload — Claude will:
 
-Provide your data via CSV/upload or your warehouse — Claude will:
-
-- Query your data warehouse directly
-- Explore schemas and table metadata
-- Run analyses end-to-end without copy-pasting
+- Explore schemas and table metadata (or work from the data you provide)
+- Run analyses on pasted results or uploaded CSV/Excel files
+- Write SQL queries for you to run manually, then analyze the results you provide
 - Iterate on queries based on results
-
-### Without a Data Warehouse Connection
-
-Without a data warehouse connection, paste SQL results or upload CSV/Excel files for analysis and visualization. Claude can also write SQL queries for you to run manually, and then analyze the results you provide.
 
 ## Commands
 
@@ -54,7 +48,7 @@ Without a data warehouse connection, paste SQL results or upload CSV/Excel files
 ```
 You: /analyze What was our monthly revenue trend for the past 12 months, broken down by product line?
 
-Claude: [Writes SQL query] → [Executes against data warehouse] → [Generates trend chart]
+Claude: [Writes SQL query] → [You run it and paste results] → [Claude generates trend chart]
        → [Identifies key patterns: "Product line A grew 23% YoY while B was flat"]
        → [Validates results with sanity checks]
 ```

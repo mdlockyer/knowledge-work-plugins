@@ -6,8 +6,6 @@ argument-hint: "<incident description or alert>"
 
 # /incident-response
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Manage an incident from detection through postmortem.
 
 ## Usage
@@ -136,20 +134,6 @@ Provide clear, factual updates at regular cadence. Include: what's happening, wh
 ### Lessons Learned
 [Key takeaways for the team]
 ```
-
-## If Connectors Available
-
-If **~~monitoring** is connected:
-- Pull alert details and metrics
-- Show graphs of affected metrics
-
-If **~~incident management** is connected:
-- Create or update incident in PagerDuty/Opsgenie
-- Page on-call responders
-
-If **~~chat** is connected:
-- Post status updates to incident channel
-- Create war room channel
 
 ## Tips
 

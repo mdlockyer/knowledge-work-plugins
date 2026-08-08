@@ -11,12 +11,6 @@
       "description": "Manage tasks, plan your day, and build up memory of important context about your work. Syncs with your calendar, email, and chat to keep everything organized and on track."
     },
     {
-      "name": "enterprise-search",
-      "displayName": "Enterprise Search",
-      "source": "./enterprise-search",
-      "description": "Search across all of your company's tools in one place. Find anything across email, chat, documents, and wikis without switching between apps."
-    },
-    {
       "name": "cowork-plugin-management",
       "displayName": "Plugin Management",
       "source": "./cowork-plugin-management",
@@ -68,64 +62,37 @@
       "name": "bio-research",
       "displayName": "Bio Research",
       "source": "./bio-research",
-      "description": "Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D"
-    },
-    {
-      "name": "slack-by-salesforce",
-      "displayName": "Slack",
-      "source": "./partner-built/slack",
-      "description": "Slack integration for searching messages, sending communications, managing canvases, and more",
-      "author": {
-        "name": "Salesforce"
-      }
-    },
-    {
-      "name": "apollo",
-      "displayName": "Apollo.io",
-      "source": "./partner-built/apollo",
-      "description": "Prospect, enrich leads, and load outreach sequences with Apollo.io — one-click MCP server integration for Claude Code and Cowork.",
-      "author": {
-        "name": "Apollo.io"
-      }
-    },
-    {
-      "name": "common-room",
-      "displayName": "Common Room",
-      "source": "./partner-built/common-room",
-      "description": "Turn Common Room into your GTM copilot. Research accounts and contacts, prep for calls with attendee profiles and talking points, and draft personalized outreach across email, LinkedIn, and phone.",
-      "author": {
-        "name": "Common Room"
-      }
+      "description": "Preclinical research workflows for life science R&D \u2014 single-cell RNA-seq QC, scvi-tools, Nextflow pipelines, instrument data conversion to Allotrope, and scientific problem selection. Works from your data files and questions."
     },
     {
       "name": "engineering",
       "displayName": "Engineering",
       "source": "./engineering",
-      "description": "Streamline engineering workflows — standups, code review, architecture decisions, incident response, and technical documentation. Works with your existing tools or standalone."
+      "description": "Streamline engineering workflows \u2014 standups, code review, architecture decisions, incident response, and technical documentation. Works with your existing tools or standalone."
     },
     {
       "name": "human-resources",
       "displayName": "Human Resources",
       "source": "./human-resources",
-      "description": "Streamline people operations — recruiting, onboarding, performance reviews, compensation analysis, and policy guidance. Maintain compliance and keep your team running smoothly."
+      "description": "Streamline people operations \u2014 recruiting, onboarding, performance reviews, compensation analysis, and policy guidance. Maintain compliance and keep your team running smoothly."
     },
     {
       "name": "design",
       "displayName": "Design",
       "source": "./design",
-      "description": "Accelerate design workflows — critique, design system management, UX writing, accessibility audits, research synthesis, and dev handoff. From exploration to pixel-perfect specs."
+      "description": "Accelerate design workflows \u2014 critique, design system management, UX writing, accessibility audits, research synthesis, and dev handoff. From exploration to pixel-perfect specs."
     },
     {
       "name": "operations",
       "displayName": "Operations",
       "source": "./operations",
-      "description": "Optimize business operations — vendor management, process documentation, change management, capacity planning, and compliance tracking. Keep your organization running efficiently."
+      "description": "Optimize business operations \u2014 vendor management, process documentation, change management, capacity planning, and compliance tracking. Keep your organization running efficiently."
     },
     {
       "name": "small-business",
       "displayName": "Small Business",
       "source": "./small-business",
-      "description": "Pre-built small business workflows (including payroll planning, month-end close, weekly briefs, and growth campaigns) using your QuickBooks, PayPal, HubSpot, Docusign, Gsuite, O365, Canva, and other connected tools. You approve every step that touches money or customers."
+      "description": "Small business workflows \u2014 hiring packets, contract review, pricing and margin analysis, cash flow forecasting, and complaint handling. You provide the data (files, exports, pasted text) and Claude produces the output."
     },
     {
       "name": "brand-voice",
@@ -151,7 +118,7 @@
     {
       "name": "vanta-mcp-plugin",
       "displayName": "Vanta",
-      "description": "The Vanta plugin connects Claude to Vanta's security and compliance platform through the Vanta MCP server. List failing compliance tests, get test-specific remediation context, and fix failing tests with code changes — directly from your Claude session.",
+      "description": "The Vanta plugin connects Claude to Vanta's security and compliance platform through the Vanta MCP server. List failing compliance tests, get test-specific remediation context, and fix failing tests with code changes \u2014 directly from your Claude session.",
       "category": "security",
       "source": {
         "source": "url",
@@ -164,7 +131,7 @@
       "name": "zoom-plugin",
       "displayName": "Zoom",
       "source": "./partner-built/zoom-plugin",
-      "description": "Plan, build, and debug Zoom integrations across REST APIs, Meeting SDK, Video SDK, webhooks, bots, and MCP workflows. Search meetings, retrieve recordings, access transcripts, and design AI-powered Zoom experiences.",
+      "description": "Plan, build, and debug Zoom integrations across REST APIs, Meeting SDK, Video SDK, webhooks, bots, and more. Includes Zoom's MCP server as educational reference. Runs standalone with your context.",
       "author": {
         "name": "Zoom"
       }
@@ -301,7 +268,7 @@
     },
     {
       "name": "cockroachdb",
-      "description": "CockroachDB plugin for Claude Code — explore schemas, write optimized SQL, debug queries, and manage distributed database clusters directly from your AI coding agent.",
+      "description": "CockroachDB plugin for Claude Code \u2014 explore schemas, write optimized SQL, debug queries, and manage distributed database clusters directly from your AI coding agent.",
       "source": {
         "source": "url",
         "url": "https://github.com/cockroachdb/claude-plugin.git",
@@ -345,7 +312,7 @@
     {
       "name": "nimble",
       "displayName": "Nimble",
-      "description": "Nimble web data toolkit — search, extract, map, crawl the web and work with structured data agents",
+      "description": "Nimble web data toolkit \u2014 search, extract, map, crawl the web and work with structured data agents",
       "source": {
         "source": "url",
         "url": "https://github.com/Nimbleway/agent-skills.git",
@@ -367,7 +334,7 @@
     {
       "name": "searchfit-seo",
       "displayName": "SearchFit SEO",
-      "description": "Free AI-powered SEO toolkit — audit websites, plan content strategy, optimize pages, generate schema markup, cluster keywords, and track AI visibility. Works with any website or codebase.",
+      "description": "Free AI-powered SEO toolkit \u2014 audit websites, plan content strategy, optimize pages, generate schema markup, cluster keywords, and track AI visibility. Works with any website or codebase.",
       "source": {
         "source": "url",
         "url": "https://github.com/searchfit/searchfit-seo.git",
@@ -402,7 +369,7 @@
     {
       "name": "product-tracking-skills",
       "displayName": "Product Tracking",
-      "description": "AI agent skills that make SaaS products data-ready for product analytics — from codebase scan to tracking plan to working instrumentation code.",
+      "description": "AI agent skills that make SaaS products data-ready for product analytics \u2014 from codebase scan to tracking plan to working instrumentation code.",
       "source": {
         "source": "url",
         "url": "https://github.com/Accoil/product-tracking-skills.git",
@@ -448,15 +415,9 @@
       "homepage": "https://github.com/adobe/skills/tree/main/plugins/creative-cloud/adobe-for-creativity"
     },
     {
-      "name": "pdf-viewer",
-      "displayName": "PDF Viewer",
-      "source": "./pdf-viewer",
-      "description": "View, annotate, and sign PDFs in a live interactive viewer. Mark up contracts, fill forms with visual feedback, stamp approvals, and place signatures — then download the annotated copy."
-    },
-    {
       "name": "box",
       "displayName": "Box",
-      "description": "Work with your Box content directly from Claude Code — search files, organize folders, collaborate with your team, and use Box AI to answer questions, summarize documents, and extract data without leaving your workflow.",
+      "description": "Work with your Box content directly from Claude Code \u2014 search files, organize folders, collaborate with your team, and use Box AI to answer questions, summarize documents, and extract data without leaving your workflow.",
       "category": "productivity",
       "source": {
         "source": "url",
@@ -493,7 +454,7 @@
     },
     {
       "name": "carta-cap-table",
-      "description": "Carta Cap Table plugin — skills and hooks for querying cap tables, grants, SAFEs, 409A valuations, waterfall scenarios, and more",
+      "description": "Carta Cap Table plugin \u2014 skills and hooks for querying cap tables, grants, SAFEs, 409A valuations, waterfall scenarios, and more",
       "category": "productivity",
       "source": {
         "source": "git-subdir",
@@ -506,7 +467,7 @@
     },
     {
       "name": "carta-crm",
-      "description": "Manage the Carta CRM conversationally — search, add, update, and enrich investors, companies, contacts, deals, notes, and fundraisings via the Carta CRM MCP Server",
+      "description": "Manage the Carta CRM conversationally \u2014 search, add, update, and enrich investors, companies, contacts, deals, notes, and fundraisings via the Carta CRM MCP Server",
       "category": "productivity",
       "source": {
         "source": "git-subdir",
@@ -519,7 +480,7 @@
     },
     {
       "name": "carta-investors",
-      "description": "Carta Investors plugin — skills for querying investors data, performance benchmarks, regulatory reporting, AGM deck generation, brand extraction, and more via the Carta MCP server",
+      "description": "Carta Investors plugin \u2014 skills for querying investors data, performance benchmarks, regulatory reporting, AGM deck generation, brand extraction, and more via the Carta MCP server",
       "category": "productivity",
       "source": {
         "source": "git-subdir",
@@ -532,7 +493,7 @@
     },
     {
       "name": "airtable",
-      "description": "Airtable is the database and operations layer for your agents — whether running product, marketing, sales, ops, HR, or a custom business app. It combines structured data with multiplayer visual surfaces (grid, kanban, calendar, gallery, timeline) humans and agents share — plus sync integrations to Jira, Salesforce, Zendesk, Google Drive, and Databricks. Makes Claude fluent in Airtable: bases and schema, records, and collaboration UI. Bundles the official Airtable MCP server.",
+      "description": "Airtable is the database and operations layer for your agents \u2014 whether running product, marketing, sales, ops, HR, or a custom business app. It combines structured data with multiplayer visual surfaces (grid, kanban, calendar, gallery, timeline) humans and agents share \u2014 plus sync integrations to Jira, Salesforce, Zendesk, Google Drive, and Databricks. Makes Claude fluent in Airtable: bases and schema, records, and collaboration UI. Bundles the official Airtable MCP server.",
       "author": {
         "name": "Airtable"
       },
@@ -585,7 +546,7 @@
     },
     {
       "name": "twilio-developer-kit",
-      "description": "Twilio Skills provide procedural knowledge for AI coding agents — which APIs to use, in what order, and what to avoid. Covers SMS, Voice, WhatsApp, Verify, SendGrid, Compliance, and 30+ products.",
+      "description": "Twilio Skills provide procedural knowledge for AI coding agents \u2014 which APIs to use, in what order, and what to avoid. Covers SMS, Voice, WhatsApp, Verify, SendGrid, Compliance, and 30+ products.",
       "author": {
         "name": "Twilio"
       },
@@ -685,7 +646,7 @@
     {
       "name": "learn-with-coursera",
       "displayName": "Learn with Coursera",
-      "description": "Turn any learning intent into a personalized Coursera experience. Asks three quick questions (topic, familiarity, preferred format), searches Coursera's catalog, and delivers the right next step — a course, hands-on project, short video, or live roleplay — then maps a path forward. Requires the Coursera connector for catalog tools.",
+      "description": "Turn any learning intent into a personalized Coursera experience. Asks three quick questions (topic, familiarity, preferred format), searches Coursera's catalog, and delivers the right next step \u2014 a course, hands-on project, short video, or live roleplay \u2014 then maps a path forward. Requires the Coursera connector for catalog tools.",
       "category": "learning",
       "source": {
         "source": "git-subdir",
@@ -728,7 +689,7 @@
     {
       "name": "lusha",
       "displayName": "Lusha",
-      "description": "Prospect, enrich, and build call-ready lead lists using Lusha's B2B intelligence platform — verified phone numbers, company signals, and lookalike targeting.",
+      "description": "Prospect, enrich, and build call-ready lead lists using Lusha's B2B intelligence platform \u2014 verified phone numbers, company signals, and lookalike targeting.",
       "category": "productivity",
       "source": {
         "source": "url",
@@ -754,7 +715,7 @@
     {
       "name": "buildkite",
       "displayName": "Buildkite",
-      "description": "Official Buildkite skills for Claude Code, Cursor, and other AI coding agents — pipelines, migration, preflight, agent runtime, CLI, and API",
+      "description": "Official Buildkite skills for Claude Code, Cursor, and other AI coding agents \u2014 pipelines, migration, preflight, agent runtime, CLI, and API",
       "category": "deployment",
       "source": {
         "source": "url",
@@ -778,7 +739,7 @@
     {
       "name": "datarobot-agent-skills",
       "displayName": "DataRobot Agent Skills",
-      "description": "DataRobot skills for AI/ML workflows — model training, deployment, predictions, feature engineering, monitoring, explainability, data preparation, App Framework CI/CD, and external agent monitoring.",
+      "description": "DataRobot skills for AI/ML workflows \u2014 model training, deployment, predictions, feature engineering, monitoring, explainability, data preparation, App Framework CI/CD, and external agent monitoring.",
       "category": "development",
       "source": {
         "source": "url",
@@ -880,7 +841,7 @@
     {
       "name": "grafana-cloud-mcp",
       "displayName": "Grafana Cloud MCP",
-      "description": "Hosted MCP server for AI-assisted Grafana Cloud observability — no local installation required.",
+      "description": "Hosted MCP server for AI-assisted Grafana Cloud observability \u2014 no local installation required.",
       "category": "monitoring",
       "source": {
         "source": "git-subdir",
@@ -906,7 +867,7 @@
     {
       "name": "honeycomb",
       "displayName": "Honeycomb",
-      "description": "Skills, agents, and workflows for Honeycomb observability — query patterns, production investigations, SLOs, OpenTelemetry instrumentation, and Beeline migration. Designed to complement the Honeycomb MCP server.",
+      "description": "Skills, agents, and workflows for Honeycomb observability \u2014 query patterns, production investigations, SLOs, OpenTelemetry instrumentation, and Beeline migration. Designed to complement the Honeycomb MCP server.",
       "category": "monitoring",
       "source": {
         "source": "git-subdir",
@@ -960,7 +921,7 @@
     {
       "name": "carbone-skill",
       "displayName": "Carbone",
-      "description": "Official Carbone skill — complete templating language reference covering tags, loops, conditions, formatters, aggregators, and all output formats (DOCX, XLSX, PPTX, ODT, HTML, Markdown, PDF)",
+      "description": "Official Carbone skill \u2014 complete templating language reference covering tags, loops, conditions, formatters, aggregators, and all output formats (DOCX, XLSX, PPTX, ODT, HTML, Markdown, PDF)",
       "category": "productivity",
       "source": {
         "source": "url",
@@ -1024,7 +985,7 @@
     {
       "name": "browser-use",
       "displayName": "Browser Use",
-      "description": "Give Claude a real browser — your Chrome or a Browser Use Cloud browser. Use it whenever a task involves a website or web app: browsing, scraping and data extraction, filling forms, testing sites, taking screenshots, automating web workflows.",
+      "description": "Give Claude a real browser \u2014 your Chrome or a Browser Use Cloud browser. Use it whenever a task involves a website or web app: browsing, scraping and data extraction, filling forms, testing sites, taking screenshots, automating web workflows.",
       "category": "automation",
       "source": {
         "source": "git-subdir",

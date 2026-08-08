@@ -78,8 +78,6 @@ Create a `legal.local.md` file where Claude can find it:
 Configure paths to your template files or define inline templates for common inquiries.
 ```
 
-### 3. Connect your tools
-
 ## Commands
 
 ### `/review-contract` -- Contract Review Against Playbook
@@ -102,7 +100,7 @@ Rapid triage of incoming NDAs against standard criteria. Categorizes as GREEN (s
 
 ### `/vendor-check` -- Vendor Agreement Status
 
-Check the status of existing agreements with a vendor across your connected systems.
+Check the status of existing agreements with a vendor using the data you provide.
 
 ```
 /vendor-check [vendor name]

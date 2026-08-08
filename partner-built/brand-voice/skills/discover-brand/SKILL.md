@@ -1,18 +1,17 @@
 ---
 name: discover-brand
 description: >
-  This skill orchestrates autonomous discovery of brand materials across enterprise
-  platforms (Notion, Confluence, Google Drive, Box, SharePoint, Figma, Gong, Granola, Slack).
-  It should be used when the user asks to "discover brand materials",
-  "find brand documents", "search for brand guidelines", "audit brand content",
-  "what brand materials do we have", "find our style guide", "where are our brand docs",
+  This skill orchestrates discovery of brand materials from whatever the user
+  provides — files, pasted documents, links, and transcripts. It should be used
+  when the user asks to "discover brand materials", "find brand documents",
+  "audit brand content", "what brand materials do we have", "find our style guide",
   "do we have a style guide", "discover brand voice", "brand content audit",
   or "find brand assets".
 ---
 
 # Brand Discovery
 
-Orchestrate autonomous discovery of brand materials across enterprise platforms. This skill coordinates the discover-brand agent to search connected platforms (Notion, Confluence, Google Drive, Box, Microsoft 365, Figma, Gong, Granola, Slack), triage sources, and produce a structured discovery report with open questions.
+Gather brand materials from the user, triage them, and produce a structured discovery report with open questions. Works entirely from materials the user shares — files, pasted text, or links.
 
 ## Discovery Workflow
 
@@ -22,106 +21,82 @@ Before starting, briefly explain what's about to happen so the user knows what t
 
 "Here's how brand discovery works:
 
-1. **Search** — I'll search your connected platforms (Notion, Google Drive, Slack, etc.) for brand-related materials: style guides, pitch decks, templates, transcripts, and more.
-2. **Analyze** — I'll categorize and rank what I find, pull the best sources, and produce a discovery report with what I found, any conflicts, and open questions.
+1. **Collect** — You share your brand materials: style guides, pitch decks, templates, email samples, transcripts, and anything else that shows how your company communicates.
+2. **Analyze** — I'll categorize and rank what you give me, pull out the strongest signals, and produce a discovery report with what I found, any conflicts, and open questions.
 3. **Generate guidelines** — Once you've reviewed the report, I can generate a structured brand voice guideline document from the results.
-4. **Save** — Guidelines are saved to `.claude/brand-voice-guidelines.md` in your working folder once you approve them. Nothing is written until that step.
-
-The search usually takes a few minutes depending on how many platforms are connected. Ready to get started?"
-
-Wait for the user to confirm before proceeding. If they have questions about the process, answer them first.
+4. **Save** — Guidelines are saved to `.claude/brand-voice-guidelines.md` in your working folder once you approve them. Nothing is written until that step."
 
 ### 1. Check Settings
 
 Read `.claude/brand-voice.local.md` if it exists. Extract:
 - Company name
-- Which platforms are enabled (notion, confluence, google-drive, box, microsoft-365, figma, gong, granola, slack)
-- Search depth preference (standard or deep)
-- Max sources limit
-- Any known brand material locations listed under "Known Brand Materials"
+- Any known brand material locations
+- Search depth preference
 
-If no settings file exists, proceed with all connected platforms and standard search depth.
+If no settings file exists, proceed with what the user provides.
 
-### 2. Validate Platform Coverage
+### 2. Collect Materials
 
-Before confirming scope, check which platforms are actually connected and classify them:
+Ask the user for brand materials. Useful categories:
 
-**Document platforms** (where brand guidelines, style guides, templates, and decks live):
-- Notion, Confluence, Google Drive, Box, Microsoft 365 (SharePoint/OneDrive)
+- **Style guides / brand books** — official voice, tone, and visual rules
+- **Marketing collateral** — website copy, pitch decks, product pages, ads
+- **Sales materials** — email templates, proposals, LinkedIn posts, sales scripts
+- **Customer-facing comms** — support responses, newsletters, announcements
+- **Conversational samples** — call transcripts, meeting notes, Slack threads (show how the team actually talks)
+- **Design system files** — color, typography, and design tokens (inform voice)
 
-**Supplementary platforms** (valuable for patterns, but not where brand docs are stored):
-- Slack, Gong, Granola, Figma
+Accept materials in any form: file uploads (PDF, DOCX, MD), pasted text, or links to shared documents.
 
-Apply these rules:
+### 3. Triage and Rank Sources
 
-1. **If zero document platforms are connected**: **Stop.** Tell the user: "You don't have any document storage platforms connected (Google Drive, SharePoint, Notion, Confluence, or Box). Brand guidelines and style guides almost always live on one of these. Please connect at least one before running discovery. Gong/Granola/Slack transcripts are valuable supplements but unlikely to contain formal brand documents."
+Categorize each source and rank by value for brand voice:
 
-2. **If no Google Drive AND no Microsoft 365 AND no Box**: **Warn** (but proceed): "None of your primary file storage platforms (Google Drive, SharePoint, Box) are connected. Brand documents frequently live on these platforms. Discovery will proceed with [connected platforms], but results may have significant gaps. Consider connecting Google Drive or SharePoint."
+1. **Official** — style guides, brand books, messaging frameworks (highest weight)
+2. **Applied** — real customer-facing content produced by the team
+3. **Conversational** — call transcripts, meeting notes, Slack threads (reveal implicit voice)
+4. **Design** — design systems, visual identity docs
 
-3. **If only one platform total is connected**: **Warn** (but proceed): "Only [platform] is connected. Discovery works best with 2+ platforms for cross-source validation. Results from a single platform will have lower confidence scores."
+Note when sources conflict (e.g., a 2023 style guide vs. a 2024 rebrand) — flag these as open questions rather than picking a winner silently.
 
-### 3. Confirm Scope with User
+### 4. Produce the Discovery Report
 
-Before launching discovery, confirm:
-- Which platforms to search (default: all connected)
-- Whether to include conversation transcripts (Gong, Granola) or just documents
-- Any known locations to prioritize
-
-Keep this brief — one question, not a questionnaire.
-
-### 4. Delegate to Discover-Brand Agent
-
-Launch the discover-brand agent via the Task tool. Provide:
-- Company name (from settings or user input)
-- Enabled platforms
-- Search depth
-- Any known URLs or locations to check first
-
-The agent executes the 4-phase discovery algorithm autonomously:
-1. **Broad Discovery** — parallel searches across platforms
-2. **Source Triage** — categorize and rank sources
-3. **Deep Fetch** — retrieve and extract from top sources
-4. **Discovery Report** — structured output with open questions
-
-### 5. Present Discovery Report
-
-When the agent returns, present the report to the user with a summary:
-- Total sources found and analyzed
+Present a structured report:
+- Total sources collected and analyzed
 - Key brand elements discovered
 - Any conflicts between sources
 - Open questions requiring team input
 
-### 6. Offer Next Steps
+### 5. Offer Next Steps
 
 After presenting the report, offer:
-1. **Generate guidelines now** — chain to `/brand-voice:generate-guidelines` using discovery report as input
+1. **Generate guidelines now** — chain to `/brand-voice:generate-guidelines` using the discovery report as input
 2. **Resolve open questions first** — work through high-priority questions before generating
-3. **Save report** — store the discovery report to Notion or as a local file
-4. **Expand search** — search additional platforms or deeper if coverage is low
+3. **Save report** — store the discovery report as a local file
+4. **Collect more** — accept additional materials if coverage is low
 
 ## Open Questions
 
-Open questions arise when the discovery agent encounters ambiguity it cannot resolve:
+Open questions arise when discovery encounters ambiguity it cannot resolve:
 - Conflicting documents (e.g., 2023 style guide vs. 2024 brand update)
 - Missing critical sections (e.g., no social media guidelines found)
-- Inconsistent terminology across platforms
+- Inconsistent terminology across materials
 
-Every open question includes an agent recommendation. Present questions as "confirm or override" — not dead ends.
+Every open question includes a recommendation. Present questions as "confirm or override" — not dead ends.
 
 ## Integration with Other Skills
 
-- **Guideline Generation**: The discovery report is returned by the discover-brand agent via the Task tool. Pass it directly to the guideline-generation skill as structured input, replacing the need for users to manually gather sources.
+- **Guideline Generation**: Pass the discovery report directly to the guideline-generation skill as structured input, replacing the need for users to manually gather sources.
 - **Brand Voice Enforcement**: Once guidelines are generated from discovery, enforcement uses them automatically.
 
 ## Error Handling
 
-- If zero platforms are connected, inform the user which platforms the plugin supports and how to connect them.
-- If all searches return empty results, flag the discovery as "low coverage" and suggest the user provide documents manually or check platform connections.
-- If a platform is connected but returns permission errors, note the gap and continue with other platforms.
+- If the user has no materials to share, suggest they upload whatever they have (even one deck or a few emails) or describe their brand voice verbally — discovery can work from a single strong source.
+- If materials are sparse, flag the discovery as "low coverage" and note that confidence scores will be lower.
+- If a file can't be read, ask the user to re-upload or paste the content.
 
 ## Reference Files
 
-For detailed discovery patterns and algorithms, consult:
+For detailed discovery patterns, consult:
 
-- **`references/search-strategies.md`** — Platform-specific search queries, query patterns by platform, and tips for maximizing discovery coverage
 - **`references/source-ranking.md`** — Source category definitions, ranking algorithm weights, and triage decision criteria

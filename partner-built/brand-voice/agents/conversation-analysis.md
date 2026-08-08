@@ -16,17 +16,17 @@ description: >
   </example>
 
   <example>
-  Context: Gong transcripts were found during brand discovery and need analysis.
-  user: "Analyze the Gong calls found during discovery"
-  assistant: "I'll pull the transcripts from Gong and analyze voice patterns..."
+  Context: Transcripts were collected during brand discovery and need analysis.
+  user: "Analyze the call transcripts from discovery"
+  assistant: "I'll analyze the transcripts for voice patterns..."
   <commentary>
-  Discovery identified relevant Gong recordings. The conversation-analysis agent
-  fetches transcripts  and performs deep pattern analysis.
+  Discovery identified relevant transcripts. The conversation-analysis agent
+  performs deep pattern analysis on user-provided transcripts.
   </commentary>
   </example>
 model: sonnet
 color: blue
-# tools not restricted -- this agent needs tools to fetch transcripts from Gong, Granola, etc.
+# tools not restricted -- this agent analyzes user-provided transcripts
 maxTurns: 15
 ---
 
@@ -43,14 +43,12 @@ When invoked, you receive conversation transcripts and analysis parameters. For 
 5. **Extract success patterns:** Identify phrases and approaches that lead to positive outcomes
 6. **Flag anti-patterns:** Find language that triggers pushback or stalls conversations
 
-When transcripts are available on Gong, use the Gong tools to search for and retrieve call recordings and transcripts. Filter by tags, outcomes, or speaker to find the most relevant calls.
+When transcripts are provided as files or pasted content, analyze them directly.
 
 ## Transcript Sources
 
-- **Gong** (): Search calls by date, outcome, participants, or tags. Retrieve transcripts and call analysis.
-- **Granola** (): List meetings, search by query, and retrieve full meeting transcripts and notes.
-- **Notion meeting notes** (): Search for meeting notes pages with transcript content.
 - **Manual uploads**: User-provided .txt, .json, or .md transcript files.
+- **Pasted transcripts**: Conversation text pasted directly into the conversation.
 - **Other sources**: Zoom, Google Meet, or other transcript formats uploaded as files.
 
 ## Output Format

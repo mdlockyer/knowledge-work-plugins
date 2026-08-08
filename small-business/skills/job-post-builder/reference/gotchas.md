@@ -1,35 +1,16 @@
 # Gotchas
 
-## 1. DocuSign login state
+## 1. Missing candidate details before sending
 
-✗ **Bad:** Claude navigates to `https://app.docusign.com` and immediately tries
-to upload the offer letter without checking whether the user is logged in.
+✗ **Bad:** The offer letter is ready, and only then Claude asks: "What's the candidate's email address?" or "What's their full legal name?"
 
-✓ **Good:** Immediately after navigating to DocuSign, check for a login screen.
-If a login prompt appears, pause and ask the user to log in, then wait for
-confirmation before continuing.
+✓ **Good:** Collect the candidate's full name and email in Phase 1 (or by the end of Phase 5) so the deliverable is complete. Ask only for what's genuinely missing.
 
-**Why it matters:** DocuSign redirects unauthenticated sessions silently. If the
-login check is skipped, the automation tries to click UI elements that don't exist
-and fails mid-flow with no clear error.
+**Why it matters:** Asking for basic details mid-flow makes the skill feel disorganized and forces the user to re-engage after the writing work is done.
 
 ---
 
-## 2. Missing candidate details before entering the browser
-
-✗ **Bad:** Claude reaches Phase 6, opens DocuSign in Chrome, and then asks mid-flow:
-"What's the candidate's email address?"
-
-✓ **Good:** If the user chose DocuSign delivery in Phase 1, collect the candidate's
-full name and email address before Phase 6 begins — either in Phase 1 or at the
-end of Phase 5. Never enter the browser flow without both fields.
-
-**Why it matters:** Interrupting an open browser session to collect missing data
-disrupts the automation state and confuses the user.
-
----
-
-## 3. Re-asking for context the user already provided
+## 2. Re-asking for context the user already provided
 
 ✗ **Bad:** The user says "we need to hire a senior PM, fully remote, $160–180k"
 and Phase 1 asks for role title, location, and compensation anyway.
@@ -42,7 +23,7 @@ rather than a long form." Redundant questions break trust and slow the workflow.
 
 ---
 
-## 4. Silently expanding the user's existing format
+## 3. Silently expanding the user's existing format
 
 ✗ **Bad:** The user has a 3-section job post on file. Claude produces a 7-section
 post based on `references/job-post-structure.md` without asking.
@@ -56,7 +37,7 @@ may conflict with internal HR or legal standards the user hasn't mentioned.
 
 ---
 
-## 5. Inventing compensation figures
+## 4. Inventing compensation figures
 
 ✗ **Bad:** No salary range was provided, so Claude writes "$120,000–$150,000 DOE"
 in the job post or offer letter.

@@ -6,8 +6,6 @@ argument-hint: "<PR URL, diff, or file path>"
 
 # /code-review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Review code changes with a structured lens on security, performance, correctness, and maintainability.
 
 ## Usage
@@ -33,11 +31,6 @@ If no specific file or URL is provided, ask what to review.
 │  ✓ Correctness (edge cases, error handling, race conditions)    │
 │  ✓ Style (naming, structure, readability)                        │
 │  ✓ Actionable suggestions with code examples                    │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + Source control: Pull PR diff automatically                    │
-│  + Project tracker: Link findings to tickets                     │
-│  + Knowledge base: Check against team coding standards           │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -97,19 +90,6 @@ If no specific file or URL is provided, ask what to review.
 ### Verdict
 [Approve / Request Changes / Needs Discussion]
 ```
-
-## If Connectors Available
-
-If **~~source control** is connected:
-- Pull the PR diff automatically from the URL
-- Check CI status and test results
-
-If **~~project tracker** is connected:
-- Link findings to related tickets
-- Verify the PR addresses the stated requirements
-
-If **~~knowledge base** is connected:
-- Check changes against team coding standards and style guides
 
 ## Tips
 

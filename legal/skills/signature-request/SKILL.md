@@ -6,8 +6,6 @@ argument-hint: "<document or contract to send>"
 
 # /signature-request -- E-Signature Routing
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Prepare a document for electronic signature — verify completeness, set signing order, and route for execution.
 
 **Important**: This command assists with legal workflows but does not provide legal advice. Verify documents are in final form before sending for signature.
@@ -26,7 +24,7 @@ Prepare for signature: @$1
 
 Accept the document in any format:
 - **File upload**: PDF, DOCX
-- **URL**: Link to a document in ~~cloud storage or ~~CLM
+- **URL**: Link to a document in cloud storage or a CLM
 - **Reference**: "The Acme Corp MSA we finalized yesterday"
 
 ### Step 2: Pre-Signature Checklist
@@ -55,13 +53,13 @@ Gather signing details:
 
 ### Step 4: Route for Signature
 
-**If ~~e-signature is connected:**
+**If the user uses an e-signature service (e.g., DocuSign):**
 - Create the signature envelope/request
 - Set signing fields and order
 - Add any required initials or date fields
 - Send for signature
 
-**If not connected:**
+**Otherwise:**
 - Generate a signing instruction document
 - Provide the document formatted for wet signature or manual e-sign
 - List all signers with contact information
@@ -101,4 +99,4 @@ Gather signing details:
 
 1. **Check entity names carefully** — The most common signing error is incorrect legal entity names.
 2. **Verify authority** — Make sure each signer is authorized to bind their organization.
-3. **Keep a copy** — Executed copies should be filed in ~~cloud storage or ~~CLM immediately after execution.
+3. **Keep a copy** — Executed copies should be filed in cloud storage or the CLM immediately after execution.

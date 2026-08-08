@@ -64,11 +64,11 @@ Provide your warehouse data to run variance analysis and pull historical compari
 
 ### Spreadsheets
 
-Connect spreadsheet tools (e.g., Google Sheets, Excel) for workpaper generation, reconciliation templates, and financial model updates.
+Upload or paste spreadsheet data (e.g., Excel, Google Sheets exports) for workpaper generation, reconciliation templates, and financial model updates.
 
 ### Analytics / BI
 
-Connect your BI platform (e.g., Tableau, Looker) to pull dashboards, KPIs, and trend data for variance explanations.
+Paste or upload BI exports (e.g., Tableau, Looker dashboards) for variance explanations.
 
 > **Note:** Provide your financial data via paste or file upload for analysis.
 

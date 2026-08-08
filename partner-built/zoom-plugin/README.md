@@ -78,7 +78,7 @@ The plugin also keeps the original Zoom product-specific reference library under
 /setup-zoom-mcp I want Claude to search meetings, pull recording resources, and create follow-up docs
 ```
 
-## Connectors
+## Standalone Operation
 
 The plugin works standalone from the bundled skills.
 

@@ -6,8 +6,6 @@ argument-hint: "<policy topic — PTO, benefits, travel, expenses, etc.>"
 
 # /policy-lookup
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Look up and explain company policies in plain language. Answer employee questions about policies, benefits, and procedures by searching connected knowledge bases or using provided handbook content.
 
 ## Usage
@@ -28,10 +26,6 @@ Search for policies matching: $ARGUMENTS
 │  ✓ Ask any policy question in plain language                    │
 │  ✓ Paste your employee handbook and I'll search it              │
 │  ✓ Get clear, jargon-free answers                               │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + Knowledge base: Search handbook and policy docs automatically │
-│  + HRIS: Pull employee-specific details (PTO balance, benefits) │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -47,7 +41,7 @@ Search for policies matching: $ARGUMENTS
 
 ## How to Answer
 
-1. Search ~~knowledge base for the relevant policy document
+1. Find the relevant policy document (from the user, their knowledge base, or employee handbook)
 2. Provide a clear, plain-language answer
 3. Quote the specific policy language
 4. Note any exceptions or special cases
@@ -78,15 +72,6 @@ Search for policies matching: $ARGUMENTS
 ### Source
 [Where this information came from — document name, page, or section]
 ```
-
-## If Connectors Available
-
-If **~~knowledge base** is connected:
-- Search employee handbook and policy documents automatically
-- Cite the specific document, section, and page number
-
-If **~~HRIS** is connected:
-- Pull employee-specific details like PTO balance, benefits elections, and enrollment status
 
 ## Tips
 

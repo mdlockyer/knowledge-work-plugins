@@ -2,11 +2,11 @@
 name: contract-review
 description: >
   Lightweight NDA, MSA, and vendor contract review for SMBs without legal on
-  staff. Reads contracts from local files, Gmail attachments, or DocuSign
-  envelopes; flags non-standard terms; explains risks in plain English; and
-  outputs a marked-up redline as a separate DOCX. Use when the user says
-  "review this contract," "what am I signing," "red flags," "flag any concerns,"
-  "check the payment terms," or uploads/forwards a contract or legal agreement.
+  staff. Reads contracts from local files or pasted text; flags non-standard
+  terms; explains risks in plain English; and outputs a marked-up redline as a
+  separate DOCX. Use when the user says "review this contract," "what am I
+  signing," "red flags," "flag any concerns," "check the payment terms," or
+  uploads/forwards a contract or legal agreement.
 ---
 
 # Contract Review
@@ -24,10 +24,9 @@ User: "Review this MSA and flag anything I should push back on."
 
 ## Workflow
 
-1. **Get the contract** — Pull from one of three sources, in order of preference:
-   - **Gmail**: Search for recent emails with contract attachments (see `reference/gmail-fetch.md`)
-   - **DocuSign**: Fetch the envelope by ID or search recent drafts awaiting signature (see `reference/docusign-fetch.md`)
-   - **Local file or paste**: Read the PDF (chunked via `pages` parameter for 10+ page files) or DOCX via Read tool. If the user pastes text directly, work with what's provided.
+1. **Get the contract** — From the user, in order of preference:
+   - **Local file**: Read the PDF (chunked via `pages` parameter for 10+ page files) or DOCX via the Read tool
+   - **Pasted text**: If the user pastes the contract text directly, work with what's provided
 
    Read the full document before analyzing. Dangerous clauses are frequently in exhibits and schedules at the back.
 
@@ -118,6 +117,4 @@ User: "Review this MSA and flag anything I should push back on."
 ## Reference
 
 - `reference/gotchas.md` — edge cases in contract analysis
-- `reference/docusign-fetch.md` — pulling envelopes from DocuSign
-- `reference/gmail-fetch.md` — finding contract attachments in Gmail
 - `reference/examples/flagged-summary-saas.md` — worked example: SaaS agreement review output

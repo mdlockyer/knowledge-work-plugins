@@ -6,8 +6,6 @@ argument-hint: "[sprint name or date range]"
 
 # /sprint-planning
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Plan a sprint by scoping work, estimating capacity, and setting clear goals.
 
 ## Usage
@@ -28,11 +26,6 @@ Plan a sprint by scoping work, estimating capacity, and setting clear goals.
 │  ✓ Scope and prioritize backlog items                           │
 │  ✓ Identify dependencies and risks                              │
 │  ✓ Generate sprint plan document                                │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + Project tracker: Pull backlog, create sprint, assign items   │
-│  + Calendar: Account for PTO and meetings in capacity           │
-│  + Chat: Share sprint plan with the team                        │
 └─────────────────────────────────────────────────────────────────┘
 ```
 

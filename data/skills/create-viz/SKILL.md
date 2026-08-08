@@ -6,8 +6,6 @@ argument-hint: "<data source> [chart type]"
 
 # /create-viz - Create Visualizations
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Create publication-quality data visualizations using Python. Generates charts from data with best practices for clarity, accuracy, and design.
 
 ## Usage
@@ -29,7 +27,7 @@ Determine:
 
 ### 2. Get the Data
 
-**If data warehouse is connected and data needs querying:**
+**If the user has warehouse access available in the session and data needs querying:**
 1. Write and execute the query
 2. Load results into a pandas DataFrame
 

@@ -6,8 +6,6 @@ argument-hint: "<vendor name or proposal>"
 
 # /vendor-review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Evaluate a vendor with structured analysis covering cost, risk, performance, and fit.
 
 ## Usage
@@ -86,16 +84,6 @@ When comparing vendors, produce a side-by-side matrix covering: pricing, feature
 - [Leverage point 1]
 - [Leverage point 2]
 ```
-
-## If Connectors Available
-
-If **~~knowledge base** is connected:
-- Search for existing vendor evaluations, contracts, and performance reviews
-- Pull procurement policies and approval thresholds
-
-If **~~procurement** is connected:
-- Pull current contract terms, spend history, and renewal dates
-- Compare pricing against existing vendor agreements
 
 ## Tips
 

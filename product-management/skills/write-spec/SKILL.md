@@ -6,8 +6,6 @@ argument-hint: "<feature or problem statement>"
 
 # Write Spec
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Write a feature specification or product requirements document (PRD).
 
 ## Usage
@@ -36,23 +34,14 @@ Ask the user for the following. Be conversational — do not dump all questions 
 - **Constraints**: Technical constraints, timeline, regulatory requirements, dependencies
 - **Prior art**: Has this been attempted before? Are there existing solutions?
 
-### 3. Pull Context from Connected Tools
+### 3. Pull Context
 
-If **~~project tracker** is connected:
-- Search for related tickets, epics, or features
-- Pull in any existing requirements or acceptance criteria
-- Identify dependencies on other work items
+If the user provides any of the following, incorporate it:
+- **Project tracker**: Related tickets, epics, or features; existing requirements or acceptance criteria; dependencies on other work items
+- **Docs / knowledge base**: Related research documents, prior specs, or design docs; relevant user research findings; meeting notes or decision records
+- **Design files**: Related mockups, wireframes, or design explorations; design system components relevant to the feature
 
-If **~~knowledge base** is connected:
-- Search for related research documents, prior specs, or design docs
-- Pull in relevant user research findings
-- Find related meeting notes or decision records
-
-If **~~design** is connected:
-- Pull related mockups, wireframes, or design explorations
-- Search for design system components relevant to the feature
-
-If these tools are not connected, work entirely from what the user provides. Do not ask the user to connect tools — just proceed with available information.
+Work from whatever the user provides — do not ask them to connect tools.
 
 ### 4. Generate the PRD
 

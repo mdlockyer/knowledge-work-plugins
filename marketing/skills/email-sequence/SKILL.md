@@ -6,8 +6,6 @@ argument-hint: "[sequence type]"
 
 # Email Sequence
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Design and draft complete email sequences with full copy, timing, branching logic, and performance benchmarks for any lifecycle or campaign use case.
 
 ## Trigger
@@ -145,17 +143,17 @@ Introduction and what they will learn -- Lesson 1: foundational concept -- Lesso
 
 ## Tool Integration
 
-### If ~~email marketing is connected (e.g., Klaviyo, Mailchimp, Customer.io)
+### If the user uses an email marketing platform (e.g., Klaviyo, Mailchimp, Customer.io)
 - Reference how to set up the sequence as a flow or automation in the platform
 - Note any platform-specific features to use (e.g., smart send time, conditional splits, A/B testing)
 - Map the branching logic to the platform's visual flow builder concepts
 
-### If ~~marketing automation or ~~CRM is connected (e.g., HubSpot, Marketo)
+### If the user uses a marketing automation or CRM platform (e.g., HubSpot, Marketo)
 - Reference lead scoring data to inform segmentation and exit conditions
 - Use lifecycle stage data to tailor messaging per segment
 - Note how to set enrollment triggers based on CRM properties or list membership
 
-### If no tools are connected
+### Without tool integration
 - Deliver all email content in copy-paste-ready format
 - Include a setup checklist the user can follow in any email platform:
   1. Create the automation or flow

@@ -13,7 +13,7 @@ Use this skill when the user wants Claude or another MCP-capable client to inter
 - MCP fit assessment
 - REST API vs MCP boundaries
 - Hybrid architectures
-- Connector expectations
+- Server expectations
 - Whiteboard-specific MCP routing
 
 ## Workflow

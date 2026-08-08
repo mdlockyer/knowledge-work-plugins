@@ -13,7 +13,7 @@ Convert instrument files into standardized Allotrope Simple Model (ASM) format f
 >
 > **To customize for your organization:**
 > - Modify the `references/` files to include your company's specific schemas or ontology mappings
-> - Use an MCP server to connect to systems that define your schemas (e.g., your LIMS, data catalog, or schema registry)
+> - Reference your internal schema systems (e.g., your LIMS, data catalog, or schema registry) when customizing the mappings
 > - Extend the `scripts/` to handle proprietary instrument formats or internal data standards
 >
 > This pattern can be adapted for any data transformation workflow where you need to convert between formats or validate against organizational standards.

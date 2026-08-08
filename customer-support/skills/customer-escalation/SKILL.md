@@ -6,8 +6,6 @@ argument-hint: "<issue summary> [customer name]"
 
 # /customer-escalation
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Package a support issue into a structured escalation brief for engineering, product, or leadership. Gathers context, structures reproduction steps, assesses business impact, and identifies the right escalation target.
 
 ## Usage
@@ -38,13 +36,13 @@ Use the "When to Escalate vs. Handle in Support" criteria below to confirm this 
 
 ### 2. Gather Context
 
-Pull together relevant information from available sources:
+Gather relevant context from the user and whatever materials they provide:
 
-- **~~support platform**: Related tickets, timeline of communications, previous troubleshooting
-- **~~CRM** (if connected): Account details, key contacts, previous escalations
-- **~~chat**: Internal discussions about this issue, similar reports from other customers
-- **~~project tracker** (if connected): Related bug reports or feature requests, engineering status
-- **~~knowledge base**: Known issues or workarounds, relevant documentation
+- **Ticket history**: Related tickets, timeline of communications, previous troubleshooting
+- **Account details**: Plan/contract info, key contacts, previous escalations (from the user's CRM if available)
+- **Internal discussions**: What the team already knows about this issue, similar reports from other customers
+- **Engineering status**: Related bug reports or feature requests (if the user has them)
+- **Documentation**: Known issues or workarounds, relevant documentation
 
 ### 3. Assess Business Impact
 
@@ -116,7 +114,7 @@ Environment: [Details]
 ### 7. Offer Next Steps
 
 After generating the escalation:
-- "Want me to post this in a ~~chat channel for the target team?"
+- "Want me to draft a message to post in a team channel for the target team?"
 - "Should I update the customer with an interim response?"
 - "Want me to set a follow-up reminder to check on this?"
 - "Should I draft a customer-facing update with the current status?"

@@ -106,5 +106,4 @@ Copy `settings/brand-voice.local.md.example` to `.claude/brand-voice.local.md` i
 - Discovery agent is autonomous but accountable — shows its work with provenance and conflicts
 - Open questions are a feature, not a failure — every ambiguity includes a recommendation
 - Progressive disclosure — frontmatter is lean, SKILL.md is focused, detail lives in references/
-- Notion AI Search as federated discovery engine — one API searches 8+ platforms via connected sources
-- Google Drive and Slack are native integrations
+- Discovery works from user-provided materials and documents

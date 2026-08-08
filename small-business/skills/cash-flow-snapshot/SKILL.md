@@ -1,13 +1,13 @@
 ---
 name: cash-flow-snapshot
 description: >
-  Reads AR/AP, historical cash timing, and known fixed costs from QuickBooks,
-  PayPal, Stripe, or Square — or a CSV upload — and produces a 30/60/90-day
-  cash flow forecast with percentage-variance confidence bands and named risk
-  flags. Delivers a chat summary and a downloadable XLSX. Use when the user
-  asks "forecast my cash flow," "will I make payroll," mentions "runway," or
-  says "cash crunch." Falls back to CSV upload when no connector is live.
-compatibility: "Requires one or more of: QuickBooks, PayPal, Stripe, Square, file upload (CSV fallback). Output uses xlsx skill."
+  Builds AR/AP, historical cash timing, and known fixed costs from data the
+  owner provides (CSV upload, pasted figures, or bookkeeping exports) and
+  produces a 30/60/90-day cash flow forecast with percentage-variance confidence
+  bands and named risk flags. Delivers a chat summary and a downloadable XLSX.
+  Use when the user asks "forecast my cash flow," "will I make payroll," mentions
+  "runway," or says "cash crunch."
+compatibility: "Requires financial data from the owner (CSV upload or pasted figures). Output uses xlsx skill."
 ---
 
 # Cash Flow Snapshot
@@ -20,40 +20,32 @@ and a downloadable XLSX workbook.
 
 > "Will I make payroll next month?"
 
-Claude pulls AR/AP and fixed costs from connected sources, calculates expected
-inflows and outflows across 30, 60, and 90-day windows, applies confidence
-bands based on each customer's historical payment variance, and flags specific
-risks by name.
+Claude gathers AR/AP and fixed costs from the owner (CSV upload or pasted figures), calculates expected inflows and outflows across 30, 60, and 90-day windows, applies confidence bands based on each customer's historical payment variance, and flags specific risks by name.
 
 ---
 
 ## Workflow
 
-### Step 1 — Identify available data sources
+### Step 1 — Gather data sources
 
-Check which connectors are live. Try in this order:
+Ask the owner to provide financial data, in order of preference:
 
-1. QuickBooks — primary source for AR aging, AP, and fixed costs
-2. PayPal — transaction history and settlement timing
-3. Stripe — charge and payout history
-4. Square — sales and payout history
-5. CSV upload — fallback if no connector is connected
+1. **CSV/Excel upload** — income/expense tabular data, any reasonable format
+2. **Bookkeeping exports** — AR aging, AP, and recurring cost reports from their accounting software
+3. **Pasted figures** — key numbers: current balance, expected inflows, fixed costs
 
-If no connector is live and no file is attached, ask the user to either connect
-a source or upload a CSV (income/expense tabular data, any reasonable format).
-Note which sources were used in the output — this affects confidence band width.
+If nothing is provided, ask: "Share your recent income and expense data (CSV, bookkeeping export, or key figures) so I can build the forecast." Note which sources were used in the output — this affects confidence band width.
 
 ### Step 2 — Pull the data
 
-**From QuickBooks:**
-- AR aging report: customer name, invoice amount, invoice date, due date, days outstanding
+**From AR aging / bookkeeping exports:**
+- AR aging: customer name, invoice amount, invoice date, due date, days outstanding
 - AP: vendor name, amount due, due date
 - Recurring fixed costs: rent, payroll, subscriptions (look for recurring transactions)
 
-**From PayPal / Stripe / Square:**
+**From payment processor exports (PayPal / Stripe / Square / bank):**
 - Settlement history: transaction date, amount, settlement date
-- Use settlement lag (transaction date → payout date) to compute each source's
-  average and variance payment delay
+- Use settlement lag (transaction date → payout date) to compute each source's average and variance payment delay
 
 **From CSV upload:**
 - Parse as income/expense tabular data
@@ -106,8 +98,8 @@ liquidity crunch. For each risk found, produce a one-line flag:
   April 14: $19,200. Shortfall risk: $2,800."
 - **Thin data warning:** "Only 2 payments on record for Customer Y — confidence
   band set to default ±30%."
-- **No-connector warning:** "Running on CSV data only — no real-time AP or
-  recurring cost data. Confidence bands are wider than normal."
+- **Single-source warning:** "Running on [source] data only — no recurring cost
+  data. Confidence bands are wider than normal."
 
 Limit to the top 5 risks by severity (largest dollar impact first).
 
@@ -116,7 +108,7 @@ Limit to the top 5 risks by severity (largest dollar impact first).
 **Chat summary** (always):
 ```
 Cash Flow Snapshot — [date range]
-Source(s): [connectors used]
+Source(s): [sources used]
 
             Expected    Low       High
 30-day net: $X,XXX     $X,XXX    $X,XXX
@@ -165,5 +157,5 @@ Remind the user after delivery:
 
 | File | Load when |
 |---|---|
-| `reference/gotchas.md` | When a connector returns unexpected data or variance is extreme |
+| `reference/gotchas.md` | When source data is unexpected or variance is extreme |
 | `reference/examples/worked-example.md` | When modeling the output format for a new data shape |

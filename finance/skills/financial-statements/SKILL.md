@@ -6,8 +6,6 @@ argument-hint: "<frequency> <period>"
 
 # /financial-statements
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 **Important**: This command assists with financial statement workflows but does not provide financial advice. All statements should be reviewed by qualified financial professionals before use in reporting or filings.
 
 Generate financial statements with period-over-period comparison and variance analysis. The workflow below walks through income statement generation; balance sheet and cash flow statement reference formats, GAAP presentation requirements (ASC 220/210/230), and common period-end adjustments are included as supporting reference material.
@@ -31,17 +29,10 @@ Generate financial statements with period-over-period comparison and variance an
 
 ### 1. Gather Financial Data
 
-If ~~erp or ~~data warehouse is connected:
-- Pull trial balance or income statement data for the specified period
-- Pull comparison period data (prior period, prior year, budget/forecast)
-- Pull account hierarchy and groupings for presentation
-
-If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull financial data automatically. You can also paste trial balance data, upload a spreadsheet, or provide income statement data for analysis.
-
-Prompt the user to provide:
+Ask the user to provide the underlying data — paste trial balance data, upload a spreadsheet, or provide income statement data for analysis:
 - Current period revenue and expense data (by account or category)
 - Comparison period data (prior period, prior year, and/or budget)
+- Account hierarchy and groupings for presentation
 - Any known adjustments or reclassifications
 
 ### 2. Generate Income Statement

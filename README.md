@@ -10,9 +10,10 @@ You provide context manually (paste text, upload files, describe the situation) 
 
 - Deleted all `*.mcp.json` (21 files) and `CONNECTORS.md` (17 files)
 - Removed connector docs, setup tables, and "supercharged with MCP" sections from READMEs
-- Rewrote skill docs to be standalone (provide context → get output), leaving MCP only where it is educational (e.g. `zoom-mcp` architecture notes) or as literal `mcp__*` tool names in `partner-built/apollo`, which simply will not resolve without a server
+- Stripped connector references from skill prose (placeholders, "If Connectors Available" sections, connected-tool workflows) so every skill is knowledge/instructional and runs from data you provide
+- Removed skills and plugins whose value depended on the connectors: `enterprise-search`, `pdf-viewer`, `partner-built/apollo`, `partner-built/slack`, `partner-built/common-room`, and most of `small-business` (see its README)
 
-Everything else is upstream: same skills, same commands, same file layout.
+Everything else is upstream: same skills, same commands, same file layout. Where a skill mentions a tool (Zoom MCP, DocuSign, QuickBooks, etc.), it is either educational reference material or guidance for the *user* to operate that tool themselves — never an automatic connection.
 
 ## Plugins included
 
@@ -26,14 +27,12 @@ Everything else is upstream: same skills, same commands, same file layout.
 | **[legal](./legal)** | Contract review, NDA triage, compliance, risk, briefs |
 | **[finance](./finance)** | Journal entries, reconciliations, statements, variances, close, audit |
 | **[data](./data)** | SQL, data exploration, visualization, dashboards, validation |
-| **[enterprise-search](./enterprise-search)** | Synthesis of sources you paste in (no live search) |
 | **[bio-research](./bio-research)** | scRNA-seq QC, scvi-tools, Nextflow, Allotrope, problem selection |
 | **[cowork-plugin-management](./cowork-plugin-management)** | Create or customize plugins for your org |
 | **[operations](./operations)** | Vendor, process, change, capacity, status, runbooks |
 | **[human-resources](./human-resources)** | Offers, onboarding, reviews, policy, comp, reporting |
 | **[design](./design)** | Critique, design systems, handoff, UX copy, accessibility, research |
-| **[pdf-viewer](./pdf-viewer)** | View and annotate PDFs |
-| **[small-business](./small-business)** | 15 small-business workflows (file-upload/CSV fallbacks) |
+| **[small-business](./small-business)** | Hiring, contracts, pricing, cash flow, and customer handling (data provided by you) |
 
 Partner-built plugins (`partner-built/*`) are also included without their MCP servers. See their READMEs for standalone limitations.
 

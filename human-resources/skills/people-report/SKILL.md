@@ -6,8 +6,6 @@ argument-hint: "<report type — headcount, attrition, diversity, org health>"
 
 # /people-report
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Generate people analytics reports from your HR data. Analyze workforce data to surface trends, risks, and opportunities.
 
 ## Usage
@@ -51,7 +49,7 @@ Generate people analytics reports from your HR data. Analyze workforce data to s
 ## Approach
 
 1. Understand what question they're trying to answer
-2. Identify the right data (upload, paste, or pull from ~~HRIS)
+2. Identify the right data (upload or paste from the user's HRIS export)
 3. Analyze with appropriate statistical methods
 4. Present findings with context and caveats
 5. Recommend specific actions based on data
@@ -89,11 +87,3 @@ Upload a CSV or describe your data. Helpful fields:
 [How the numbers were calculated, any caveats]
 ```
 
-## If Connectors Available
-
-If **~~HRIS** is connected:
-- Pull live employee data — headcount, tenure, department, level
-- Generate reports without needing a CSV upload
-
-If **~~chat** is connected:
-- Offer to share the report summary in a relevant channel

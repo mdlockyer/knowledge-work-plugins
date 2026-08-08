@@ -1,6 +1,6 @@
 ---
 name: account-research
-description: Research a company or person and get actionable sales intel. Works standalone with web search, supercharged when you connect enrichment tools or your CRM. Trigger with "research [company]", "look up [person]", "intel on [prospect]", "who is [name] at [company]", or "tell me about [company]".
+description: Research a company or person and get actionable sales intel. Works from web search plus whatever context the user provides. Trigger with "research [company]", "look up [person]", "intel on [prospect]", "who is [name] at [company]", or "tell me about [company]".
 ---
 
 # Account Research
@@ -19,10 +19,6 @@ Get a complete picture of any company or person before outreach. This skill alwa
 │  ✓ Hiring signals: open roles, growth indicators                │
 │  ✓ Key people: leadership team from LinkedIn                    │
 │  ✓ Product/service: what they sell, who they serve              │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + Enrichment: verified emails, phone, tech stack, org chart    │
-│  + CRM: prior relationship, past opportunities, contacts        │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -38,20 +34,7 @@ Just tell me who to research:
 - "Who is Sarah Chen at TechCorp?"
 - "Tell me about [company] before my call"
 
-I'll run web searches immediately. If you have enrichment or CRM connected, I'll pull that data too.
-
----
-
-## Connectors (Optional)
-
-Connect your tools to supercharge this skill:
-
-| Connector | What It Adds |
-|-----------|--------------|
-| **Enrichment** | Verified emails, phone numbers, tech stack, org chart, funding details |
-| **CRM** | Prior relationship history, past opportunities, existing contacts, notes |
-
-> **No connectors?** No problem. Web search provides solid research for any company or person.
+I'll run web searches immediately. If you have enrichment data or CRM history to share, I'll incorporate that too.
 
 ---
 
@@ -106,7 +89,7 @@ Connect your tools to supercharge this skill:
 | **LinkedIn** | [URL] |
 | **Background** | [Prior companies, education] |
 | **Tenure** | [Time at company] |
-| **Email** | [If enrichment connected] |
+| **Email** | [If user provides enrichment data] |
 
 **Talking Points:**
 - [Personal hook based on background]
@@ -116,7 +99,7 @@ Connect your tools to supercharge this skill:
 
 ---
 
-## Tech Stack [If Enrichment Connected]
+## Tech Stack [If the user provides it]
 
 | Category | Tools |
 |----------|-------|
@@ -129,7 +112,7 @@ Connect your tools to supercharge this skill:
 
 ---
 
-## Prior Relationship [If CRM Connected]
+## Prior Relationship [If the user provides it]
 
 | Field | Detail |
 |-------|--------|
@@ -209,10 +192,10 @@ Run these searches:
 - Technology mentions
 - Customer base
 
-### Step 3: Enrichment (If Connected)
+### Step 3: Enrichment (If the user provides enrichment data)
 
 ```
-If enrichment tools available:
+If enrichment data is provided:
 1. Enrich company → Firmographics, funding, tech stack
 2. Search people → Org chart, contact list
 3. Enrich person → Email, phone, background
@@ -226,10 +209,10 @@ If enrichment tools available:
 - Detailed tech stack
 - Funding history with investors
 
-### Step 4: CRM Check (If Connected)
+### Step 4: CRM Check (If the user provides CRM history)
 
 ```
-If CRM available:
+If CRM history is provided:
 1. Search for account by domain
 2. Get related contacts
 3. Get opportunity history

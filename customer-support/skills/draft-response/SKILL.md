@@ -6,8 +6,6 @@ argument-hint: "<situation description>"
 
 # /draft-response
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Draft a professional, customer-facing response tailored to the situation, customer relationship, and communication context.
 
 ## Usage
@@ -37,29 +35,29 @@ Parse the user's input to determine:
 
 ### 2. Research Context
 
-Gather relevant background from available sources:
+Gather relevant background from the user and any materials they provide:
 
-**~~email:**
+**Email:**
 - Previous correspondence with this customer on this topic
 - Any commitments or timelines previously shared
 - Tone and style of the existing thread
 
-**~~chat:**
-- Internal discussions about this customer or topic
+**Internal discussions:**
+- What the team knows about this customer or topic
 - Any guidance from product, engineering, or leadership
 - Similar situations and how they were handled
 
-**~~CRM (if connected):**
+**Account context (if available):**
 - Account details and plan level
 - Contact information and key stakeholders
 - Previous escalations or sensitive issues
 
-**~~support platform (if connected):**
+**Support history (if available):**
 - Related tickets and their resolution
 - Known issues or workarounds
 - SLA status and response time commitments
 
-**~~knowledge base:**
+**Documentation:**
 - Official documentation or help articles to reference
 - Product roadmap information (if shareable)
 - Policy or process documentation

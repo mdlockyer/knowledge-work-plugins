@@ -1,6 +1,6 @@
 # Sales Plugin
 
-A sales productivity plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Helps with prospecting, outreach, pipeline management, call preparation, and deal strategy. Works with any sales team — standalone with web search and your input, supercharged when you connect your CRM, email, and other tools.
+A sales productivity plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Helps with prospecting, outreach, pipeline management, call preparation, and deal strategy. Works with any sales team — powered by web search and whatever context you provide.
 
 ## Installation
 
@@ -41,7 +41,7 @@ Domain knowledge Claude uses automatically when relevant:
 /call-summary
 ```
 
-Paste your notes or transcript. Get a structured summary, action items with owners, and a draft follow-up email. If CRM is connected, offers to log the activity and create tasks.
+Paste your notes or transcript. Get a structured summary, action items with owners, and a draft follow-up email.
 
 ### Weekly Forecast
 

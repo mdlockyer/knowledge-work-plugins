@@ -6,8 +6,6 @@ argument-hint: "<new hire name and role>"
 
 # /onboarding
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Generate a comprehensive onboarding plan for a new team member.
 
 ## Usage
@@ -83,19 +81,6 @@ Generate a comprehensive onboarding plan for a new team member.
 |------|-------------|-----------|
 | [Tool] | [Level] | [ ] |
 ```
-
-## If Connectors Available
-
-If **~~HRIS** is connected:
-- Pull new hire details and team org chart
-- Auto-populate tools access list based on role
-
-If **~~knowledge base** is connected:
-- Link to relevant onboarding docs, team wikis, and runbooks
-- Pull the team's existing onboarding checklist to customize
-
-If **~~calendar** is connected:
-- Create Day 1 calendar events and Week 1 meeting invites automatically
 
 ## Tips
 

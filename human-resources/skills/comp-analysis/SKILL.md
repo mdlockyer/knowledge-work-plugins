@@ -6,8 +6,6 @@ argument-hint: "<role, level, or dataset>"
 
 # /comp-analysis
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Analyze compensation data for benchmarking, band placement, and planning. Helps benchmark compensation against market data for hiring, retention, and equity planning.
 
 ## Usage
@@ -43,7 +41,7 @@ Upload a CSV or paste your comp bands. I'll analyze placement, identify outliers
 - **Industry**: Tech vs. finance vs. healthcare
 
 ### Data Sources
-- **With ~~compensation data**: Pull verified benchmarks
+- **With benchmark data**: Analyze user-provided or user-shared benchmark data
 - **Without**: Use web research, public salary data, and user-provided context
 - Always note data freshness and source limitations
 
@@ -74,16 +72,6 @@ Provide percentile bands (25th, 50th, 75th, 90th) for base, equity, and total co
 - [Equity considerations]
 - [Retention risks if applicable]
 ```
-
-## If Connectors Available
-
-If **~~compensation data** is connected:
-- Pull verified market benchmarks by role, level, and location
-- Compare your bands against real-time market data
-
-If **~~HRIS** is connected:
-- Pull current employee comp data for band analysis
-- Identify outliers and retention risks automatically
 
 ## Tips
 

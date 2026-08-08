@@ -4,7 +4,7 @@
 
 The documented path for Zoom MCP is a **General app** using **user-level OAuth**.
 Each user authorizes with their own Zoom account, and the resulting bearer token is passed by
-the bundled connector in [`.mcp.json`](../../../.mcp.json).
+the client's MCP server configuration (for example, the endpoints in the SKILL.md).
 
 ## Step 1: Create a General App with User-Level OAuth
 
@@ -97,12 +97,12 @@ Add the MCP-specific granular scopes required by the tools you want to use.
 | Zoom Docs | `docs:write:import` | Create new file by import | `create_file_with_content` |
 | Zoom Docs | `docs:read:export` | Read file content in Markdown format | `get_file_content` |
 
-Minimum recommendation for the main Zoom MCP connector:
+Minimum recommendation for the main Zoom MCP server:
 - use a General app
 - use user-level OAuth
 - include the 7 main MCP scopes above on the same app
 
-For the dedicated Zoom Docs MCP connector:
+For the dedicated Zoom Docs MCP server:
 - add `docs:write:import` if you want Docs creation
 - add `docs:read:export` if you want Docs retrieval
 - export the resulting token as `ZOOM_DOCS_MCP_ACCESS_TOKEN`
@@ -149,9 +149,9 @@ Important:
 - these settings do **not** replace the OAuth scopes above
 - they affect whether useful recap and transcript content exists for MCP retrieval
 
-## Step 5: Provide the Token to the Bundled MCP Connector
+## Step 5: Provide the Token to the MCP Server
 
-Export the token environment variable used by this plugin:
+Export the token environment variables used by the server:
 
 ```bash
 export ZOOM_MCP_ACCESS_TOKEN="YOUR_ACCESS_TOKEN"
@@ -159,7 +159,7 @@ export ZOOM_DOCS_MCP_ACCESS_TOKEN="YOUR_DOCS_ACCESS_TOKEN"
 ```
 
 Verification:
-- restart Claude Code or re-enable the plugin so the bundled MCP server restarts with the token
+- restart the client so the MCP server restarts with the token
 - confirm the client can see `recordings_list`, `search_meetings`, `get_meeting_assets`,
   and `get_recording_resource`
 - for the dedicated Docs server, confirm the client can see `create_file_with_content`

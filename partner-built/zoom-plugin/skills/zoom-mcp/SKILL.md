@@ -1,6 +1,6 @@
 ---
 name: zoom-mcp
-description: Guidance for the bundled Zoom MCP connectors. Use after routing to an MCP workflow when planning or troubleshooting tool-based access to meetings, recordings, meeting assets, or transcripts. Route Zoom Docs requests to the dedicated Docs MCP server and Whiteboard-specific requests to `zoom-mcp/whiteboard`.
+description: Guidance for Zoom's hosted MCP servers. Use after routing to an MCP workflow when planning or troubleshooting tool-based access to meetings, recordings, meeting assets, or transcripts. Route Zoom Docs requests to the dedicated Docs MCP server and Whiteboard-specific requests to `zoom-mcp/whiteboard`.
 user-invocable: false
 triggers:
   - "zoom mcp"
@@ -21,17 +21,17 @@ triggers:
 
 # Zoom MCP
 
-Guidance for the bundled Zoom MCP connector in this Claude plugin. Prefer `design-mcp-workflow` or [setup-zoom-mcp](../setup-zoom-mcp/SKILL.md) first, then route here for tool-surface details, auth expectations, and MCP-specific constraints.
+Guidance for Zoom's hosted MCP servers. Prefer `design-mcp-workflow` or [setup-zoom-mcp](../setup-zoom-mcp/SKILL.md) first, then route here for tool-surface details, auth expectations, and MCP-specific constraints.
 
 # Zoom MCP Server
 
-This plugin bundles Zoom's hosted MCP server at `mcp-us.zoom.us` for AI-agent access to:
+Zoom hosts an MCP server at `mcp-us.zoom.us` for AI-agent access to:
 
 - semantic meeting search
 - meeting-linked asset retrieval
 - recording resource retrieval
 
-Zoom Docs are exposed through a separate bundled server:
+Zoom Docs are exposed through a separate server:
 
 - `zoom-docs-mcp` at `mcp.zoom.us`
 - purpose-built for Zoom Docs creation and retrieval
@@ -53,13 +53,13 @@ Whiteboard-specific MCP work is covered by the dedicated skill
 
 ## Quick Start
 
-**1. Export the token expected by the bundled connector:**
+**1. Export the token expected by the server:**
 
 ```bash
 export ZOOM_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
 ```
 
-**2. Enable or restart the plugin so Claude restarts the bundled MCP server definition.**
+**2. Configure the MCP server in your client** (e.g. Claude Code or Cowork) using the endpoints below, and set the access token.
 
 **3. Verify discovery:**
 - Confirm the client can see `recordings_list`, `search_meetings`, `get_meeting_assets`,
@@ -81,7 +81,7 @@ recordings_list
 **1. User OAuth is the documented execution path**
 
 Use a **General app** with **user-level OAuth** as the execution path for Zoom MCP
-tool use in this plugin. Do not rely on Server-to-Server OAuth as a supported MCP auth model here.
+tool use. Do not rely on Server-to-Server OAuth as a supported MCP auth model for MCP.
 
 **2. Zoom MCP uses MCP-specific granular scopes**
 

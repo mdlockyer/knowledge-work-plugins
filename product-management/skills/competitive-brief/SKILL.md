@@ -6,8 +6,6 @@ argument-hint: "<competitor or feature area>"
 
 # Competitive Brief
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Create a competitive analysis brief for one or more competitors or a feature area.
 
 ## Usage
@@ -36,14 +34,11 @@ Ask the user:
 - Job postings (signal of strategic direction)
 - Social media and community discussions
 
-If **~~knowledge base** is connected:
-- Search for existing competitive analysis documents
-- Find win/loss reports or sales battle cards
-- Pull prior competitive research
-
-If **~~chat** is connected:
-- Search for competitive mentions in sales or product channels
-- Find recent deal feedback involving competitors
+If the user provides internal documents, incorporate them:
+- Existing competitive analysis documents
+- Win/loss reports or sales battle cards
+- Prior competitive research
+- Competitive mentions in sales or product channels, recent deal feedback involving competitors
 
 ### 3. Generate the Brief
 

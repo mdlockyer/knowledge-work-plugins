@@ -5,8 +5,6 @@ argument-hint: "<topic, problem, or idea to explore>"
 
 # /brainstorm
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../CONNECTORS.md).
-
 Brainstorm a product topic with a sharp, opinionated thinking partner. This is a conversation, not a deliverable — the goal is to push thinking further than the PM would get alone.
 
 ## Usage
@@ -27,12 +25,6 @@ Brainstorm a product topic with a sharp, opinionated thinking partner. This is a
 │  ✓ Stress-test assumptions and strategies                      │
 │  ✓ Apply PM frameworks (HMW, JTBD, First Principles, etc.)    │
 │  ✓ Capture key ideas, next steps, and open questions           │
-├────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                    │
-│  + Knowledge base: Pull prior research, specs, and decisions   │
-│  + Analytics: Ground ideas in actual usage data                │
-│  + Project tracker: Check what has been tried before           │
-│  + Chat: Review recent team discussions for context            │
 └────────────────────────────────────────────────────────────────┘
 ```
 
@@ -52,24 +44,14 @@ Ask one clarifying question to frame the session, then dive in. Do not front-loa
 
 ### 2. Pull Context (if available)
 
-If **~~knowledge base** is connected:
-- Search for prior research, specs, or decision documents related to the topic
-- Surface relevant user research findings or customer feedback
-- Find previous brainstorming notes or exploration documents
+If the user provides any of the following, use it to ground the session:
 
-If **~~product analytics** is connected:
-- Pull relevant usage data, adoption metrics, or behavioral patterns
-- Ground the brainstorm in real numbers rather than assumptions
+- **Prior research or docs**: Search for prior research, specs, or decision documents related to the topic
+- **Usage data**: Relevant usage data, adoption metrics, or behavioral patterns to ground the brainstorm in real numbers
+- **Past attempts**: Whether similar ideas have been explored, attempted, or shelved before
+- **Team discussions**: Recent team discussions on the topic, relevant customer conversations or feedback threads
 
-If **~~project tracker** is connected:
-- Check if similar ideas have been explored, attempted, or shelved before
-- Look for related tickets, epics, or strategic themes
-
-If **~~chat** is connected:
-- Search for recent team discussions on the topic
-- Surface relevant customer conversations or feedback threads
-
-If these tools are not connected, work entirely from what the PM provides. Do not ask them to connect tools.
+Work from whatever the user provides — do not ask them to connect tools.
 
 ### 3. Run the Session
 

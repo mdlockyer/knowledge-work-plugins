@@ -6,8 +6,6 @@ argument-hint: "[audit | document | extend] <component or system>"
 
 # /design-system
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Manage your design system — audit for consistency, document components, or design new patterns.
 
 ## Usage
@@ -172,16 +170,6 @@ Common UI solutions combining components:
 - [Decision that needs design review]
 - [Edge case to resolve]
 ```
-
-## If Connectors Available
-
-If **~~design tool** is connected:
-- Audit components directly in Figma — check naming, variants, and token usage
-- Pull component properties and layer structure for documentation
-
-If **~~knowledge base** is connected:
-- Search for existing component documentation and usage guidelines
-- Publish updated documentation to your wiki
 
 ## Tips
 

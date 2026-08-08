@@ -1,11 +1,11 @@
 ---
 name: daily-briefing
-description: Start your day with a prioritized sales briefing. Works standalone when you tell me your meetings and priorities, supercharged when you connect your calendar, CRM, and email. Trigger with "morning briefing", "daily brief", "what's on my plate today", "prep my day", or "start my day".
+description: Start your day with a prioritized sales briefing. Works from what you tell me — meetings, pipeline, and priorities. Trigger with "morning briefing", "daily brief", "what's on my plate today", "prep my day", or "start my day".
 ---
 
 # Daily Sales Briefing
 
-Get a clear view of what matters most today. This skill works with whatever you tell me, and gets richer when you connect your tools.
+Get a clear view of what matters most today. This skill works with whatever you tell me.
 
 ## How It Works
 
@@ -17,12 +17,6 @@ Get a clear view of what matters most today. This skill works with whatever you 
 │  ✓ You tell me: today's meetings, key deals, priorities         │
 │  ✓ I organize: prioritized action plan for your day             │
 │  ✓ Output: scannable 2-minute briefing                          │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + Calendar: auto-pull today's meetings with attendees          │
-│  + CRM: pipeline alerts, tasks, deal health                     │
-│  + Email: unread from key accounts, waiting on replies          │
-│  + Enrichment: overnight signals on your accounts               │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -32,29 +26,10 @@ Get a clear view of what matters most today. This skill works with whatever you 
 
 When you run this skill, I'll ask for what I need:
 
-**If no calendar connected:**
 > "What meetings do you have today? (Just paste your calendar or list them)"
-
-**If no CRM connected:**
 > "What deals are you focused on this week? Any that need attention?"
 
-**If you have connectors:**
-I'll pull everything automatically and just show you the briefing.
-
----
-
-## Connectors (Optional)
-
-Connect your tools to supercharge this skill:
-
-| Connector | What It Adds |
-|-----------|--------------|
-| **Calendar** | Today's meetings with attendees, times, and context |
-| **CRM** | Open pipeline, deals closing soon, overdue tasks, stale deals |
-| **Email** | Unread from opportunity contacts, emails waiting on replies |
-| **Enrichment** | Overnight signals: funding, hiring, news on your accounts |
-
-> **No connectors?** No problem. Tell me your meetings and deals, and I'll create your briefing.
+Work with whatever you provide.
 
 ---
 
@@ -142,28 +117,26 @@ Connect your tools to supercharge this skill:
 
 ### Step 1: Gather Context
 
-**If connectors available:**
+Gather what the user provides:
 ```
-1. Calendar → Get today's events
+1. Calendar / meetings → today's events
    - Filter to external meetings (non-company attendees)
    - Pull: time, title, attendees, description
 
-2. CRM → Query your pipeline
+2. Pipeline / deals → what the user shares
    - Open opportunities owned by you
    - Flag: closing this week, no activity 7+ days, slipped dates
    - Get: overdue tasks, upcoming tasks
 
-3. Email → Check priority messages
+3. Email priorities → messages the user flags
    - Unread from opportunity contact domains
    - Sent messages with no reply (3+ days)
 
-4. Enrichment → Check signals (if available)
+4. Enrichment signals (if provided)
    - Funding, hiring, news on open accounts
 ```
 
-**If no connectors:**
-```
-Ask user:
+Ask the user:
 1. "What meetings do you have today?"
 2. "What deals are you focused on? Any closing soon or needing attention?"
 3. "Anything urgent I should know about?"
@@ -195,10 +168,10 @@ Select #1 Priority:
 Assemble sections based on available data:
 
 1. #1 Priority — Always include (even if simple)
-2. Today's Numbers — If CRM connected, otherwise skip
+2. Today's Numbers — From the user's pipeline info, otherwise skip
 3. Today's Meetings — From calendar or user input
-4. Pipeline Alerts — If CRM connected
-5. Email Priorities — If email connected
+4. Pipeline Alerts — From the user's deal info
+5. Email Priorities — From the user's email info
 6. Suggested Actions — Always include top 3 actions
 ```
 
@@ -250,9 +223,9 @@ Say "wrap up my day" or "end of day summary" after your last meeting:
 
 ## Tips
 
-1. **Connect your calendar first** — Biggest time saver
-2. **Add CRM second** — Unlocks pipeline alerts
-3. **Even without connectors** — Just tell me your meetings and I'll help prioritize
+1. **Share your calendar or meetings first** — Biggest time saver
+2. **Give me your pipeline** — Unlocks alerts
+3. **Even with minimal info** — Just tell me your meetings and I'll help prioritize
 
 ---
 

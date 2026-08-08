@@ -6,8 +6,6 @@ argument-hint: "<error message or problem description>"
 
 # /debug
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Run a structured debugging session to find and fix issues systematically.
 
 ## Usage
@@ -73,20 +71,6 @@ Tell me about the problem. Any of these help:
 - [Test to add]
 - [Guard to put in place]
 ```
-
-## If Connectors Available
-
-If **~~monitoring** is connected:
-- Pull logs, error rates, and metrics around the time of the issue
-- Show recent deploys and config changes that may correlate
-
-If **~~source control** is connected:
-- Identify recent commits and PRs that touched affected code paths
-- Check if the issue correlates with a specific change
-
-If **~~project tracker** is connected:
-- Search for related bug reports or known issues
-- Create a ticket for the fix once identified
 
 ## Tips
 

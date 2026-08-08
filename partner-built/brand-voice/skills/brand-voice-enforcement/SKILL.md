@@ -26,7 +26,7 @@ Find the user's brand guidelines using this sequence. Stop as soon as you find t
 
 3. **Ask the user** — If none of the above found guidelines, tell the user:
    "I couldn't find your brand guidelines. You can:
-   - Run `/brand-voice:discover-brand` to find brand materials across your platforms
+   - Run `/brand-voice:discover-brand` to collect brand materials from you
    - Run `/brand-voice:generate-guidelines` to create guidelines from documents or transcripts
    - Paste guidelines directly into this chat or point me to a file"
 

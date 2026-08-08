@@ -6,8 +6,6 @@ argument-hint: "<role and level>"
 
 # /draft-offer
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Draft a complete offer letter for a new hire.
 
 ## Usage
@@ -63,17 +61,6 @@ We are pleased to offer you the position of [Title] at [Company]...
 - [Comp band context]
 - [Any flags or considerations]
 ```
-
-## If Connectors Available
-
-If **~~HRIS** is connected:
-- Pull comp band data for the level/role
-- Verify headcount approval
-- Auto-populate benefits details
-
-If **~~ATS** is connected:
-- Pull candidate details from the application
-- Update offer status in the pipeline
 
 ## Tips
 

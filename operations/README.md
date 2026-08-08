@@ -1,6 +1,6 @@
 # Operations Plugin
 
-A business operations plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Helps with vendor management, process documentation, change management, capacity planning, compliance tracking, and resource planning. Works with any ops team — standalone with your input, supercharged when you connect your ITSM, project tracker, and other tools.
+A business operations plugin primarily designed for [Cowork](https://claude.com/product/cowork), Anthropic's agentic desktop application — though it also works in Claude Code. Helps with vendor management, process documentation, change management, capacity planning, compliance tracking, and resource planning. Works with any ops team — you provide the details and data, and Claude does the rest.
 
 ## Installation
 
@@ -76,7 +76,7 @@ Upload team data or describe your resources. Get utilization analysis, bottlenec
 /status-report
 ```
 
-I'll pull updates from your connected tools (or ask you for input) and generate a polished status report with KPIs, risks, and next steps.
+I'll work from the updates you provide (or ask you for input) and generate a polished status report with KPIs, risks, and next steps.
 
 ### Creating a Runbook
 

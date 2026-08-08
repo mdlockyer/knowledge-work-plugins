@@ -1,13 +1,13 @@
 ---
 name: vendor-check
-description: Check the status of existing agreements with a vendor across all connected systems — CLM, CRM, email, and document storage — with gap analysis and upcoming deadlines. Use when onboarding or renewing a vendor, when you need a consolidated view of what's signed and what's missing (MSA, DPA, SOW), or when checking for approaching expirations and surviving obligations.
+description: Check the status of existing agreements with a vendor using data the user provides — CLM, CRM, email, and document storage — with gap analysis and upcoming deadlines. Use when onboarding or renewing a vendor, when you need a consolidated view of what's signed and what's missing (MSA, DPA, SOW), or when checking for approaching expirations and surviving obligations.
 argument-hint: "[vendor name]"
 ---
 
 # /vendor-check -- Vendor Agreement Status
 
 
-Check the status of existing agreements with a vendor across all connected systems. Provides a consolidated view of the legal relationship.
+Check the status of existing agreements with a vendor using data the user provides. Provides a consolidated view of the legal relationship.
 
 **Important**: This command assists with legal workflows but does not provide legal advice. Agreement status reports should be verified against original documents by qualified legal professionals.
 
@@ -30,40 +30,42 @@ Accept the vendor name from the user. Handle common variations:
 
 Ask the user to clarify if the vendor name is ambiguous.
 
-### Step 2: Search Connected Systems
+### Step 2: Gather Agreement Information
 
-Search for the vendor across all available connected systems, in priority order:
+Ask the user what they can provide, working through the most authoritative sources first:
 
-#### CLM (Contract Lifecycle Management) -- If Connected
-Search for all contracts involving the vendor:
+#### CLM (Contract Lifecycle Management)
+Ask for all contracts involving the vendor:
 - Active agreements
 - Expired agreements (last 3 years)
 - Agreements in negotiation or pending signature
 - Amendments and addenda
 
-#### CRM -- If Connected
-Search for the vendor/account record:
+#### CRM
+Ask for the vendor/account record:
 - Account status and relationship type
 - Associated opportunities or deals
 - Contact information for vendor's legal/contracts team
 
-#### Email -- If Connected
-Search for recent relevant correspondence:
+#### Email
+Ask for recent relevant correspondence:
 - Contract-related emails (last 6 months)
 - NDA or agreement attachments
 - Negotiation threads
 
-#### Documents (e.g., Box, Egnyte, SharePoint) -- If Connected
-Search for:
+#### Documents (e.g., Box, Egnyte, SharePoint)
+Ask for:
 - Executed agreements
 - Redlines and drafts
 - Due diligence materials
 
-#### Chat (e.g., Slack, Teams) -- If Connected
-Search for recent mentions:
+#### Chat (e.g., Slack, Teams)
+Ask for recent mentions:
 - Contract requests involving this vendor
 - Legal questions about the vendor
 - Relevant team discussions (last 3 months)
+
+Work from whatever the user provides — if a system's data isn't available, note it in the output.
 
 ### Step 3: Compile Agreement Status
 
@@ -104,8 +106,8 @@ Output a consolidated report:
 ## Vendor Agreement Status: [Vendor Name]
 
 **Search Date**: [today's date]
-**Sources Checked**: [list of systems searched]
-**Sources Unavailable**: [list of systems not connected, if any]
+**Sources Checked**: [list of systems the user provided data from]
+**Sources Unavailable**: [list of systems with no data provided, if any]
 
 ## Relationship Overview
 
@@ -141,9 +143,9 @@ Output a consolidated report:
 
 ### Step 6: Handle Missing Sources
 
-If key systems are not connected :
+If the user couldn't provide data from key systems:
 
-- **No CLM**: Note that no CLM is connected. Suggest the user check their CLM manually. Report what was found in other systems.
+- **No CLM**: Note that no CLM data was provided. Suggest the user check their CLM manually. Report what was found from other sources.
 - **No CRM**: Skip CRM context. Note the gap.
 - **No Email**: Note that email was not searched. Suggest the user search their email for "[vendor name] agreement" or "[vendor name] NDA".
 - **No Documents**: Note that document storage was not searched.
@@ -152,7 +154,7 @@ Always clearly state which sources were checked and which were not, so the user 
 
 ## Notes
 
-- If no agreements are found in any connected system, report that clearly and ask the user if they have agreements stored elsewhere
+- If no agreements are found in any of the provided data, report that clearly and ask the user if they have agreements stored elsewhere
 - For vendor groups (e.g., a vendor with multiple subsidiaries), ask whether the user wants to check a specific entity or the entire group
 - Flag any agreements that are expired but may still have surviving obligations (confidentiality, indemnification, etc.)
 - If an agreement is approaching expiration (within 90 days), highlight this prominently

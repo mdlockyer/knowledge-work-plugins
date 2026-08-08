@@ -44,11 +44,11 @@ Common options:
 - **PostgreSQL/Redshift**
 - **Databricks**
 
-Use `~~data warehouse` tools (query and schema) to connect. If unclear, check available tools in the current session.
+Use `data warehouse` query and schema tools if the user has them available in the current session; otherwise, ask the user to provide schema information or a sample of the tables. If unclear, check available tools in the current session.
 
 **Step 2: Explore the schema**
 
-Use `~~data warehouse` schema tools to:
+If warehouse tools are available, use their schema tools; otherwise, ask the user to paste or describe the schema:
 1. List available datasets/schemas
 2. Identify the most important tables (ask user: "Which 3-5 tables do analysts query most often?")
 3. Pull schema details for those key tables
@@ -167,7 +167,7 @@ Common gaps:
 
 For the identified domain:
 
-1. **Explore relevant tables**: Use `~~data warehouse` schema tools to find tables in that domain
+1. **Explore relevant tables**: Use data warehouse schema tools if available, or ask the user to share the relevant tables
 2. **Ask domain-specific questions**:
    - "What tables are used for [domain] analysis?"
    - "What are the key metrics for [domain]?"

@@ -6,8 +6,6 @@ argument-hint: "<question or topic>"
 
 # /customer-research
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Multi-source research on a customer question, product topic, or account-related inquiry. Synthesizes findings from all available sources with clear attribution and confidence scoring.
 
 ## Usage
@@ -34,21 +32,21 @@ Before searching, clarify what you're actually trying to find:
 
 ### 2. Search Available Sources
 
-Search systematically through the source tiers below, adapting to what is connected. Don't stop at the first result — cross-reference across sources.
+Search systematically through the source tiers below, using what the user provides. Don't stop at the first result — cross-reference across sources.
 
 **Tier 1 — Official Internal Sources (highest confidence):**
-- ~~knowledge base (if connected): product docs, runbooks, FAQs, policy documents
-- ~~cloud storage: internal documents, specs, guides, past research
+- Product documentation: product docs, runbooks, FAQs, policy documents (from the user or their knowledge base)
+- Internal documents: specs, guides, past research (if the user shares them)
 - Product roadmap (internal-facing): feature timelines, priorities
 
 **Tier 2 — Organizational Context:**
-- ~~CRM notes: account notes, activity history, previous answers, opportunity details
-- ~~support platform (if connected): previous resolutions, known issues, workarounds
+- Account notes: account activity history, previous answers, opportunity details (from the user's CRM if available)
+- Support history: previous resolutions, known issues, workarounds
 - Meeting notes: previous discussions, decisions, commitments
 
 **Tier 3 — Team Communications:**
-- ~~chat: search for the topic in relevant channels; check if teammates have discussed or answered this before
-- ~~email: search for previous correspondence on this topic
+- Team channels: search the topic in relevant channels; check if teammates have discussed or answered this before
+- Email: previous correspondence on this topic
 - Calendar notes: meeting agendas and post-meeting notes
 
 **Tier 4 — External Sources:**
@@ -103,12 +101,12 @@ Compile results into a structured research brief:
 
 ### 4. Handle Insufficient Sources
 
-If no connected sources yield results:
+If no provided sources yield results:
 
 - Perform web research on the topic
 - Ask the user for internal context:
-  - "I couldn't find this in connected sources. Do you have internal docs or knowledge base articles about this?"
-  - "Has your team discussed this topic before? Any ~~chat channels I should check?"
+  - "I couldn't find this in the sources you provided. Do you have internal docs or knowledge base articles about this?"
+  - "Has your team discussed this topic before? Any team channels I should check?"
   - "Is there a subject matter expert who would know the answer?"
 - Be transparent about limitations:
   - "This answer is based on web research only — please verify against your internal documentation before sharing with the customer."

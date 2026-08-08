@@ -6,8 +6,6 @@ argument-hint: "<process name or description>"
 
 # /process-doc
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Document a business process as a complete standard operating procedure (SOP).
 
 ## Usage
@@ -64,16 +62,6 @@ Walk me through the process — describe it, paste existing docs, or just tell m
 ### Related Documents
 - [Link to related process or policy]
 ```
-
-## If Connectors Available
-
-If **~~knowledge base** is connected:
-- Search for existing process documentation to update rather than duplicate
-- Publish the completed SOP to your wiki
-
-If **~~project tracker** is connected:
-- Link the process to related projects and workflows
-- Create tasks for process improvement action items
 
 ## Tips
 

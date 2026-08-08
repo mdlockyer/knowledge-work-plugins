@@ -6,8 +6,6 @@ argument-hint: "<time period or metric focus>"
 
 # Metrics Review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Review and analyze product metrics, identify trends, and surface actionable insights.
 
 ## Usage
@@ -20,13 +18,10 @@ Review and analyze product metrics, identify trends, and surface actionable insi
 
 ### 1. Gather Metrics Data
 
-If **~~product analytics** is connected:
-- Pull key product metrics for the relevant time period
-- Get comparison data (previous period, same period last year, targets)
-- Pull segment breakdowns if available
-
-If no analytics tool is connected, ask the user to provide:
-- The metrics and their values (paste a table, screenshot, or describe)
+Ask the user to provide the metrics and their values (paste a table, screenshot, or describe them), including:
+- Key product metrics for the relevant time period
+- Comparison data (previous period, same period last year, targets)
+- Segment breakdowns if available
 - Comparison data (previous period, targets)
 - Any context on recent changes (launches, incidents, seasonality)
 

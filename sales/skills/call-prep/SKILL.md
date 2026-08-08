@@ -1,11 +1,11 @@
 ---
 name: call-prep
-description: Prepare for a sales call with account context, attendee research, and suggested agenda. Works standalone with user input and web research, supercharged when you connect your CRM, email, chat, or transcripts. Trigger with "prep me for my call with [company]", "I'm meeting with [company] prep me", "call prep [company]", or "get me ready for [meeting]".
+description: Prepare for a sales call with account context, attendee research, and suggested agenda. Works from user input and web research. Trigger with "prep me for my call with [company]", "I'm meeting with [company] prep me", "call prep [company]", or "get me ready for [meeting]".
 ---
 
 # Call Prep
 
-Get fully prepared for any sales call in minutes. This skill works with whatever context you provide, and gets significantly better when you connect your sales tools.
+Get fully prepared for any sales call in minutes. This skill works with whatever context you provide — notes, emails, calendar invites, or CRM exports.
 
 ## How It Works
 
@@ -18,13 +18,6 @@ Get fully prepared for any sales call in minutes. This skill works with whatever
 │  ✓ Web search: recent news, funding, leadership changes         │
 │  ✓ Company research: what they do, size, industry               │
 │  ✓ Output: prep brief with agenda and questions                 │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + CRM: account history, contacts, opportunities, activities    │
-│  + Email: recent threads, open questions, commitments           │
-│  + Chat: internal discussions, colleague insights               │
-│  + Transcripts: prior call recordings, key moments              │
-│  + Calendar: auto-find meeting, pull attendees                  │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -41,24 +34,6 @@ When you run this skill, I'll ask for what I need:
 **Helpful if you have it:**
 - Who's attending (names and titles)
 - Any context you want me to know (paste prior notes, emails, etc.)
-
-If you've connected your CRM, email, or other tools, I'll pull context automatically and skip the questions.
-
----
-
-## Connectors (Optional)
-
-Connect your tools to supercharge this skill:
-
-| Connector | What It Adds |
-|-----------|--------------|
-| **CRM** | Account details, contact history, open deals, recent activities |
-| **Email** | Recent threads with the company, open questions, attachments shared |
-| **Chat** | Internal chat discussions (e.g. Slack) about the account, colleague insights |
-| **Transcripts** | Prior call recordings, topics covered, competitor mentions |
-| **Calendar** | Auto-find the meeting, pull attendees and description |
-
-> **No connectors?** No problem. Just tell me about the meeting and paste any context you have. I'll research the rest.
 
 ---
 
@@ -162,37 +137,32 @@ Run **call-follow-up** to:
 
 ### Step 1: Gather Context
 
-**If connectors available:**
+Ask the user:
+1. "What company are you meeting with?"
+2. "What type of meeting is this?"
+3. "Who's attending? (names and titles if you know)"
+4. "Any context you want me to know? (paste notes, emails, etc.)"
+
+Incorporate whatever they provide — prior notes, emails, calendar invites, CRM exports:
 ```
-1. Calendar → Find upcoming meeting matching company name
+1. Calendar invite → upcoming meeting matching company name
    - Pull: title, time, attendees, description, attachments
 
-2. CRM → Query account
+2. Account history (if provided) → account context
    - Pull: account details, all contacts, open opportunities
    - Pull: last 10 activities, any account notes
 
-3. Email → Search recent threads
-   - Query: emails with company domain (last 30 days)
+3. Email threads (if provided) → recent correspondence
+   - Emails with company domain (last 30 days)
    - Extract: key topics, open questions, commitments
 
-4. Chat → Search internal discussions
-   - Query: company name mentions (last 30 days)
+4. Internal discussions (if provided) → team insights
+   - Company name mentions (last 30 days)
    - Extract: colleague insights, competitive intel
 
-5. Transcripts → Find prior calls
-   - Pull: call recordings with this account
+5. Prior call notes (if provided) → past conversations
+   - Pull: call recordings or notes with this account
    - Extract: key moments, objections raised, topics covered
-```
-
-**If no connectors:**
-```
-1. Ask user:
-   - "What company are you meeting with?"
-   - "What type of meeting is this?"
-   - "Who's attending? (names and titles if you know)"
-   - "Any context you want me to know? (paste notes, emails, etc.)"
-
-2. Accept whatever they provide and work with it
 ```
 
 ### Step 2: Research Supplement

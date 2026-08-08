@@ -6,8 +6,6 @@ argument-hint: "<campaign objective or product>"
 
 # Campaign Plan
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Generate a comprehensive marketing campaign brief with objectives, audience, messaging, channel strategy, content calendar, and success metrics.
 
 ## Trigger
@@ -94,7 +92,7 @@ Define KPIs aligned to the campaign objective:
 - How each metric will be tracked
 - Reporting cadence recommendation
 
-If ~~product analytics is connected, reference any available historical performance benchmarks to inform targets.
+If the user provides historical performance benchmarks (e.g., from past campaigns or analytics exports), reference them to inform targets.
 
 ### 8. Budget Allocation (if budget provided)
 - Breakdown by channel or activity

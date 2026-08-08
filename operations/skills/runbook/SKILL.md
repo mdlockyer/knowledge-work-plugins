@@ -6,8 +6,6 @@ argument-hint: "<process or task name>"
 
 # /runbook
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Create a step-by-step operational runbook for a recurring task or procedure.
 
 ## Usage
@@ -69,16 +67,6 @@ Create a step-by-step operational runbook for a recurring task or procedure.
 |------|--------|-------|
 | [Date] | [Person] | [Any issues or observations] |
 ```
-
-## If Connectors Available
-
-If **~~knowledge base** is connected:
-- Search for existing runbooks to update rather than create from scratch
-- Publish the completed runbook to your ops wiki
-
-If **~~ITSM** is connected:
-- Link the runbook to related incident types and change requests
-- Auto-populate escalation contacts from on-call schedules
 
 ## Tips
 

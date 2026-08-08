@@ -1,6 +1,6 @@
 ---
 name: update
-description: Sync tasks and refresh memory from your current activity. Use when pulling new assignments from your project tracker into TASKS.md, triaging stale or overdue tasks, filling memory gaps for unknown people or projects, or running a comprehensive scan to catch todos buried in chat and email.
+description: Refresh tasks and memory from your current activity. Use when triaging stale or overdue tasks, filling memory gaps for unknown people or projects, or running a comprehensive scan to catch todos buried in chat and email.
 argument-hint: "[--comprehensive]"
 ---
 
@@ -9,7 +9,7 @@ argument-hint: "[--comprehensive]"
 
 Keep your task list and memory current. Two modes:
 
-- **Default:** Sync tasks from external tools, triage stale items, check memory for gaps
+- **Default:** Review tasks, triage stale items, check memory for gaps
 - **`--comprehensive`:** Deep scan chat, email, calendar, docs — flag missed todos and suggest new memories
 
 ## Usage
@@ -28,8 +28,8 @@ Read `TASKS.md` and `memory/` directory. If they don't exist, suggest `/producti
 ### 2. Sync Tasks from External Sources
 
 Check for available task sources:
-- **Project tracker** (e.g. Asana, Linear, Jira) (if MCP available)
 - **GitHub Issues** (if in a repo): `gh issue list --assignee=@me`
+- **Anything the user pastes**: assignments from email, chat, or their project tracker
 
 If no sources are available, skip to Step 3.
 

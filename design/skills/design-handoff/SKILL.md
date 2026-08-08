@@ -6,8 +6,6 @@ argument-hint: "<Figma URL or design description>"
 
 # /design-handoff
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Generate comprehensive developer handoff documentation from a design.
 
 ## Usage
@@ -113,16 +111,6 @@ If a Figma URL is provided, pull the design from Figma. Otherwise, work from the
 - [ARIA labels needed]
 - [Keyboard interactions]
 ```
-
-## If Connectors Available
-
-If **~~design tool** is connected:
-- Pull exact measurements, tokens, and component specs from Figma
-- Export assets and generate a complete spec sheet
-
-If **~~project tracker** is connected:
-- Link the handoff to the implementation ticket
-- Create sub-tasks for each section of the spec
 
 ## Tips
 

@@ -6,8 +6,6 @@ argument-hint: "<context or copy to review>"
 
 # /ux-copy
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Write or review UX copy for any interface context.
 
 ## Usage
@@ -89,16 +87,6 @@ Adapt tone to context:
 ### Localization Notes
 [Anything translators should know — idioms to avoid, character expansion, cultural context]
 ```
-
-## If Connectors Available
-
-If **~~knowledge base** is connected:
-- Pull your brand voice guidelines and content style guide
-- Check for existing copy patterns and terminology standards
-
-If **~~design tool** is connected:
-- View the screen context in Figma to understand the full user flow
-- Check character limits and layout constraints from the design
 
 ## Tips
 

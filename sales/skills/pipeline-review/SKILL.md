@@ -6,8 +6,6 @@ argument-hint: "<segment or rep>"
 
 # /pipeline-review
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Analyze your pipeline health, prioritize deals, and get actionable recommendations for where to focus.
 
 ## Usage
@@ -35,12 +33,6 @@ If a file is referenced: @$1
 │  ✓ Prioritization: rank deals by impact and closability        │
 │  ✓ Hygiene audit: missing data, bad close dates, single-thread │
 │  ✓ Weekly action plan: what to focus on                        │
-├─────────────────────────────────────────────────────────────────┤
-│  SUPERCHARGED (when you connect your tools)                      │
-│  + CRM: Pull pipeline automatically, update records             │
-│  + Activity data for engagement scoring                         │
-│  + Historical patterns for risk prediction                      │
-│  + Calendar: See upcoming meetings per deal                     │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -228,9 +220,8 @@ You can tell me to weight differently: "Focus on big deals over soon deals" or "
 
 ---
 
-## If CRM Connected
-
-- I'll pull your pipeline automatically
+If the user provides their pipeline data (export or paste), incorporate it:
+- Pull their pipeline directly from the provided data
 - Update records with new close dates, stages, next steps
 - Create follow-up tasks
 - Track hygiene improvements over time

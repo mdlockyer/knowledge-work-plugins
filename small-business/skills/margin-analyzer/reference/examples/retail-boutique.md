@@ -1,7 +1,7 @@
 # Example: Retail Boutique — Apparel
 
 **Business:** Small women's clothing boutique, brick-and-mortar + Shopify
-**Connectors:** QuickBooks (costs), PayPal (online sales)
+**Data sources:** CSV exports (accounting costs, payment processor sales)
 **Data:** 14 months of transactions
 
 ---
@@ -33,8 +33,8 @@ Metric priority: gross margin % (she wants to understand profitability, not just
 
 ## Step 3–4: Data pulled
 
-- **QuickBooks:** 14 months of COGS by product category
-- **PayPal:** 14 months of transaction history (online sales only; in-store via Square separately)
+- **Cost export:** 14 months of COGS by product category
+- **Sales export:** 14 months of transaction history (online sales only; in-store tracked separately)
 
 ---
 
@@ -82,5 +82,5 @@ The owner received the full unit economics table, the benchmarking paragraph, an
 
 ## Notes for skill author
 
-- This example shows graceful handling of mixed data sources (PayPal online + Square in-store noted as limitation)
+- This example shows graceful handling of mixed data sources (online + in-store sales noted as a limitation)
 - Elasticity was computable because the owner had raised Knitwear prices once 8 months ago (from $79 → $89) and volume dipped 5% the following month — that's the one-data-point limitation referenced in gotchas.md

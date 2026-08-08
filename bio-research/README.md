@@ -39,7 +39,7 @@ Systematic framework for research problem selection based on Fischbach & Walsh's
 ## Common Workflows
 
 **Literature Review**
-Search ~~literature database for papers, access full-text through ~~journal access, and create figures with ~~scientific illustration.
+Share papers, search results, or your library export for literature review; create figures from your data.
 
 **Single-Cell Analysis**
 Run QC on scRNA-seq data, then use scvi-tools for integration, batch correction, and cell type annotation.
@@ -48,7 +48,7 @@ Run QC on scRNA-seq data, then use scvi-tools for integration, batch correction,
 Download public data from GEO/SRA, run nf-core pipelines (RNA-seq, variant calling, ATAC-seq), and verify outputs.
 
 **Drug Discovery**
-Search ~~chemical database for bioactive compounds, use ~~drug target database for target prioritization, and review clinical trial data.
+Analyze compound data, prioritize drug targets, and review clinical trial data you provide.
 
 **Research Strategy**
 Pitch a new idea, troubleshoot a stuck project, or evaluate strategic decisions using the scientific problem selection framework.

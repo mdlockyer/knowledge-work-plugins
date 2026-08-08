@@ -6,8 +6,6 @@ argument-hint: "[daily | topic <query> | incident]"
 
 # /brief -- Legal Team Briefing
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Generate contextual briefings for legal work. Supports three modes: daily brief, topic brief, and incident brief.
 
 **Important**: This command assists with legal workflows but does not provide legal advice. Briefings should be reviewed by qualified legal professionals before being relied upon.
@@ -32,9 +30,9 @@ A morning summary of everything a legal team member needs to know to start their
 
 #### Sources to Scan
 
-Check each connected source for legal-relevant items:
+Ask the user what's relevant today, working through each source they have:
 
-**Email (if connected):**
+**Email:**
 - New contract requests or review requests
 - Compliance questions or reports
 - Responses from counterparties on active negotiations
@@ -42,23 +40,23 @@ Check each connected source for legal-relevant items:
 - External counsel communications
 - Regulatory or legal update newsletters
 
-**Calendar (if connected):**
+**Calendar:**
 - Today's meetings that need legal prep (board meetings, deal reviews, vendor calls)
 - Upcoming deadlines this week (contract expirations, filing deadlines, response deadlines)
 - Recurring legal team syncs
 
-**Chat (if connected):**
+**Chat:**
 - Overnight messages in legal team channels
 - Direct messages requesting legal input
 - Mentions of legal-relevant topics (contract, compliance, privacy, NDA, terms)
 - Escalations or urgent requests
 
-**CLM (if connected):**
+**CLM:**
 - Contracts awaiting review or signature
 - Approaching expiration dates (next 30 days)
 - Newly executed agreements
 
-**CRM (if connected):**
+**CRM:**
 - Deals moving to stages that require legal involvement
 - New opportunities flagged for legal review
 
@@ -88,7 +86,7 @@ Check each connected source for legal-relevant items:
 [Upcoming deadlines and filing dates]
 
 ### Sources Not Available
-[Any sources that were not connected or returned errors]
+[Any sources the user couldn't provide]
 ```
 
 ---
@@ -100,7 +98,7 @@ Research and brief on a specific legal question or topic across available source
 #### Workflow
 
 1. Accept the topic query from the user
-2. Search across connected sources:
+2. Draw on the sources the user provides:
    - **Documents**: Internal memos, prior analyses, playbooks, precedent
    - **Email**: Prior communications on the topic
    - **Chat**: Team discussions about the topic
@@ -135,7 +133,7 @@ Research and brief on a specific legal question or topic across available source
 ```
 
 #### Important Notes
-- Topic briefs synthesize what is available in connected sources; they do not substitute for formal legal research
+- Topic briefs synthesize what the user provides; they do not substitute for formal legal research
 - If the topic requires current legal authority or case law, recommend the user consult a legal research platform (Westlaw, Lexis, etc.) or outside counsel
 - Always note the limitations of the sources searched
 
@@ -148,7 +146,7 @@ Rapid briefing for developing situations that require immediate legal attention 
 #### Workflow
 
 1. Accept the incident topic or description
-2. Rapidly scan all connected sources for relevant context:
+2. Rapidly gather relevant context from the user:
    - **Email**: Communications about the incident
    - **Chat**: Real-time discussions and escalations
    - **Documents**: Relevant policies, response plans, insurance coverage

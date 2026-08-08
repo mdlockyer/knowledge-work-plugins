@@ -6,8 +6,6 @@ argument-hint: "<description> [data source]"
 
 # /build-dashboard - Build Interactive Dashboards
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Build a self-contained interactive HTML dashboard with charts, filters, tables, and professional styling. Opens directly in a browser -- no server or dependencies required.
 
 ## Usage
@@ -30,7 +28,7 @@ Determine:
 
 ### 2. Gather the Data
 
-**If data warehouse is connected:**
+**If the user has warehouse access available in the session:**
 1. Query the necessary data
 2. Embed the results as JSON within the HTML file
 

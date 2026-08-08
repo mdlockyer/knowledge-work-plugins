@@ -1,13 +1,12 @@
 # Worked example — cash-flow-snapshot
 
-**Scenario:** Small services business. QuickBooks + PayPal connected. Three
-active customers, monthly payroll, office rent.
+**Scenario:** Small services business. Owner provides AR aging and payment processor exports. Three active customers, monthly payroll, office rent.
 
 ---
 
-## Input data (pulled from connectors)
+## Input data (from owner-provided exports)
 
-**AR aging (QuickBooks):**
+**AR aging (bookkeeping export):**
 
 | Customer       | Invoice | Amount   | Due Date   | Days Outstanding |
 |----------------|---------|----------|------------|------------------|
@@ -15,7 +14,7 @@ active customers, monthly payroll, office rent.
 | BlueSky LLC    | INV-108 | $14,200  | Apr 22     | 0                |
 | Crestwood Inc  | INV-115 | $6,000   | May 5      | —                |
 
-**Historical payment lag (from PayPal settlements):**
+**Historical payment lag (from payment processor export):**
 
 | Customer       | Mean Lag | Std Dev | Payments on Record |
 |----------------|----------|---------|--------------------|
@@ -23,7 +22,7 @@ active customers, monthly payroll, office rent.
 | BlueSky LLC    | 7 days   | 2 days  | 8                  |
 | Crestwood Inc  | 12 days  | 5 days  | 6                  |
 
-**Fixed costs (QuickBooks recurring AP):**
+**Fixed costs (recurring AP from bookkeeping export):**
 - Payroll: $22,000 — hits April 15
 - Rent: $3,200 — hits May 1
 - Software subscriptions: $480 — hits May 1
@@ -70,7 +69,7 @@ Confidence band calculation:
 
 ```
 Cash Flow Snapshot — Apr 23 → Jul 21, 2026
-Sources: QuickBooks, PayPal
+Sources: AR aging export, payment processor export
 
               Expected    Low        High
 30-day net:   +$600      −$5,928    +$7,128
@@ -84,7 +83,7 @@ Sources: QuickBooks, PayPal
 
 Confidence band: ±28% (based on historical payment variance across 3 customers).
 
-This forecast is based on QuickBooks AR/AP and PayPal settlement history.
+This forecast is based on the owner-provided AR/AP and settlement history exports.
 It is not a substitute for accounting advice — verify with your bookkeeper
 before making financing decisions.
 ```

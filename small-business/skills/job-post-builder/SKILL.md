@@ -7,15 +7,14 @@ description: >
   "JD", "open role", "create a job ad", "interview questions", "scoring rubric",
   "draft an offer letter", "send an offer", "make a hiring packet", or any
   request to recruit for a position. When in doubt, trigger — covers the full
-  hiring workflow from job post through DocuSign envelope creation via browser.
-  Does NOT screen or rank applicants.
+  hiring workflow from job post through offer letter. Does NOT screen or rank
+  applicants.
 ---
 
 # Job Post Builder
 
 Produces a complete hiring packet — job post, interview guide, and offer letter
-— from a brief conversation about the role. Optionally routes the offer letter
-to DocuSign via Claude in Chrome.
+— from a brief conversation about the role.
 
 ---
 
@@ -23,8 +22,7 @@ to DocuSign via Claude in Chrome.
 
 Invoke when a user says they need to hire someone or produce any hiring document.
 The skill walks a 6-phase workflow: gather context → research the market → write
-the job post → draft the interview guide → assemble the offer letter → (optionally)
-route to DocuSign.
+the job post → draft the interview guide → assemble the offer letter → deliver it.
 
 **Example trigger:**
 > "We're hiring a senior product manager. Can you put together the job post and
@@ -35,11 +33,11 @@ route to DocuSign.
 ## Workflow
 
 1. **Gather role context** — Ask for role title, responsibilities, qualifications,
-   location, comp, interview process, and offer delivery preference (Word doc vs.
-   DocuSign). Source: conversation / AskUserQuestion.
-2. **Research comparable posts** — Search Google Drive / Desktop for existing JDs
-   and templates; run web search for 3–5 live postings for this role. Sources:
-   file MCP, web search.
+   location, comp, interview process, and offer letter delivery preference.
+   Source: conversation / AskUserQuestion.
+2. **Research comparable posts** — Ask if there's a prior JD or template to use
+   as a starting point; run web search for 3–5 live postings for this role.
+   Sources: user files, web search.
 3. **Write the job post** — Draft a market-informed job description using
    `references/job-post-structure.md`. Output: `[Role]-Job-Post.docx` via docx skill.
 4. **Draft interview guide + scoring rubric** — Build a stage-by-stage guide using
@@ -48,25 +46,19 @@ route to DocuSign.
 5. **Assemble offer letter** — Build offer letter with bracketed placeholders using
    `references/offer-letter-template.md`. Output: `[Role]-Offer-Letter.docx` via
    docx skill.
-6. **Route to DocuSign (if requested)** — Use Claude in Chrome to navigate DocuSign,
-   upload the offer letter, configure the envelope, and save a draft. Requires
-   explicit user approval before the envelope is sent.
+6. **Deliver the offer letter** — Save the letter as a .docx for the owner to
+   review and send. If they want to send it via an e-signature service (e.g.
+   DocuSign), guide them through uploading it in their browser — do not send
+   anything on their behalf.
 
 ---
 
 ## Approval gates
 
-This skill performs externally-visible actions in Phase 6. The following rules apply:
-
-- **Never send a DocuSign envelope without approval.** Save the envelope as a draft
-  and return the URL. The user must review and confirm before Claude clicks Send.
-- **Never send the Gmail fallback email without approval.** If the DocuSign browser
-  flow fails, draft the fallback email and show it to the user before sending.
+- **Never send anything on the owner's behalf.** The offer letter is delivered as
+  a .docx; sending (email, DocuSign, or otherwise) is the owner's job.
 - **Never publish the job post.** Produce the .docx file only. Posting to any job
   board is the user's responsibility.
-
-Phase 6 will not advance past "Save as draft" without the user explicitly confirming
-they have reviewed the envelope and want it sent.
 
 ---
 
@@ -82,10 +74,10 @@ Ask the user (via conversation or AskUserQuestion) for:
 - **Nice-to-have qualifications** — preferred but not required
 - **Location / remote policy** — on-site, hybrid, or fully remote; location if relevant
 - **Compensation range** — salary band if they have one (flag that this needs HR/legal sign-off)
-- **Existing JD or template?** — ask if there's a prior version in Google Drive or on their Desktop to use as a starting point
+- **Existing JD or template?** — ask if there's a prior version they can share to use as a starting point
 - **Offer letter delivery preference** — ask how they'd like the offer letter delivered:
-  - *Send directly via DocuSign* — skill opens DocuSign in Chrome, uploads the letter, sets up the envelope, and saves a draft for review before sending
-  - *Just the Word doc* — skill saves the offer letter as a .docx and stops there; the user handles routing themselves
+  - *Word doc only* — skill saves the offer letter as a .docx and stops there; the user handles sending
+  - *Help preparing to send* — skill produces the .docx and walks through uploading it to an e-signature service (e.g. DocuSign) in their browser
 
 - **Interview process** — ask how their hiring process is structured:
   - How many rounds/stages are there?
@@ -107,8 +99,8 @@ Ask the user (via conversation or AskUserQuestion) for:
   | Final / culture interview | Skip-level or exec | Values, long-term trajectory |
 
 Capture the delivery preference in Phase 1 so the right Phase 5/6 path is clear
-before any writing starts. If the user already indicated a preference (e.g. "send
-it to DocuSign"), extract it from their message rather than asking again.
+before any writing starts. If the user already indicated a preference, extract
+it from their message rather than asking again.
 
 If the user has already provided most of this in their message, extract it and
 confirm before moving on rather than asking redundant questions. One focused
@@ -255,55 +247,25 @@ Build from scratch using `references/offer-letter-template.md` as the full templ
 Save as `[Role]-Offer-Letter.docx` using the docx skill.
 
 **Then branch based on the delivery preference captured in Phase 1:**
-- If the user chose **DocuSign** → proceed to Phase 6
+- If the user wants help preparing to send via e-signature → proceed to Phase 6
 - If the user chose **Word doc only** → skip Phase 6, deliver the .docx and close out
 
 ---
 
-## Phase 6 — Route the Offer Letter Directly to DocuSign
+## Phase 6 — Prepare the Offer Letter for Sending
 
-Use Claude in Chrome to upload the offer letter into DocuSign and set up the
-envelope, so the user doesn't have to touch DocuSign manually.
+If the user wants to send the offer via an e-signature service (e.g. DocuSign),
+walk them through it — do not operate the service on their behalf.
 
-**Step-by-step browser flow:**
-
-1. Navigate to `https://app.docusign.com` — the user should already be logged in.
-   If a login screen appears, pause and ask the user to log in, then continue.
-
-2. Click **"Start" → "Send an Envelope"** (or the equivalent "New" / "Use a Template"
-   button depending on the UI version).
-
-3. **Upload the offer letter:** Click "Upload Documents" and upload the
-   `[Role]-Offer-Letter.docx` file that was just created.
-
-4. **Add the signer:** In the Recipients section, add the candidate as a signer.
-   Ask the user for the candidate's name and email if not already provided.
-   Set their role to "Signer".
-
-5. **Add the sender as a CC recipient** if the user wants a copy (ask if unsure).
-
-6. **Set the subject line:** `Offer of Employment — [Role Title] at [Company Name]`
-
-7. **Add a message:**
+1. Deliver the `[Role]-Offer-Letter.docx` file.
+2. Guide the user: "Upload this to DocuSign (or your e-signature tool), add the
+   candidate as signer, and review the signature placement before sending."
+3. Offer a ready-to-use message for the send:
    > "Hi [Candidate First Name], we're thrilled to extend this offer and look
    > forward to having you join the team. Please review and sign at your
    > earliest convenience. Don't hesitate to reach out if you have any questions."
-
-8. **Place signature fields:** On the document, place a Signature field and a
-   Date Signed field on the candidate acceptance line at the bottom of the letter.
-
-9. **Save as draft** — do NOT send. Return the envelope URL to the user so they
-   can review before sending.
-
-Tell the user:
-> "The DocuSign envelope has been set up with the offer letter and candidate
-> details. Here's the draft link: [ENVELOPE URL]. Review the signature placement,
-> then confirm here when you're ready to send."
-
-**Fallback:** If DocuSign is unavailable or the browser flow fails at any step,
-fall back to the Gmail draft approach: draft an email via the Gmail MCP with the
-offer letter attached and a note to upload it to DocuSign manually. Show the
-draft to the user before sending.
+4. If the user prefers email, draft the email with the letter attached and show
+   it to them — they send it from their own email client.
 
 ---
 
@@ -313,7 +275,7 @@ Once all three files are created, present them together:
 
 Present a summary listing the three deliverables by role title: the job post
 docx (ready to post), the interview guide docx (share with interviewers), and
-the offer letter docx (routed to DocuSign draft or ready for manual upload).
+the offer letter docx (ready for the owner to review and send).
 
 Remind the user:
 - The offer letter template needs legal review before use in any jurisdiction
@@ -341,4 +303,4 @@ Load these when reaching the relevant phase — don't load all upfront:
 See `tests/triggers.md` for must-trigger, must-NOT-trigger, and ambiguous routing cases.
 
 See `tests/scenarios.md` for end-to-end scenario walkthroughs covering the happy
-path, missing connector, and approval gate flows.
+path and approval gate flows.

@@ -6,8 +6,6 @@ argument-hint: "<ticket or issue description>"
 
 # /ticket-triage
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 Categorize, prioritize, and route an incoming support ticket or customer issue. Produces a structured triage assessment with a suggested initial response.
 
 ## Usage
@@ -46,9 +44,9 @@ Using the category taxonomy and priority framework below:
 
 Before routing, check available sources:
 
-- **~~support platform**: Search for similar open or recently resolved tickets
-- **~~knowledge base**: Check for known issues or existing documentation
-- **~~project tracker**: Check if there's an existing bug report or feature request
+- **Ticket history**: Search for similar open or recently resolved tickets (from the user or support system)
+- **Documentation**: Check for known issues or existing documentation
+- **Related work**: Check if there's an existing bug report or feature request
 
 Apply the duplicate detection process below.
 

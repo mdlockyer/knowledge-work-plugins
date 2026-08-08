@@ -6,8 +6,6 @@ argument-hint: "<entry type> [period]"
 
 # Journal Entry Preparation
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
-
 **Important**: This command assists with journal entry workflows but does not provide financial advice. All entries should be reviewed by qualified financial professionals before posting.
 
 Prepare journal entries with proper debits, credits, supporting detail, and review documentation.
@@ -32,19 +30,11 @@ Prepare journal entries with proper debits, credits, supporting detail, and revi
 
 ### 1. Gather Source Data
 
-If ~~erp or ~~data warehouse is connected:
-- Pull the trial balance for the specified period
-- Pull subledger detail for the relevant accounts
-- Pull prior period entries of the same type for reference
-- Identify the current GL balances for affected accounts
-
-If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull GL data automatically. You can also paste trial balance data or upload a spreadsheet.
-
-Prompt the user to provide:
+Ask the user to provide the underlying data — paste trial balance data or upload a spreadsheet:
 - Trial balance or GL balances for affected accounts
-- Subledger detail or supporting schedules
-- Prior period entries for reference (optional)
+- Subledger detail for the affected accounts
+- Prior period entries of the same type for reference (optional)
+- Current GL balances for affected accounts
 
 ### 2. Calculate the Entry
 

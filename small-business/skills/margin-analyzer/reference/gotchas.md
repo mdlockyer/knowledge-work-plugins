@@ -2,29 +2,29 @@
 
 ## Gotcha: Treating revenue as profit
 
-An owner sees $50K in PayPal transactions and thinks that's what they made. It isn't — it's what they collected.
+An owner sees $50K in payment transactions and thinks that's what they made. It isn't — it's what they collected.
 
 **Why it matters:** If you surface revenue figures without immediately pairing them with costs, the owner may misread the analysis and feel reassured when they shouldn't be.
 
 ### ✗ Bad
-"Your PayPal revenue last quarter was $50,000."
+"Your revenue last quarter was $50,000."
 
 ### ✓ Good
-"Your PayPal revenue last quarter was $50,000. After direct costs of $31,000, your gross profit was $19,000 — a 38% gross margin."
+"Your revenue last quarter was $50,000. After direct costs of $31,000, your gross profit was $19,000 — a 38% gross margin."
 
 ---
 
 ## Gotcha: Using list price instead of effective price
 
-Owners often have discounts, refunds, and promotions that reduce what they actually receive per transaction. PayPal transaction data reflects actual collected amounts, but QuickBooks invoices may show list price.
+Owners often have discounts, refunds, and promotions that reduce what they actually receive per transaction. Payment processor data reflects actual collected amounts, but invoices may show list price.
 
-**Why it matters:** If you compute margins using list price but PayPal shows actual collections, your cost-per-unit math will look better than reality.
+**Why it matters:** If you compute margins using list price but the processor shows actual collections, your cost-per-unit math will look better than reality.
 
 ### ✗ Bad
-Use invoice amounts from QB for revenue and PayPal costs for COGS → margin appears inflated.
+Use invoice amounts for revenue and processor costs for COGS → margin appears inflated.
 
 ### ✓ Good
-Use PayPal/Square transaction amounts as the revenue source (actual collected), and QB for costs. Note any discrepancy between QB invoice totals and payment totals — it's worth surfacing.
+Use payment processor transaction amounts as the revenue source (actual collected), and accounting records for costs. Note any discrepancy between invoice totals and payment totals — it's worth surfacing.
 
 ---
 
@@ -56,31 +56,31 @@ Ask service businesses: "For this service, what does it cost you in time and any
 
 ---
 
-## Gotcha: QuickBooks COGS not broken down by product/service
+## Gotcha: Accounting COGS not broken down by product/service
 
-Many small businesses use QuickBooks but record COGS as a single line item, not broken out by product. `profit-loss-quickbooks-account` may not return item-level cost data.
+Many small businesses record COGS as a single line item, not broken out by product. A P&L export may not include item-level cost data.
 
 **Why it matters:** You can't compute per-product margins if COGS is lumped together.
 
 ### ✗ Bad
-Call `profit-loss-quickbooks-account` → Get total COGS $22,000 → Try to divide across 12 products → Numbers are meaningless.
+Use total COGS $22,000 → Try to divide across 12 products → Numbers are meaningless.
 
 ### ✓ Good
-If QB doesn't have item-level COGS, ask the owner: "QuickBooks has your total costs but not a breakdown by product. Do you have a rough sense of what each item costs you to make or deliver? Even ballpark figures work." Proceed with owner-provided figures and flag the limitation in the output.
+If the accounting data doesn't have item-level COGS, ask the owner: "Your books have total costs but not a breakdown by product. Do you have a rough sense of what each item costs you to make or deliver? Even ballpark figures work." Proceed with owner-provided figures and flag the limitation in the output.
 
 ---
 
-## Gotcha: PayPal rate-limiting on repeated calls
+## Gotcha: Incomplete or inconsistent transaction exports
 
-Rapid repeated calls to `list_transactions` (e.g., iterating through multiple date ranges) can trigger PayPal's rate limiter.
+Exported transaction files can be incomplete (missing months, excluded payment types) or inconsistent (different date formats, merged rows).
 
-**Why it matters:** Without a retry strategy, the skill fails mid-analysis.
+**Why it matters:** Garbage in, garbage out — margins computed from partial data look precise but are misleading.
 
 ### ✗ Bad
-Call list_transactions in a loop → 429 error → skill crashes with no data.
+Take whatever file the owner uploads at face value and compute margins without checking coverage.
 
 ### ✓ Good
-Call `list_transactions` → if 429, pause 30 seconds → retry once → if the retry succeeds, continue normally, but treat any *second* 429 in the same session as a signal to stop retrying. After a second rate-limit event (even if separated by a successful call), immediately surface the fallback: "PayPal is rate-limiting repeated calls in this session. I can switch to Square for the revenue data, or you can upload a PayPal CSV export — either works. What would you prefer?" Do not attempt a third retry.
+Check the export's date range and row counts before analyzing. If coverage is partial, ask: "This export covers [X] months and [Y] transactions — is that the full picture, or are some channels/products missing?" Surface any gaps in the Data Quality Notes section.
 
 ---
 

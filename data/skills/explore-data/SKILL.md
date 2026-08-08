@@ -19,7 +19,7 @@ Generate a comprehensive data profile for a table or uploaded file. Understand i
 
 ### 1. Access the Data
 
-**If a data warehouse integration is connected:**
+**If the user has warehouse or database access available in the session:**
 
 1. Resolve the table name (handle schema prefixes, suggest matches if ambiguous)
 2. Query table metadata: column names, types, descriptions if available
@@ -32,7 +32,7 @@ Generate a comprehensive data profile for a table or uploaded file. Understand i
 
 **If neither:**
 
-1. Ask the user to provide a table name (with their warehouse connected) or upload a file
+1. Ask the user to provide a table name or upload a file
 2. If they describe a table schema, provide guidance on what profiling queries to run
 
 ### 2. Understand Structure
@@ -283,7 +283,7 @@ When documenting a dataset for team use:
 
 ### Schema Exploration Queries
 
-When connected to a data warehouse, use these patterns to discover schema:
+When the user has warehouse access, use these patterns to discover schema:
 
 ```sql
 -- List all tables in a schema (PostgreSQL)

@@ -27,7 +27,6 @@ Primary capabilities:
 ## Repo Shape
 
 - `.claude-plugin/plugin.json` — Claude plugin manifest
-- `settings` — Zoom integration definition
 - `skills/` — all plugin skills and supporting references
 - `README.md` — user-facing overview
 - skill docs — Zoom integration notes

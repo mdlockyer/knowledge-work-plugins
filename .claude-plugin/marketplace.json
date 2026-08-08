@@ -1,14 +1,14 @@
 {
   "name": "knowledge-work-plugins",
   "owner": {
-    "name": "Anthropic"
+    "name": "mdlockyer"
   },
   "plugins": [
     {
       "name": "productivity",
       "displayName": "Productivity",
       "source": "./productivity",
-      "description": "Manage tasks, plan your day, and build up memory of important context about your work. Syncs with your calendar, email, and chat to keep everything organized and on track."
+      "description": "Manage tasks, plan your day, and build up memory of important context about your work. You provide the details; Claude tracks, triages, and reminds."
     },
     {
       "name": "cowork-plugin-management",

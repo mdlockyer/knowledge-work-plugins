@@ -15,8 +15,8 @@ Install from [claude.com/plugins](https://claude.com/plugins/).
 ### Claude Code
 
 ```bash
-claude plugin marketplace add anthropics/knowledge-work-plugins
-claude plugin install small-business@knowledge-work-plugins
+claude plugin marketplace add mdlockyer/knowledge-work-plugins
+claude plugin install small-business@knowledge-work-plugins-fork
 ```
 
 ## How it works

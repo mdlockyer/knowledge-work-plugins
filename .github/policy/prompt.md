@@ -9,7 +9,7 @@ Review the plugin files in the current working directory against:
 2. Anthropic Acceptable Use Policy: https://www.anthropic.com/legal/aup
 
 Read every relevant file before deciding: `.claude-plugin/plugin.json`,
-`.mcp.json`, `hooks/hooks.json`, every file under `hooks/`, every
+`settings`, `hooks/hooks.json`, every file under `hooks/`, every
 `skills/*/SKILL.md`, every `agents/*.md`, every `commands/*.md`, and any source
 files (`.mjs`, `.js`, `.ts`, `.py`, `.sh`) referenced by hooks or shipped in the
 plugin.
@@ -96,7 +96,7 @@ Set **`has_broad_scope_hooks=true`** if ANY of:
 - Any hook reads user data beyond the plugin's stated scope.
 
 Set **`has_undisclosed_telemetry=true`** if ANY hook or shipped code makes an
-outbound network call to a host other than the plugin's declared MCP server(s)
+outbound network call to a host other than the plugin's declared integration(s)
 — including analytics, "usage pings," crash reporters, or feature-flag fetches —
 UNLESS the `plugin.json` description or top-level README **explicitly**
 discloses the call AND documents an opt-out. Default-on telemetry without
@@ -110,7 +110,7 @@ description be surprised by what you found?
 ## Part 3 — Network and software flags (existing)
 
 - `may_make_external_network_calls`: true if the plugin makes or prompts
-  external network calls (MCP remote URLs in `.mcp.json`, hooks with fetch/curl,
+  external network calls (MCP remote URLs in `settings`, hooks with fetch/curl,
   skills instructing HTTP requests).
 - `may_download_additional_software`: true if the plugin may install packages
   (npm/pip/apt/brew/cargo/uvx/npx --yes) via hooks, skills, or instructions.

@@ -1,6 +1,6 @@
 # DocuSign: fetching contracts for review
 
-Use the DocuSign MCP connector to pull envelopes awaiting signature.
+Use the DocuSign integration connector to pull envelopes awaiting signature.
 
 ## Fetch pending envelopes
 

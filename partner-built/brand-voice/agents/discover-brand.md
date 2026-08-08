@@ -36,7 +36,7 @@ description: >
 model: sonnet
 color: cyan
 maxTurns: 25
-# tools not restricted — this agent needs all available MCP tools to search platforms
+# tools not restricted — this agent needs all available tools to search platforms
 ---
 
 You are a specialized brand discovery agent. Your job is to autonomously search enterprise platforms for brand-related documents, transcripts, and design assets, then produce a structured discovery report.

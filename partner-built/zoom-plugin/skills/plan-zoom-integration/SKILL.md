@@ -7,7 +7,6 @@ user-invocable: false
 
 # /plan-zoom-integration
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Create a practical build plan for a Zoom integration or app.
 

@@ -11,7 +11,7 @@ Generate three personalized outreach formats — email, call script, and LinkedI
 
 ### Step 1: Look Up the Target
 
-Use Common Room MCP tools to find and retrieve data for the target (company and/or specific contact). Pull:
+Use Common Room tools to find and retrieve data for the target (company and/or specific contact). Pull:
 - Recent product activity and engagement signals
 - Community activity (posts, questions, reactions)
 - 3rd-party intent signals (job postings, news, funding)

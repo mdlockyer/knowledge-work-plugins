@@ -21,7 +21,7 @@ Explicit workflows you invoke with a slash command:
 | `/status-report` | Generate a status report — project updates, KPIs, risks, and action items for leadership |
 | `/runbook` | Create or update an operational runbook — step-by-step procedures for recurring tasks |
 
-All commands work **standalone** (provide context and details) and get **supercharged** with MCP connectors.
+All commands work **standalone** (provide context and details).
 
 ## Skills
 
@@ -85,36 +85,6 @@ I'll pull updates from your connected tools (or ask you for input) and generate 
 ```
 
 Walk me through the process once. I'll document it as a repeatable runbook with checklists, troubleshooting, and escalation paths.
-
-## Standalone + Supercharged
-
-Every command and skill works without any integrations:
-
-| What You Can Do | Standalone | Supercharged With |
-|-----------------|------------|-------------------|
-| Vendor reviews | Provide details, upload proposals | Procurement, Knowledge base |
-| Process documentation | Describe the process | Knowledge base (existing docs) |
-| Change requests | Describe the change | ITSM, Project tracker |
-| Capacity planning | Upload data, describe team | Project tracker (workload data) |
-| Status reports | Provide updates manually | Project tracker, Chat, Calendar |
-| Runbooks | Walk through the process | Knowledge base, ITSM |
-
-## MCP Integrations
-
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
-
-Connect your tools for a richer experience:
-
-| Category | Examples | What It Enables |
-|---|---|---|
-| **ITSM** | ServiceNow, Zendesk | Ticket management, change requests, incident tracking |
-| **Project tracker** | Asana, Jira, monday.com | Project status, resource allocation, task tracking |
-| **Knowledge base** | Notion, Confluence | Process docs, runbooks, policies |
-| **Chat** | Slack, Teams | Team coordination, approvals, status updates |
-| **Calendar** | Google Calendar, Microsoft 365 | Meeting scheduling, deadline tracking |
-| **Email** | Gmail, Microsoft 365 | Vendor communications, approvals |
-
-See [CONNECTORS.md](CONNECTORS.md) for the full list of supported integrations.
 
 ## Settings
 

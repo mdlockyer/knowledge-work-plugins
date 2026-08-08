@@ -2,34 +2,9 @@
 
 Connect to preclinical research tools and databases (literature search, genomics analysis, target prioritization) to accelerate early-stage life sciences R&D. Use with [Cowork](https://claude.com/product/cowork) or install directly in Claude Code.
 
-This plugin consolidates 11 MCP server integrations and 5 analysis skills into a single package for life science researchers.
+This plugin consolidates 5 analysis skills into a single package for life science researchers.
 
 ## What's Included
-
-### MCP Servers (Data Sources & Tools)
-
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
-
-| Provider | What It Does | Category/Placeholder |
-|----------|-------------|---------------------|
-| U.S. National Library of Medicine | Search biomedical literature and research articles | `~~literature` |
-| deepsense.ai | Access preprints from bioRxiv and medRxiv | `~~literature` |
-| Consensus | AI-powered search and synthesis of peer-reviewed research | `~~literature` |
-| John Wiley & Sons | Access academic research and publications | `~~journal access` |
-| Sage Bionetworks | Collaborative research data management | `~~data repository` |
-| deepsense.ai | Bioactive drug-like compound database | `~~chemical database` |
-| OpenTargets | Drug target discovery and prioritization | `~~drug targets` |
-| deepsense.ai | NIH/NLM clinical trial registry | `~~clinical trials` |
-| BioRender | Scientific illustration creation | `~~scientific illustration` |
-| Owkin | AI for biology — histopathology and drug discovery | `~~AI research` |
-| Benchling\* | Lab data management platform | `~~lab platform` |
-
-### Optional Binary MCP Servers
-
-These require a separate binary download:
-
-- **10X Genomics txg-mcp** (`~~genomics platform`) — Cloud analysis data and workflows ([GitHub](https://github.com/10XGenomics/txg-mcp/releases))
-- **ToolUniverse** (`~~tool database`) — AI tools for scientific discovery from Harvard MIMS ([GitHub](https://github.com/mims-harvard/ToolUniverse/releases))
 
 ### Skills (Analysis Workflows)
 
@@ -80,4 +55,4 @@ Pitch a new idea, troubleshoot a stuck project, or evaluate strategic decisions 
 
 ## License
 
-Skills are licensed under Apache 2.0. MCP servers are provided by their respective authors — see individual server documentation for terms.
+Skills are licensed under Apache 2.0.

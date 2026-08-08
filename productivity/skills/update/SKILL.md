@@ -6,7 +6,6 @@ argument-hint: "[--comprehensive]"
 
 # Update Command
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Keep your task list and memory current. Two modes:
 
@@ -107,7 +106,7 @@ Everything in Default Mode, plus a deep scan of recent activity.
 
 ### Extra Step: Scan Activity Sources
 
-Gather data from available MCP sources:
+Gather data from available sources:
 - **Chat:** Search recent messages, read active channels
 - **Email:** Search sent messages
 - **Documents:** List recently touched docs

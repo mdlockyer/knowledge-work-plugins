@@ -38,23 +38,6 @@ This plugin turns Claude into a customer support co-pilot. It helps you:
 | `escalation` | Escalation tiers, structured escalation format, impact assessment, follow-up cadence |
 | `knowledge-management` | Article structure standards, writing for searchability, review cadence, maintenance |
 
-## Data Sources
-
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
-
-Connect your support platform, knowledge base, and communication tools for the best experience. Without them, provide customer context manually.
-
-**Included MCP connections:**
-- Chat (Slack) for internal discussions and customer channel context
-- Support platform (Intercom) for ticket history and customer conversations
-- CRM (HubSpot) for account details and contact information
-- Knowledge base (Guru, Notion) for internal documentation and runbooks
-- Project tracker (Atlassian) for bug reports and feature requests
-- Email and cloud storage (Microsoft 365) for customer correspondence
-
-**Additional options:**
-- See [CONNECTORS.md](CONNECTORS.md) for alternative tools in each category
-
 ## Example Workflows
 
 ### Triaging an Incoming Ticket
@@ -129,7 +112,7 @@ Claude: [Generates a structured how-to article with prerequisites,
 
 ## Configuration
 
-The plugin works out of the box with the included MCP connections. For the richest experience, connect additional data sources through your Claude settings:
+The plugin works out of the box. Provide context manually or extend skills with your own data.
 
 1. **Support platform**: Add your ticketing system for ticket history and customer context
 2. **Knowledge base**: Add your wiki for internal documentation and existing KB articles

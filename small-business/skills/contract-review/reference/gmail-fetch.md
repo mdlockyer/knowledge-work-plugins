@@ -1,6 +1,6 @@
 # Gmail: finding contract attachments
 
-Use the Gmail MCP connector to find contract attachments in recent email.
+Use the Gmail integration connector to find contract attachments in recent email.
 
 ## Search for contract emails
 

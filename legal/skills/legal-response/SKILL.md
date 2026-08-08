@@ -6,7 +6,6 @@ argument-hint: "[inquiry-type]"
 
 # /legal-response -- Generate Response from Templates
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Generate a response to a common legal inquiry using configured templates. Customizes the response with specific details and includes escalation triggers for situations that should not use a templated response.
 
@@ -451,7 +450,7 @@ When helping users create new templates:
 ## Notes
 
 - Always present the draft response for user review before suggesting it be sent
-- If connected to email via MCP, offer to create a draft email with the response
+- If connected to email , offer to create a draft email with the response
 - Track response deadlines and offer to set calendar reminders
 - For regulated responses (DSRs, subpoenas), always note the applicable deadline and regulatory requirements
 - Templates should be living documents; suggest updates when the user modifies a templated response, so the template can be improved over time

@@ -136,10 +136,10 @@ POST /exports
 Poll `GET /exports/{job_id}` until `status == "success"`. Response includes
 `urls[]` — use `urls[0]` as the preview link and HubSpot attachment URL.
 
-**Canva MCP equivalents** (when using Cowork's Canva connector instead of
+**Canva integration equivalents** (when using Cowork's Canva connector instead of
 direct REST):
 
-| Need | MCP tool | Returns |
+| Need | tool | Returns |
 |------|---------|---------|
 | Permanent preview URL | `export-design` | Permanent download URL (safe to embed) |
 | Per-page thumbnail (more stable than autofill response, not permanent) | `get-design-thumbnail` | Page thumbnail URL |

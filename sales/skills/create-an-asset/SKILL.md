@@ -406,7 +406,7 @@ component:
 - `ai` — AI/ML models, agents
 - `database` — Data stores, warehouses
 - `api` — APIs, services
-- `middleware` — Integration platforms, MCP servers
+- `middleware` — Integration platforms, integrations
 - `output` — Dashboards, reports, notifications
 
 #### Flow Steps
@@ -843,7 +843,7 @@ For workflow demos, use these icon mappings:
 | ai | 🤖 or brain SVG | Claude, AI Agent |
 | database | 🗄️ or cylinder SVG | Snowflake, Postgres |
 | api | 🔌 or plug SVG | REST API, GraphQL |
-| middleware | ⚡ or hub SVG | Workato, MCP Server |
+| middleware | ⚡ or hub SVG | Workato, Integration |
 | output | 📊 or screen SVG | Dashboard, Report |
 
 ---

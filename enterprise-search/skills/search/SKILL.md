@@ -6,15 +6,14 @@ argument-hint: "<query>"
 
 # Search Command
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
-Search across all connected MCP sources in a single query. Decompose the user's question, run parallel searches, and synthesize results.
+Search across all connected sources in a single query. Decompose the user's question, run parallel searches, and synthesize results.
 
 ## Instructions
 
 ### 1. Check Available Sources
 
-Before searching, determine which MCP sources are available. Attempt to identify connected tools from the available tool list. Common sources:
+Before searching, determine which sources are available. Attempt to identify connected tools from the available tool list. Common sources:
 
 - **~~chat** — chat platform tools
 - **~~email** — email tools
@@ -23,10 +22,9 @@ Before searching, determine which MCP sources are available. Attempt to identify
 - **~~CRM** — CRM tools
 - **~~knowledge base** — knowledge base tools
 
-If no MCP sources are connected:
+If no sources are connected:
 ```
 To search across your tools, you'll need to connect at least one source.
-Check your MCP settings to add ~~chat, ~~email, ~~cloud storage, or other tools.
 
 Supported sources: ~~chat, ~~email, ~~cloud storage, ~~project tracker, ~~CRM, ~~knowledge base,
 and any other MCP-connected service.

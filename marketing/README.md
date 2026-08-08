@@ -71,19 +71,3 @@ If your brand style guide is configured in local settings, Claude will check you
 
 Configure your brand voice, style guide, and target personas in a local settings file for personalized output. This allows commands like `/draft-content` and `/brand-review` to automatically apply your brand standards without prompting each time.
 
-## MCP Integrations
-
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
-
-This plugin works with the following MCP servers:
-
-- **Slack** — Share drafts, reports, and briefs with your team
-- **Canva** — Create and edit design assets
-- **Figma** — Access design files and brand assets
-- **HubSpot** — Pull campaign data, manage contacts, and track marketing automation
-- **Amplitude** — Pull product analytics and user behavior data for performance reporting
-- **Notion** — Access briefs, style guides, and campaign documents
-- **Ahrefs** — SEO keyword research, backlink analysis, and site audits
-- **Similarweb** — Competitive traffic analysis and market benchmarking
-- **Klaviyo** — Draft and review email marketing sequences and campaigns
-- **Supermetrics** — Pull marketing data from multiple platforms for analytics and reporting

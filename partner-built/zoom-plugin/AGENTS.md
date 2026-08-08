@@ -8,7 +8,7 @@ This repository contains a Zoom developer plugin centered on `SKILL.md`-based wo
 
 Primary capabilities:
 - choose the right Zoom surface for a use case
-- plan Zoom integrations across REST APIs, SDKs, webhooks, OAuth, and MCP
+- plan Zoom integrations across REST APIs, SDKs, webhooks, OAuth, and integration
 - debug broken Zoom integrations
 - build focused Zoom implementations for meetings, bots, chat, phone, contact center, and virtual agent workflows
 - provide deep product-specific reference material under `skills/`
@@ -27,10 +27,10 @@ Primary capabilities:
 ## Repo Shape
 
 - `.claude-plugin/plugin.json` — Claude plugin manifest
-- `.mcp.json` — bundled Zoom MCP server definition
+- `settings` — bundled Zoom integration definition
 - `skills/` — all plugin skills and supporting references
 - `README.md` — user-facing overview
-- `CONNECTORS.md` — bundled MCP connector notes
+- skill docs — bundled integration connector notes
 
 ## Usage Notes
 

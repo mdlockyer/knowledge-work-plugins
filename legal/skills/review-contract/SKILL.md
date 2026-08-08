@@ -6,7 +6,6 @@ argument-hint: "<contract file or text>"
 
 # /review-contract -- Contract Review Against Playbook
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Review a contract against your organization's negotiation playbook. Analyze each clause, flag deviations, generate redline suggestions, and provide business impact analysis.
 
@@ -307,7 +306,7 @@ Issues that improve the position but can be conceded strategically:
 
 ### Step 8: CLM Routing (If Connected)
 
-If a Contract Lifecycle Management system is connected via MCP:
+If a Contract Lifecycle Management system is connected :
 - Recommend the appropriate approval workflow based on contract type and risk level
 - Suggest the correct routing path (e.g., standard approval, senior counsel, outside counsel)
 - Note any required approvals based on contract value or risk flags

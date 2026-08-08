@@ -1,6 +1,6 @@
 # Data Sources
 
-Exact mapping from each pulse section to the MCP tool that produces it. **Dispatch all calls in a single parallel batch** — do not pull serially.
+Exact mapping from each pulse section to the tool that produces it. **Dispatch all calls in a single parallel batch** — do not pull serially.
 
 ## Cash & Finance (QuickBooks)
 

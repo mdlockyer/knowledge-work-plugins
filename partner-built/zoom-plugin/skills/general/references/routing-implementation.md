@@ -198,7 +198,7 @@ export function routeComplexQuery(query: string): RouteDecision {
 
   const needsClarification: string[] = [];
   if (signals.mcp && signals.restApi) {
-    needsClarification.push('Do you want deterministic REST API automation, AI-agent MCP tooling, or a hybrid of both?');
+    needsClarification.push('Do you want deterministic REST API automation, AI-agent tooling, or a hybrid of both?');
   }
   if (primarySkill === 'zoom-general') {
     needsClarification.push('Do you need SDK embed behavior, API resource automation, or event ingestion?');

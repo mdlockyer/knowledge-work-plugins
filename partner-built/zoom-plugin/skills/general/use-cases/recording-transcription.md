@@ -33,9 +33,9 @@ Recording Flow:
 MCP Agent Flow:
 1. Agent invokes search tool
         ↓
-2. MCP: search meetings / recordings by context
+2. Source: search meetings / recordings by context
         ↓
-3. MCP: retrieve transcript-capable recording details
+3. Source: retrieve transcript-capable recording details
         ↓
 4. Agent fetches transcript file or uses returned summary context
 

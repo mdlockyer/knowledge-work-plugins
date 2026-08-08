@@ -5,7 +5,6 @@ description: Initialize the productivity system and open the dashboard. Use when
 
 # Start Command
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Initialize the task and memory systems, then open the unified dashboard.
 
@@ -92,7 +91,7 @@ Or we can stick with what we have and add context later.
 
 **If they choose comprehensive scan:**
 
-Gather data from available MCP sources:
+Gather data from available sources:
 - **Chat:** Recent messages, channels, DMs
 - **Email:** Sent messages, recipients
 - **Documents:** Recent docs, collaborators

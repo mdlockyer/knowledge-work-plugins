@@ -25,4 +25,4 @@ Follow the guideline-generation skill instructions to:
 After generation, guidelines are saved locally so `/brand-voice:enforce-voice` can automatically find them in future sessions.
 
 Supported document formats: PDF, PowerPoint, Word, Markdown, plain text.
-Supported transcript sources: Gong (MCP), Granola (MCP), Notion meeting notes, manual uploads.
+Supported transcript sources: Gong , Granola , Notion meeting notes, manual uploads.

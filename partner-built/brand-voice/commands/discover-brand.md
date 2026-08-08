@@ -18,7 +18,7 @@ Follow the discover-brand skill instructions to:
 6. Offer next steps: generate guidelines, resolve open questions, save report, or expand search
 
 **Platform validation:**
-- If **no platforms** are connected, inform the user which MCP servers the plugin supports (Notion, Atlassian Confluence, Box, Figma, Gong, Granola, Microsoft 365) and that Google Drive and Slack are available as native Claude integrations.
+- If **no platforms** are connected, inform the user which integrations the plugin supports (Notion, Atlassian Confluence, Box, Figma, Gong, Granola, Microsoft 365) and that Google Drive and Slack are available as native Claude integrations.
 - If **no document platforms** (Notion, Confluence, Google Drive, Box, Microsoft 365) are connected — only supplementary platforms like Slack, Gong, Granola, or Figma — stop and tell the user: "You don't have any document storage platforms connected. Brand guidelines and style guides almost always live on Google Drive, SharePoint, Notion, Confluence, or Box. Please connect at least one before running discovery."
 - If **no primary file storage** (Google Drive, Microsoft 365, Box) is connected, warn: "None of your primary file storage platforms are connected. Brand documents frequently live on these. Discovery will proceed but results may have significant gaps."
 - If **only one platform** is connected, warn: "Discovery works best with 2+ platforms for cross-source validation. Results from a single platform will have lower confidence scores."

@@ -44,7 +44,7 @@ Common options:
 - **PostgreSQL/Redshift**
 - **Databricks**
 
-Use `~~data warehouse` tools (query and schema) to connect. If unclear, check available MCP tools in the current session.
+Use `~~data warehouse` tools (query and schema) to connect. If unclear, check available tools in the current session.
 
 **Step 2: Explore the schema**
 

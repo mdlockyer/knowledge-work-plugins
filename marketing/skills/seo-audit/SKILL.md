@@ -6,7 +6,6 @@ argument-hint: "<url or topic> [audit type]"
 
 # /seo-audit
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Audit a website's SEO health, research keyword opportunities, identify content gaps, and benchmark against competitors. Produces a prioritized action plan a marketer can execute immediately.
 
@@ -48,7 +47,7 @@ Research keywords related to the user's domain, topic, or target keywords.
 
 **If tools are not connected:**
 - Use web search to research the keyword landscape
-- Note: "For more precise volume and difficulty data, connect an SEO tool like Ahrefs or Semrush via MCP. The audit will auto-populate with ranking data."
+- Note: "For more precise volume and difficulty data, connect an SEO tool like Ahrefs or Semrush . The audit will auto-populate with ranking data."
 
 For each keyword opportunity, assess:
 - **Primary keywords** — high-intent terms directly tied to the user's product or service

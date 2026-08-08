@@ -79,18 +79,3 @@ Claude: "Ask Todd Martinez (Finance lead) to prepare the Pipeline
 
 No clarifying questions. No round trips.
 
-## Data Sources
-
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
-
-Connect your communication and project management tools for the best experience. Without them, manage tasks and memory manually.
-
-**Included MCP connections:**
-- Chat (Slack) for team context and message scanning
-- Email and calendar (Microsoft 365) for action item discovery
-- Knowledge base (Notion) for reference documents
-- Project tracker (Asana, Linear, Atlassian, monday.com, ClickUp) for task syncing
-- Office suite (Microsoft 365) for documents
-
-**Additional options:**
-- See [CONNECTORS.md](CONNECTORS.md) for alternative tools in each category

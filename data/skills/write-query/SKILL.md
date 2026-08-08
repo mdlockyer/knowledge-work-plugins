@@ -6,7 +6,6 @@ argument-hint: "<description of what data you need>"
 
 # /write-query - Write Optimized SQL
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Write a SQL query from a natural language description, optimized for your specific SQL dialect and following best practices.
 
@@ -48,7 +47,7 @@ Remember the dialect for future queries in the same session.
 
 ### 3. Discover Schema (If Warehouse Connected)
 
-If a data warehouse MCP server is connected:
+If a data warehouse integration is connected:
 
 1. Search for relevant tables based on the user's description
 2. Inspect column names, types, and relationships

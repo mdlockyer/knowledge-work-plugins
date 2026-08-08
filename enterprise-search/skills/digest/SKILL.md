@@ -6,7 +6,6 @@ argument-hint: "[--daily | --weekly | --since <date>]"
 
 # Digest Command
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Scan recent activity across all connected sources and generate a structured digest highlighting what matters.
 
@@ -26,7 +25,7 @@ The user may also specify a custom range:
 
 ### 2. Check Available Sources
 
-Identify which MCP sources are connected (same approach as the search command):
+Identify which sources are connected (same approach as the search command):
 
 - **~~chat** — channels, DMs, mentions
 - **~~email** — inbox, sent, threads
@@ -38,7 +37,6 @@ Identify which MCP sources are connected (same approach as the search command):
 If no sources are connected, guide the user:
 ```
 To generate a digest, you'll need at least one source connected.
-Check your MCP settings to add ~~chat, ~~email, ~~cloud storage, or other tools.
 ```
 
 ### 3. Gather Activity from Each Source

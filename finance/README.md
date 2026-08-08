@@ -54,19 +54,13 @@ claude plugins add knowledge-work-plugins/finance
 2. Run `/sox-testing procure-to-pay 2024-Q4` to test procurement controls
 3. Review sample selections and document test results
 
-## MCP Integration
-
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
-
-This plugin works best when connected to your financial data sources via MCP servers. Add the relevant servers to your `.mcp.json`:
-
 ### ERP / Accounting System
 
-Connect your ERP (e.g., NetSuite, SAP) MCP server to pull trial balances, subledger data, and journal entries automatically.
+Provide your ERP data (e.g., NetSuite, SAP trial balances) for analysis.
 
 ### Data Warehouse
 
-Connect your data warehouse (e.g., Snowflake, BigQuery) MCP server to query financial data, run variance analysis, and pull historical comparisons.
+Provide your warehouse data to run variance analysis and pull historical comparisons.
 
 ### Spreadsheets
 
@@ -76,11 +70,10 @@ Connect spreadsheet tools (e.g., Google Sheets, Excel) for workpaper generation,
 
 Connect your BI platform (e.g., Tableau, Looker) to pull dashboards, KPIs, and trend data for variance explanations.
 
-> **Note:** Connect your ERP and data warehouse MCP servers to pull financial data automatically. Without these, you can paste data or upload files for analysis.
+> **Note:** Provide your financial data via paste or file upload for analysis.
 
 ## Configuration
 
-Add your data source MCP servers to the `mcpServers` section of `.mcp.json` in this plugin directory. The `recommendedCategories` field lists the types of integrations that enhance this plugin's capabilities:
 
 - `erp-accounting` — ERP or accounting system for GL, subledger, and JE data
 - `data-warehouse` — Data warehouse for financial queries and historical data

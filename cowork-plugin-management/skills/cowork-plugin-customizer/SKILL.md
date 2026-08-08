@@ -42,9 +42,9 @@ For **scoped customization** and **general customization** (not generic plugin s
 
   Use their response (if any) as additional context throughout the remaining phases.
 
-### Phase 1: Gather Context from Knowledge MCPs
+### Phase 1: Gather Context from Knowledge sources
 
-Use company-internal knowledge MCPs to collect information relevant to the customization scope. See `references/search-strategies.md` for detailed query patterns by category.
+Use company-internal knowledge sources to collect information relevant to the customization scope. See `references/search-strategies.md` for detailed query patterns by category.
 
 **What to gather** (scope to what's relevant):
 
@@ -78,9 +78,9 @@ Use user-friendly descriptions that focus on the plugin's purpose:
 
 Work through each item using context from Phase 0 and Phase 1.
 
-**If the user's free-form input (Phase 0) or knowledge MCPs (Phase 1) provided a clear answer**: Apply directly without confirmation.
+**If the user's free-form input (Phase 0) or knowledge sources (Phase 1) provided a clear answer**: Apply directly without confirmation.
 
-**Otherwise**: Use AskUserQuestion. Don't assume "industry standard" defaults are correct — if neither the user's input nor knowledge MCPs provided a specific answer, ask. Note: AskUserQuestion always includes a Skip button and a free-text input box for custom answers, so do not include `None` or `Other` as options.
+**Otherwise**: Use AskUserQuestion. Don't assume "industry standard" defaults are correct — if neither the user's input nor knowledge sources provided a specific answer, ask. Note: AskUserQuestion always includes a Skip button and a free-text input box for custom answers, so do not include `None` or `Other` as options.
 
 **Types of changes:**
 
@@ -91,7 +91,7 @@ Work through each item using context from Phase 0 and Phase 1.
 
 If user doesn't know or skips, leave the value unchanged (or the `~~`-prefixed placeholder, for generic setup).
 
-### Phase 4: Search for Useful MCPs
+### Phase 4: Search for Useful Integrations
 
 After customization items have been resolved, connect MCPs for any tools that were identified or changed. See `references/mcp-servers.md` for the full workflow, category-to-keywords mapping, and config file format.
 
@@ -99,7 +99,7 @@ For each tool identified during customization:
 
 1. Search the registry: `search_mcp_registry(keywords=[...])` using category keywords from `references/mcp-servers.md`, or search for the specific tool name if already known
 2. If unconnected: `suggest_connectors(directoryUuids=["chosen-uuid"])` — user completes auth
-3. Update the plugin's MCP config file (check `plugin.json` for custom location, otherwise `.mcp.json` at root)
+3. Update the plugin's MCP config file (check `plugin.json` for custom location, otherwise `settings` at root)
 
 Collect all MCP results and present them together in the summary output (see below) — don't present MCPs one at a time during this phase.
 
@@ -138,12 +138,12 @@ After customization, present the user with a summary of what was learned grouped
 
 Then present the MCPs that were connected during setup and any that the user should still connect, with instructions on how to connect them.
 
-If no knowledge MCPs were available in Phase 1, and the user had to answer at least one question manually, include a note at the end:
+If no knowledge sources were available in Phase 1, and the user had to answer at least one question manually, include a note at the end:
 
 > By the way, connecting sources like Slack or Microsoft Teams would let me find answers automatically next time you customize a plugin.
 
 ## Additional Resources
 
-- **`references/mcp-servers.md`** — MCP discovery workflow, category-to-keywords mapping, config file locations
+- **`references/mcp-servers.md`** — integration discovery workflow, category-to-keywords mapping, config file locations
 - **`references/search-strategies.md`** — Knowledge MCP query patterns for finding tool names and org values
-- **`examples/customized-mcp.json`** — Example fully configured `.mcp.json`
+- **`examples/customized-mcp.json`** — Example fully configured `settings`

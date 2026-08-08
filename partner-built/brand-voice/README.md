@@ -41,27 +41,6 @@ Every piece of AI-generated content — sales emails, proposals, marketing pages
 ### Open Questions
 When the plugin encounters ambiguity it can't resolve — conflicting documents, missing guidelines, stated vs. practiced brand divergence — it surfaces open questions for team discussion. Every question includes an agent recommendation, turning ambiguity into a "confirm or override" interaction rather than a dead end.
 
-## MCP Connectors
-
-| Connector | URL | Purpose |
-|-----------|-----|---------|
-| **Notion** | `https://mcp.notion.com/mcp` | Discovery backbone — federates across connected Google Drive, SharePoint, OneDrive, Slack, Jira. Also stores output guidelines. |
-| **Atlassian** | `https://mcp.atlassian.com/v1/mcp` | Deep Confluence search + Jira context for Atlassian-heavy enterprises |
-| **Box** | `https://mcp.box.com` | Cloud file storage — official brand docs, shared decks, and style guides often live here |
-| **Microsoft 365** | `https://microsoft365.mcp.claude.com/mcp` | SharePoint, OneDrive, Outlook, Teams — enterprise document storage and email templates |
-| **Figma** | `https://mcp.figma.com/mcp` | Brand design systems — color, typography, design tokens inform voice |
-| **Gong** | `https://mcp.gong.io/mcp` | Enterprise conversation intelligence — sales call transcripts and analysis |
-| **Granola** | `https://mcp.granola.ai/mcp` | Meeting intelligence — transcripts and notes from sales, customer, and strategy meetings |
-
-### Native Integrations
-
-These platforms are native Claude integrations — no MCP connector install needed. They are available as tools when the user connects them in Claude Desktop or Cowork.
-
-| Integration | Purpose |
-|-------------|---------|
-| **Google Drive** | Shared brand documents, style guides, marketing materials, Google Docs and Slides |
-| **Slack** | Brand discussions, channel searches, pinned brand guidelines, informal voice patterns |
-
 ## Quick Start
 
 1. Install the plugin and open Claude Cowork
@@ -83,7 +62,6 @@ Copy `settings/brand-voice.local.md.example` to `.claude/brand-voice.local.md` i
 ```
 ├── .claude-plugin/
 │   └── plugin.json                              # Plugin manifest
-├── .mcp.json                                    # 7 MCP server connections
 ├── README.md
 ├── agents/
 │   ├── discover-brand.md                        # Autonomous platform search agent
@@ -129,4 +107,4 @@ Copy `settings/brand-voice.local.md.example` to `.claude/brand-voice.local.md` i
 - Open questions are a feature, not a failure — every ambiguity includes a recommendation
 - Progressive disclosure — frontmatter is lean, SKILL.md is focused, detail lives in references/
 - Notion AI Search as federated discovery engine — one API searches 8+ platforms via connected sources
-- Google Drive and Slack are native Claude integrations — no MCP connector needed
+- Google Drive and Slack are native integrations

@@ -18,7 +18,7 @@ Explicit workflows you invoke with a slash command:
 | `/forecast` | Generate a weighted sales forecast — upload CSV or describe your pipeline, set quota, get projections |
 | `/pipeline-review` | Analyze pipeline health — prioritize deals, flag risks, get weekly action plan |
 
-All commands work **standalone** (paste notes, upload CSV, or describe your situation) and get **supercharged** with MCP connectors.
+All commands work **standalone** (paste notes, upload CSV, or describe your situation).
 
 ## Skills
 
@@ -83,35 +83,6 @@ How do we compare to Competitor X?
 ```
 
 The `competitive-intelligence` skill researches both companies and builds a differentiation matrix with talk tracks.
-
-## Standalone + Supercharged
-
-Every command and skill works without any integrations:
-
-| What You Can Do | Standalone | Supercharged With |
-|-----------------|------------|-------------------|
-| Process call notes | Paste notes/transcript | Transcripts MCP (e.g. Gong, Fireflies) |
-| Forecast pipeline | Upload CSV, paste deals | CRM MCP |
-| Review pipeline | Upload CSV, describe deals | CRM MCP |
-| Research prospects | Web search | Enrichment MCP (e.g. Clay, ZoomInfo) |
-| Prep for calls | Describe meeting | CRM, Email, Calendar MCPs |
-| Draft outreach | Web search + your context | CRM, Email MCPs |
-| Competitive intel | Web search | CRM (win/loss data), Docs (battlecards) |
-
-## MCP Integrations
-
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
-
-Connect your tools for a richer experience:
-
-| Category | Examples | What It Enables |
-|---|---|---|
-| **CRM** | HubSpot, Close | Pipeline data, account history, contact records |
-| **Transcripts** | Fireflies, Gong, Chorus | Call recordings, transcripts, key moments |
-| **Enrichment** | Clay, ZoomInfo, Apollo | Company and contact data enrichment |
-| **Chat** | Slack, Teams | Internal discussions, colleague intel |
-
-See [CONNECTORS.md](CONNECTORS.md) for the full list of supported integrations, including email, calendar, and additional CRM options.
 
 ## Settings
 

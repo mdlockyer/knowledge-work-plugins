@@ -21,7 +21,7 @@ Explicit workflows you invoke with a slash command:
 | `/incident` | Run an incident response workflow — triage, communicate, mitigate, and write postmortem |
 | `/deploy-checklist` | Pre-deployment checklist — verify tests, review changes, check dependencies, confirm rollback plan |
 
-All commands work **standalone** (paste code, describe your system, upload files) and get **supercharged** with MCP connectors.
+All commands work standalone (paste code, describe your system, upload files).
 
 ## Skills
 
@@ -85,36 +85,6 @@ Start an incident workflow: triage severity, draft communications, track timelin
 ```
 
 Get a customized deployment checklist based on your service and what's changing.
-
-## Standalone + Supercharged
-
-Every command and skill works without any integrations:
-
-| What You Can Do | Standalone | Supercharged With |
-|-----------------|------------|-------------------|
-| Standup updates | Describe your work | Source control, Project tracker, Chat |
-| Code review | Paste diff or code | Source control (pull PRs automatically) |
-| Debug sessions | Describe the problem | Monitoring (pull logs and metrics) |
-| Architecture decisions | Describe the system | Knowledge base (find prior ADRs) |
-| Incident response | Describe the incident | Monitoring, Incident management, Chat |
-| Deploy checklists | Describe the deploy | CI/CD, Source control |
-
-## MCP Integrations
-
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
-
-Connect your tools for a richer experience:
-
-| Category | Examples | What It Enables |
-|---|---|---|
-| **Source control** | GitHub, GitLab | PR diffs, commit history, branch status |
-| **Project tracker** | Linear, Jira, Asana | Ticket status, sprint data, assignments |
-| **Monitoring** | Datadog, New Relic | Logs, metrics, alerts, dashboards |
-| **Incident management** | PagerDuty, Opsgenie | On-call schedules, incident tracking, paging |
-| **Chat** | Slack, Teams | Team discussions, standup channels |
-| **Knowledge base** | Notion, Confluence | ADRs, runbooks, onboarding docs |
-
-See [CONNECTORS.md](CONNECTORS.md) for the full list of supported integrations.
 
 ## Settings
 

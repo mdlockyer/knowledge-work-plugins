@@ -26,7 +26,7 @@ description: >
   </example>
 model: sonnet
 color: green
-# tools not restricted -- this agent needs MCP tools to fetch documents from connected platforms
+# tools not restricted -- this agent needs tools to fetch documents from connected platforms
 maxTurns: 15
 ---
 
@@ -47,7 +47,7 @@ When invoked, you receive a list of documents to analyze. For each document:
 4. **Flag** contradictions between sources
 5. **Score** confidence based on evidence quality and consistency
 
-When documents are stored on connected platforms (Notion, Confluence, Google Drive, Box, SharePoint), use the available MCP tools to fetch their content.
+When documents are stored on connected platforms (Notion, Confluence, Google Drive, Box, SharePoint), use the available tools to fetch their content.
 
 ## Output Format
 

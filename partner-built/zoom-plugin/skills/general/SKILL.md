@@ -146,7 +146,7 @@ Routing guardrails:
 - Do not replace deterministic backend APIs with MCP-only routing.
 - Do not force raw REST-first routing when the task is AI-agent tool orchestration.
 - Prefer hybrid routing when the user needs both stable automation and AI-driven interactions.
-- MCP remote server works over Streamable HTTP/SSE; use this path when the target client/agent supports MCP transports (for example Claude or VS Code).
+- integration remote server works over Streamable HTTP/SSE; use this path when the target client/agent supports integration transports (for example Claude or VS Code).
 - Do not design per-tenant custom MCP endpoint provisioning; Zoom MCP endpoints are shared at instance/cluster level.
 - Source: https://developers.zoom.us/docs/mcp/library/resources/apis-vs-mcp/
 
@@ -154,7 +154,7 @@ Routing guardrails:
 
 When a prompt matches both API and MCP paths with similar confidence, ask one short clarifier before execution:
 
-- `Do you want deterministic REST API automation, AI-agent MCP tooling, or a hybrid of both?`
+- `Do you want deterministic REST API automation, AI-agent tooling, or a hybrid of both?`
 
 Then route as:
 - REST answer → `zoom-rest-api`
@@ -163,7 +163,7 @@ Then route as:
 
 ### MCP Availability and Topology Notes
 
-- Zoom-hosted MCP access is evolving; docs indicate a model where Zoom exposes product-scoped MCP servers (for example Meetings, Team Chat, Whiteboard).
+- Zoom-hosted integration access is evolving; docs indicate a model where Zoom exposes product-scoped integrations (for example Meetings, Team Chat, Whiteboard).
 - Use `zoom-mcp` as the parent MCP entry point.
 - Route Whiteboard-specific MCP requests to **[zoom-mcp/whiteboard](../zoom-mcp/whiteboard/SKILL.md)**.
 - When a request is product-specific and MCP coverage exists, route to that MCP product surface first; otherwise use REST/SDK skills for deterministic implementation.

@@ -80,8 +80,6 @@ Configure paths to your template files or define inline templates for common inq
 
 ### 3. Connect your tools
 
-The plugin works best when connected to your existing tools via MCP. Pre-configured servers include Slack, Box, Egnyte, Atlassian, and Microsoft 365. See [CONNECTORS.md](CONNECTORS.md) for the full list of supported categories and options.
-
 ## Commands
 
 ### `/review-contract` -- Contract Review Against Playbook
@@ -174,23 +172,6 @@ Supported inquiry types include: data subject request, discovery hold, vendor qu
 3. See existing agreements, expiration dates, and key terms at a glance
 4. Know immediately whether you need a new NDA or can proceed under existing terms
 
-## MCP Integration
-
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
-
-The plugin connects to your tools through MCP (Model Context Protocol) servers:
-
-| Category | Examples | Purpose |
-|----------|----------|---------|
-| Chat | Slack, Teams | Team requests, notifications, triage |
-| Cloud storage | Box, Egnyte | Playbooks, templates, precedents |
-| Office suite | Microsoft 365 | Email, calendar, documents |
-| Project tracker | Atlassian (Jira/Confluence) | Matter tracking, tasks |
-
-See [CONNECTORS.md](CONNECTORS.md) for the full list of supported integrations, including CLM, CRM, e-signature, and additional options.
-
-Configure connections in `.mcp.json`. The plugin gracefully degrades when tools are unavailable -- it will note gaps and suggest manual checks.
-
 ## Customization
 
 ### Playbook Configuration
@@ -214,7 +195,7 @@ Customize the risk assessment matrix to match your organization's risk appetite 
 ```
 legal/
 ├── .claude-plugin/plugin.json
-├── .mcp.json
+├── skills/
 ├── README.md
 ├── commands/
 │   ├── review-contract.md

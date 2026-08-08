@@ -6,7 +6,6 @@ argument-hint: "<question>"
 
 # /analyze - Answer Data Questions
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Answer a data question, from a quick lookup to a full analysis to a formal report.
 
@@ -31,7 +30,7 @@ Parse the user's question and determine:
 
 ### 2. Gather Data
 
-**If a data warehouse MCP server is connected:**
+**If a data warehouse integration is connected:**
 
 1. Explore the schema to find relevant tables and columns
 2. Write SQL query(ies) to extract the needed data

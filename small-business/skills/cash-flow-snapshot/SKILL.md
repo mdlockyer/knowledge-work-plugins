@@ -7,7 +7,7 @@ description: >
   flags. Delivers a chat summary and a downloadable XLSX. Use when the user
   asks "forecast my cash flow," "will I make payroll," mentions "runway," or
   says "cash crunch." Falls back to CSV upload when no connector is live.
-compatibility: "Requires one or more of: QuickBooks MCP, PayPal MCP, Stripe MCP, Square MCP, file upload (CSV fallback). Output uses xlsx skill."
+compatibility: "Requires one or more of: QuickBooks, PayPal, Stripe, Square, file upload (CSV fallback). Output uses xlsx skill."
 ---
 
 # Cash Flow Snapshot

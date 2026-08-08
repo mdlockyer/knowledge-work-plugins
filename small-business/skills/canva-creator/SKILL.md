@@ -184,7 +184,7 @@ Tighter intervals burn quota without speeding up completion.
 return `design.canva.ai` thumbnails that expire within minutes; embedding
 them as markdown images produces broken "Show Image" placeholders.
 Permanent export URLs (`export-download.canva.com` or the `export-design`
-MCP tool) do not expire. Native Cowork carousels render the autofill
+tool) do not expire. Native Cowork carousels render the autofill
 result directly using the connector's authenticated session — let them
 render on their own, don't re-embed.
 
@@ -231,7 +231,7 @@ render on their own, don't re-embed.
    row's exports in parallel.
    - REST: `POST /v1/exports` with `format.type: "png"`, poll
      `GET /v1/exports/{job_id}` until success, capture `urls[0]`.
-   - Canva MCP: `export-design` with the design ID.
+   - Canva Source: `export-design` with the design ID.
 
    These permanent URLs are what get embedded in previews and attached to
    the HubSpot post later. The autofill response thumbnail is never used

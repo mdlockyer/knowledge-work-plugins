@@ -34,9 +34,7 @@ faster for pure ingestion.
 
 ## How It Works
 
-This plugin uses a **local MCP server** (`@modelcontextprotocol/server-pdf`)
-that runs on your machine via `npx`. No API keys or remote services —
-the PDF server starts automatically when the plugin loads.
+This plugin provides an interactive PDF viewer. No remote services required beyond Node.js for local viewing.
 
 ## Requirements
 

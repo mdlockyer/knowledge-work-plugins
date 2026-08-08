@@ -6,7 +6,6 @@ argument-hint: "[vendor name]"
 
 # /vendor-check -- Vendor Agreement Status
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Check the status of existing agreements with a vendor across all connected systems. Provides a consolidated view of the legal relationship.
 
@@ -142,7 +141,7 @@ Output a consolidated report:
 
 ### Step 6: Handle Missing Sources
 
-If key systems are not connected via MCP:
+If key systems are not connected :
 
 - **No CLM**: Note that no CLM is connected. Suggest the user check their CLM manually. Report what was found in other systems.
 - **No CRM**: Skip CRM context. Note the gap.

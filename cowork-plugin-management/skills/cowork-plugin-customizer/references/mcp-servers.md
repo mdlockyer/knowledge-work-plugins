@@ -5,7 +5,7 @@ How to find and connect MCPs during plugin customization.
 ## Available Tools
 
 ### `search_mcp_registry`
-Search the MCP directory for available connectors.
+Search the integration directory for available connectors.
 
 **Input:** `{ "keywords": ["array", "of", "search", "terms"] }`
 
@@ -13,7 +13,7 @@ Search the MCP directory for available connectors.
 - `name`: MCP display name
 - `description`: One-liner description
 - `tools`: List of tool names the MCP provides
-- `url`: MCP endpoint URL (use this in `.mcp.json`)
+- `url`: MCP endpoint URL (use this in `settings`)
 - `directoryUuid`: UUID for use with suggest_connectors
 - `connected`: Boolean - whether user has this MCP connected
 
@@ -65,9 +65,9 @@ Display Connect buttons to let users install/connect MCPs.
    ```
    If present, edit the file at that path.
 
-2. **If no `mcpServers` field**, use `.mcp.json` at the plugin root (default).
+2. **If no `mcpServers` field**, use `settings` at the plugin root (default).
 
-3. **If `mcpServers` points only to `.mcpb` files** (bundled servers), create a new `.mcp.json` at the plugin root.
+3. **If `mcpServers` points only to `.mcpb` files** (bundled servers), create a new `settings` at the plugin root.
 
 ### Config File Format
 
@@ -88,4 +88,4 @@ Use the `url` field from `search_mcp_registry` results.
 
 ### Directory Entries Without a URL
 
-Some directory entries have no `url` because the endpoint is dynamic — the admin provides it when connecting the server. These servers can still be referenced in the plugin's MCP config by **name**: if the MCP server name in the config matches the directory entry name, it is treated the same as a URL match.
+Some directory entries have no `url` because the endpoint is dynamic — the admin provides it when connecting the server. These servers can still be referenced in the plugin's integration config by **name**: if the integration name in the config matches the directory entry name, it is treated the same as a URL match.

@@ -26,8 +26,6 @@ No tab switching. No remembering which tool has what. Ask the question, get the 
 
 ## What It Searches
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
-
 Connect any combination of sources. The more you connect, the more complete your answers.
 
 | Source | What it finds |
@@ -40,7 +38,7 @@ Connect any combination of sources. The more you connect, the more complete your
 | **CRM** | Accounts, contacts, opportunities |
 | **Ticketing** | Support tickets, customer issues |
 
-Each source is an MCP connection. Add more sources in your MCP settings to expand what Claude can search.
+Add more sources in your settings to expand what Claude can search.
 
 ---
 
@@ -78,7 +76,7 @@ Three skills power the search experience:
 
 **Search Strategy** — Query decomposition and source-specific translation. Breaks your natural language question into targeted searches per source, handles ambiguity, and falls back gracefully when sources are unavailable.
 
-**Source Management** — Knows which MCP sources are available, guides you to connect new ones, manages source priority, and handles rate limits.
+**Source Management** — Organizes sources, manages priority, and handles rate limits.
 
 **Knowledge Synthesis** — Combines results from multiple sources into coherent answers. Deduplicates cross-source information, attributes sources, scores confidence based on freshness and authority, and summarizes large result sets.
 
@@ -145,7 +143,7 @@ claude plugins add knowledge-work-plugins/enterprise-search
 /enterprise-search:digest --daily
 ```
 
-The more sources you connect via MCP, the more complete your search results. Start with ~~chat, ~~email, and ~~cloud storage, then add your wiki, project management tool, and CRM as needed.
+The more sources you connect, the more complete your search results. Start with ~~chat, ~~email, and ~~cloud storage, then add your wiki, project management tool, and CRM as needed.
 
 ---
 

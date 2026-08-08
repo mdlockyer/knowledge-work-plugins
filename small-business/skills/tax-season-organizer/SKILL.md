@@ -122,15 +122,15 @@ Query each connected source for **all payments made to individuals or businesses
 
 **QuickBooks — try live connector first, fall back to CSV if needed:**
 
-1. **Try live connector.** Attempt to pull vendor-level payment records via the QuickBooks MCP. If the connector returns individual payee records with name, amount, and account category, use them directly and skip the CSV step.
+1. **Try live connector.** Attempt to pull vendor-level payment records via the QuickBooks integration. If the connector returns individual payee records with name, amount, and account category, use them directly and skip the CSV step.
 
-2. **Detect aggregate-only response.** If the MCP returns only category-level totals (e.g. "Contract labor: $7,500" with no payee breakdown), the connector does not yet support vendor-level queries. In this case, prompt the user:
+2. **Detect aggregate-only response.** If the integration returns only category-level totals (e.g. "Contract labor: $7,500" with no payee breakdown), the connector does not yet support vendor-level queries. In this case, prompt the user:
 
    > "QuickBooks returned summary data only — I need payee-level detail to build your 1099 list. Please export a **Transaction List by Vendor** report (QuickBooks → Reports → Expenses → Transaction List by Vendor, filtered to this tax year) and upload the CSV here. I'll process it automatically."
 
 3. **Process CSV via Desktop connector.** Map columns: payee name, amount, date, payment method, EIN/SSN status. Follow the same aggregation and threshold logic below regardless of whether data came from the live connector or CSV.
 
-> **Note for future connector versions:** If the QuickBooks MCP is upgraded to expose vendor payment records directly, step 1 will succeed and the CSV fallback will be skipped automatically. No changes to this skill are needed — the try-first logic handles it.
+> **Note for future connector versions:** If the QuickBooks integration is upgraded to expose vendor payment records directly, step 1 will succeed and the CSV fallback will be skipped automatically. No changes to this skill are needed — the try-first logic handles it.
 
 For field names and query approach, see [reference/connector-queries.md](reference/connector-queries.md).
 

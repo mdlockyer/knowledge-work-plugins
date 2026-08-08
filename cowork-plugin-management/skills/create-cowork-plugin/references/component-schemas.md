@@ -226,9 +226,9 @@ Command hooks return JSON to stdout:
 
 Decisions: `approve`, `block`, `ask_user` (ask for confirmation).
 
-## MCP Servers
+## Integrations
 
-**Location**: `.mcp.json` at plugin root
+**Location**: `settings` at plugin root
 **Format**: JSON
 
 ### Server Types
@@ -289,7 +289,7 @@ Document all required environment variables in the plugin README.
 
 ### Directory Servers Without a URL
 
-Some MCP directory entries have no `url` because the endpoint is dynamic. Plugins can reference these servers by **name** instead — if the server name in the plugin's MCP config matches the directory entry name, it is treated the same as a URL match.
+Some integration directory entries have no `url` because the endpoint is dynamic. Plugins can reference these servers by **name** instead — if the server name in the plugin's integration config matches the directory entry name, it is treated the same as a URL match.
 
 ## Commands (Legacy)
 
@@ -343,11 +343,11 @@ allowed-tools: Read, Write, Edit, Bash(git:*)
 # Bash with specific commands only
 allowed-tools: Bash(npm:*), Read
 
-# MCP tools (specific)
+# tools (specific)
 allowed-tools: ["mcp__plugin_name_server__tool_name"]
 ```
 
-## CONNECTORS.md
+## skill docs
 
 **Location**: Plugin root
 **When to create**: When the plugin references external tools by category rather than specific product
@@ -361,7 +361,7 @@ allowed-tools: ["mcp__plugin_name_server__tool_name"]
 
 Plugin files use `~~category` as a placeholder for whatever tool the user
 connects in that category. For example, `~~project tracker` might mean
-Asana, Linear, Jira, or any other project tracker with an MCP server.
+Asana, Linear, Jira, or any other project tracker with an integration.
 
 Plugins are tool-agnostic — they describe workflows in terms of categories
 rather than specific products.
@@ -390,7 +390,7 @@ During customization (via the cowork-plugin-customizer skill), these get replace
 Every plugin should include a README with:
 
 1. **Overview** — what the plugin does
-2. **Components** — list of skills, agents, hooks, MCP servers
+2. **Components** — list of skills, agents, hooks, integrations
 3. **Setup** — any required environment variables or configuration
 4. **Usage** — how to trigger each skill
-5. **Customization** — if CONNECTORS.md exists, mention it
+5. **Customization** — if skill docs exists, mention it

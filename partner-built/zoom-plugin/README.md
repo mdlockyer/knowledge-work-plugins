@@ -4,15 +4,7 @@ A Claude plugin for planning, building, and debugging Zoom integrations. It help
 
 ## Installation
 
-Install this directory as a local Claude plugin. The plugin manifest is at [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json) and the bundled Zoom MCP connectors are defined in [`.mcp.json`](.mcp.json).
-
-Before using the bundled MCP servers, export bearer tokens for the Zoom surfaces you want Claude to use:
-
-```bash
-export ZOOM_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
-export ZOOM_DOCS_MCP_ACCESS_TOKEN="your_zoom_docs_mcp_access_token"
-export ZOOM_WHITEBOARD_MCP_ACCESS_TOKEN="your_zoom_user_oauth_access_token"
-```
+Install this directory as a local Claude plugin. The plugin manifest is at [`.claude-plugin/plugin.json`](.claude-plugin/plugin.json).
 
 ## Slash Workflows
 
@@ -25,7 +17,7 @@ Explicit slash workflows implemented as skills under `skills/`:
 | [`/build-zoom-meeting-app`](skills/build-zoom-meeting-app/SKILL.md) | Build an embedded or managed Zoom meeting flow |
 | [`/build-zoom-bot`](skills/build-zoom-bot/SKILL.md) | Build bots, recorders, and real-time meeting processors |
 | [`/debug-zoom`](skills/debug-zoom/SKILL.md) | Triage a broken Zoom integration and isolate the failing layer |
-| [`/setup-zoom-mcp`](skills/setup-zoom-mcp/SKILL.md) | Decide when Zoom MCP fits and set up a safe Claude workflow |
+| [`/setup-zoom-mcp`](skills/setup-zoom-mcp/SKILL.md) | Set up a safe Claude workflow |
 | [`/build-zoom-rest-api-app`](skills/rest-api/SKILL.md) | Route into Zoom REST endpoints, scopes, and resource patterns |
 | [`/build-zoom-meeting-sdk-app`](skills/meeting-sdk/SKILL.md) | Route into embedded Zoom meeting implementation details |
 | [`/build-zoom-video-sdk-app`](skills/video-sdk/SKILL.md) | Route into custom video-session implementation details |
@@ -80,7 +72,7 @@ The plugin also keeps the original Zoom product-specific reference library under
 /debug-zoom My Zoom webhook signature verification fails in production but not locally
 ```
 
-### Designing an MCP flow
+### Designing a workflow
 
 ```text
 /setup-zoom-mcp I want Claude to search meetings, pull recording resources, and create follow-up docs
@@ -88,7 +80,7 @@ The plugin also keeps the original Zoom product-specific reference library under
 
 ## Connectors
 
-See [CONNECTORS.md](CONNECTORS.md). The plugin works standalone from the bundled skills, and gets supercharged when Claude can use the bundled Zoom MCP servers from [`.mcp.json`](.mcp.json).
+The plugin works standalone from the bundled skills.
 
 ## Cross-Platform Notes
 
@@ -99,8 +91,6 @@ This repo is packaged first as a Claude plugin, but it also includes [AGENTS.md]
 ```text
 Zoom Plugin/
 ├── .claude-plugin/plugin.json
-├── .mcp.json
-├── CONNECTORS.md
 ├── skills/
 │   ├── plan-zoom-product/
 │   ├── plan-zoom-integration/

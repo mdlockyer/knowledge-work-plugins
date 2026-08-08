@@ -36,7 +36,7 @@ If Stripe is enabled and a customer appears in both QuickBooks AR and Stripe ove
 
 **PayPal API returns 429 rate limit errors.**
 
-PayPal's MCP connector rate-limits aggressively when the requested date window is wide. The most common cause is querying 14–30 days of transactions in a single call.
+PayPal's integration connector rate-limits aggressively when the requested date window is wide. The most common cause is querying 14–30 days of transactions in a single call.
 
 *Fix:* Always query with `transaction_status: S` (settled only) and a **7-day window** ending today. This is the default in the workflow.
 

@@ -1,18 +1,17 @@
 ---
 name: source-management
-description: Manages connected MCP sources for enterprise search. Detects available sources, guides users to connect new ones, handles source priority ordering, and manages rate limiting awareness.
+description: Manages connected sources for enterprise search. Detects available sources, guides users to connect new ones, handles source priority ordering, and manages rate limiting awareness.
 user-invocable: false
 ---
 
 # Source Management
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 
 Knows what sources are available, helps connect new ones, and manages how sources are queried.
 
 ## Checking Available Sources
 
-Determine which MCP sources are connected by checking available tools. Each source corresponds to a set of MCP tools:
+Determine which sources are connected by checking available tools. Each source corresponds to a set of tools:
 
 | Source | Key capabilities |
 |--------|-----------------|
@@ -32,7 +31,6 @@ When a user searches but has few or no sources connected:
 ```
 You currently have [N] source(s) connected: [list].
 
-To expand your search, you can connect additional sources in your MCP settings:
 - ~~chat — messages, threads, channels
 - ~~email — emails, conversations, attachments
 - ~~cloud storage — docs, sheets, slides
@@ -47,8 +45,8 @@ When a user asks about a specific tool that is not connected:
 
 ```
 [Tool name] isn't currently connected. To add it:
-1. Open your MCP settings
-2. Add the [tool] MCP server configuration
+1. Open your settings
+2. Add the [tool] integration configuration
 3. Authenticate when prompted
 
 Once connected, it will be automatically included in future searches.
@@ -118,7 +116,7 @@ When query type is unclear:
 
 ## Rate Limiting Awareness
 
-MCP sources may have rate limits. Handle them gracefully:
+sources may have rate limits. Handle them gracefully:
 
 ### Detection
 
@@ -165,9 +163,8 @@ When reporting search results, include which sources were searched so the user k
 
 ## Adding Custom Sources
 
-The enterprise search plugin works with any MCP-connected source. As new MCP servers become available, they can be added to the `.mcp.json` configuration. The search and digest commands will automatically detect and include new sources based on available tools.
+The enterprise search plugin works with any integration-connected source. As new integrations become available, they can be added to the `settings` configuration. The search and digest commands will automatically detect and include new sources based on available tools.
 
 To add a new source:
-1. Add the MCP server configuration to `.mcp.json`
-2. Authenticate if required
+1. 2. Authenticate if required
 3. The source will be included in subsequent searches automatically

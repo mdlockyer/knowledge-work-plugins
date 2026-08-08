@@ -54,5 +54,5 @@ Slack uses its own markup syntax called **mrkdwn**, which differs from standard 
 ## Tone and Audience
 
 - Match the tone to the channel — `#general` is usually more formal than `#random`.
-- Use emoji reactions instead of reply messages for simple acknowledgments (though note: the MCP tools can't add reactions, so suggest the user do this manually if appropriate).
+- Use emoji reactions instead of reply messages for simple acknowledgments (though note: the tools can't add reactions, so suggest the user do this manually if appropriate).
 - When writing announcements, use a clear structure: context, key info, call to action.

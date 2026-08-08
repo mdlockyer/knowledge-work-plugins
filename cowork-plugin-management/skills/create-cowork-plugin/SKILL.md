@@ -13,7 +13,7 @@ Build a new plugin from scratch through guided conversation. Walk the user throu
 
 ## Overview
 
-A plugin is a self-contained directory that extends Claude's capabilities with skills, agents, hooks, and MCP server integrations. This skill encodes the full plugin architecture and a five-phase workflow for creating one conversationally.
+A plugin is a self-contained directory that extends Claude's capabilities with skills, agents, hooks, and integration integrations. This skill encodes the full plugin architecture and a five-phase workflow for creating one conversationally.
 
 The process:
 
@@ -40,7 +40,7 @@ plugin-name/
 │       ├── SKILL.md
 │       └── references/
 ├── agents/                   # Subagent definitions (.md files)
-├── .mcp.json                 # MCP server definitions
+├── settings                 # integration definitions
 └── README.md                 # Plugin documentation
 ```
 
@@ -80,7 +80,7 @@ Custom component paths can be specified (supplements, does not replace, auto-dis
   "commands": "./custom-commands",
   "agents": ["./agents", "./specialized-agents"],
   "hooks": "./config/hooks.json",
-  "mcpServers": "./.mcp.json"
+  "mcpServers": "./settings"
 }
 ```
 
@@ -91,7 +91,7 @@ Detailed schemas for each component type are in `references/component-schemas.md
 | Component                          | Location            | Format                      |
 | ---------------------------------- | ------------------- | --------------------------- |
 | Skills                             | `skills/*/SKILL.md` | Markdown + YAML frontmatter |
-| MCP Servers                        | `.mcp.json`         | JSON                        |
+| Integrations                        | `settings`         | JSON                        |
 | Agents (uncommonly used in Cowork) | `agents/*.md`       | Markdown + YAML frontmatter |
 | Hooks (rarely used in Cowork)      | `hooks/hooks.json`  | JSON                        |
 | Commands (legacy)                  | `commands/*.md`     | Markdown + YAML frontmatter |
@@ -107,7 +107,7 @@ Cowork users will usually find skills the most useful. **Scaffold new plugins wi
 When a plugin is intended to be shared with others outside their company, it might have parts that need to be adapted to individual users.
 You might need to reference external tools by category rather than specific product (e.g., "project tracker" instead of "Jira").
 When sharing is needed, use generic language and mark these as requiring customization with two tilde characters such as `create an issue in ~~project tracker`.
-If used any tool categories, write a `CONNECTORS.md` file at the plugin root to explain:
+If used any tool categories, write a skill docs file at the plugin root to explain:
 
 ```markdown
 # Connectors
@@ -156,7 +156,7 @@ Summarize understanding and confirm before proceeding.
 Based on the discovery answers, determine:
 
 - **Skills** — Does it need specialized knowledge that Claude should load on-demand, or user-initiated actions? (domain expertise, reference schemas, workflow guides, deploy/configure/analyze/review actions)
-- **MCP Servers** — Does it need external service integration? (databases, APIs, SaaS tools)
+- **Integrations** — Does it need external service integration? (databases, APIs, SaaS tools)
 - **Agents (uncommon)** — Are there autonomous multi-step tasks? (validation, generation, analysis)
 - **Hooks (rare)** — Should something happen automatically on certain events? (enforce policies, load context, validate operations)
 
@@ -200,7 +200,7 @@ For each component type in the plan, ask targeted design questions. Present ques
 - What behavior — validate, block, modify, add context?
 - Prompt-based (LLM-driven) or command-based (deterministic script)?
 
-**MCP Servers:**
+**Integrations:**
 
 - What server type? (stdio for local, SSE for hosted with OAuth, HTTP for REST APIs)
 - What authentication method?
@@ -226,7 +226,7 @@ If the user says "whatever you think is best," provide specific recommendations 
 - **Skills** use progressive disclosure: lean SKILL.md body (under 3,000 words), detailed content in `references/`. Frontmatter description must be third-person with specific trigger phrases. Skill bodies are instructions FOR Claude, not messages to the user — write them as directives about what to do.
 - **Agents** need a description with `<example>` blocks showing triggering conditions, plus a system prompt in the markdown body.
 - **Hooks** config goes in `hooks/hooks.json`. Use `${CLAUDE_PLUGIN_ROOT}` for script paths. Prefer prompt-based hooks for complex logic.
-- **MCP configs** go in `.mcp.json` at plugin root. Use `${CLAUDE_PLUGIN_ROOT}` for local server paths. Document required env vars in README.
+- **integration configs** go in `settings` at plugin root. Use `${CLAUDE_PLUGIN_ROOT}` for local server paths. Document required env vars in README.
 
 ### Phase 5: Review & Package
 
@@ -266,5 +266,5 @@ The `.plugin` file will appear in the chat as a rich preview where the user can 
 
 ## Additional Resources
 
-- **`references/component-schemas.md`** — Detailed format specifications for every component type (skills, agents, hooks, MCP, legacy commands, CONNECTORS.md)
+- **`references/component-schemas.md`** — Detailed format specifications for every component type (skills, agents, hooks, integration, legacy commands, skill docs)
 - **`references/example-plugins.md`** — Three complete example plugin structures at different complexity levels

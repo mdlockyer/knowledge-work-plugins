@@ -14,7 +14,7 @@ This plugin transforms Claude into a data analyst collaborator. It helps you exp
 
 ### With a Data Warehouse Connection
 
-Connect your data warehouse MCP server (e.g., Snowflake, Databricks, BigQuery, or any SQL-compatible database) for the best experience. Claude will:
+Provide your data via CSV/upload or your warehouse — Claude will:
 
 - Query your data warehouse directly
 - Explore schemas and table metadata
@@ -104,17 +104,3 @@ Claude: [Reviews methodology] → [Checks for survivorship bias in churn analysi
        → [Confidence: "Ready to share with noted caveat"]
 ```
 
-## Connecting Your Data Stack
-
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
-
-This plugin works best when connected to your data infrastructure. Add MCP servers for:
-
-- **Data Warehouse**: Snowflake, Databricks, BigQuery, Definite, or any SQL-compatible database
-- **Analytics/BI**: Amplitude, Looker, Tableau, or similar
-- **Notebooks**: Jupyter, Hex, or similar
-- **Spreadsheets**: Google Sheets, Excel
-- **Data Orchestration**: Airflow, dbt, Dagster, Prefect
-- **Data Ingestion**: Fivetran, Airbyte, Stitch
-
-Configure MCP servers in your `.mcp.json` or Claude Code settings to enable direct data access.

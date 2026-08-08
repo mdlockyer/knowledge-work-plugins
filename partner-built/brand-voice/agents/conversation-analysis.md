@@ -21,12 +21,12 @@ description: >
   assistant: "I'll pull the transcripts from Gong and analyze voice patterns..."
   <commentary>
   Discovery identified relevant Gong recordings. The conversation-analysis agent
-  fetches transcripts via MCP and performs deep pattern analysis.
+  fetches transcripts  and performs deep pattern analysis.
   </commentary>
   </example>
 model: sonnet
 color: blue
-# tools not restricted -- this agent needs MCP tools to fetch transcripts from Gong, Granola, etc.
+# tools not restricted -- this agent needs tools to fetch transcripts from Gong, Granola, etc.
 maxTurns: 15
 ---
 
@@ -43,13 +43,13 @@ When invoked, you receive conversation transcripts and analysis parameters. For 
 5. **Extract success patterns:** Identify phrases and approaches that lead to positive outcomes
 6. **Flag anti-patterns:** Find language that triggers pushback or stalls conversations
 
-When transcripts are available on Gong, use the Gong MCP tools to search for and retrieve call recordings and transcripts. Filter by tags, outcomes, or speaker to find the most relevant calls.
+When transcripts are available on Gong, use the Gong tools to search for and retrieve call recordings and transcripts. Filter by tags, outcomes, or speaker to find the most relevant calls.
 
 ## Transcript Sources
 
-- **Gong** (via MCP): Search calls by date, outcome, participants, or tags. Retrieve transcripts and call analysis.
-- **Granola** (via MCP): List meetings, search by query, and retrieve full meeting transcripts and notes.
-- **Notion meeting notes** (via MCP): Search for meeting notes pages with transcript content.
+- **Gong** (): Search calls by date, outcome, participants, or tags. Retrieve transcripts and call analysis.
+- **Granola** (): List meetings, search by query, and retrieve full meeting transcripts and notes.
+- **Notion meeting notes** (): Search for meeting notes pages with transcript content.
 - **Manual uploads**: User-provided .txt, .json, or .md transcript files.
 - **Other sources**: Zoom, Google Meet, or other transcript formats uploaded as files.
 

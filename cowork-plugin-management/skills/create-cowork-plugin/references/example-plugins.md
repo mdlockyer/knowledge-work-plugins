@@ -57,7 +57,7 @@ Write the notes to a new file named after the transcript with `-notes` appended.
 
 ---
 
-## Standard Plugin: Skills + MCP
+## Standard Plugin: Skills
 
 A plugin that combines domain knowledge, user-initiated actions, and external service integration.
 
@@ -76,7 +76,7 @@ code-quality/
 │   │   └── SKILL.md
 │   └── fix-lint/
 │       └── SKILL.md
-├── .mcp.json
+├── settings
 └── README.md
 ```
 
@@ -180,7 +180,7 @@ Project coding standards and conventions for consistent, high-quality code.
 - **`references/style-rules.md`** — complete style rules by language
 ```
 
-### .mcp.json
+### settings
 
 ```json
 {
@@ -197,7 +197,7 @@ Project coding standards and conventions for consistent, high-quality code.
 
 ## Full-Featured Plugin: All Component Types
 
-A plugin using skills, agents, hooks, and MCP integration with tool-agnostic connectors.
+A plugin using skills, agents, hooks, and integration integration with tool-agnostic connectors.
 
 ### Structure
 
@@ -218,8 +218,8 @@ engineering-workflow/
 │   └── ticket-analyzer.md
 ├── hooks/
 │   └── hooks.json
-├── .mcp.json
-├── CONNECTORS.md
+├── settings
+├── skill docs
 └── README.md
 ```
 
@@ -311,7 +311,7 @@ Followed by a brief rationale for the top 5 priorities.
 }
 ```
 
-### CONNECTORS.md
+### skill docs
 
 ```markdown
 # Connectors
@@ -330,7 +330,7 @@ connects in that category. Plugins are tool-agnostic.
 | Source control  | `~~source control`  | GitHub           | GitLab, Bitbucket   |
 ```
 
-### .mcp.json
+### settings
 
 ```json
 {

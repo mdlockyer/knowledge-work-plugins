@@ -21,7 +21,7 @@ Explicit workflows you invoke with a slash command:
 | `/comp-analysis` | Analyze compensation data — benchmarking, band placement, equity refresh modeling |
 | `/people-report` | Generate headcount, attrition, diversity, or org health reports |
 
-All commands work **standalone** (provide context and details) and get **supercharged** with MCP connectors.
+All commands work **standalone** (provide context and details).
 
 ## Skills
 
@@ -78,36 +78,6 @@ The `employee-handbook` skill triggers automatically and searches your connected
 ```
 
 Upload comp data or describe your bands. Get market comparisons, band placement analysis, and recommendations for adjustments.
-
-## Standalone + Supercharged
-
-Every command and skill works without any integrations:
-
-| What You Can Do | Standalone | Supercharged With |
-|-----------------|------------|-------------------|
-| Draft offers | Provide details manually | HRIS, ATS for auto-fill |
-| Onboarding checklists | Describe your process | HRIS, Knowledge base for templates |
-| Performance reviews | Manual input | HRIS for review history |
-| Policy lookup | Paste handbook content | Knowledge base |
-| Comp analysis | Upload CSV, describe bands | Compensation data MCP |
-| People reports | Upload data | HRIS for live data |
-
-## MCP Integrations
-
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](CONNECTORS.md).
-
-Connect your tools for a richer experience:
-
-| Category | Examples | What It Enables |
-|---|---|---|
-| **HRIS** | Workday, BambooHR, Rippling | Employee data, org structure, PTO balances |
-| **ATS** | Greenhouse, Lever, Ashby | Candidate pipeline, interview schedules, offer tracking |
-| **Compensation** | Pave, Radford | Market benchmarks, comp band data |
-| **Chat** | Slack, Teams | Team announcements, candidate coordination |
-| **Calendar** | Google Calendar, Microsoft 365 | Interview scheduling, onboarding calendar |
-| **Email** | Gmail, Microsoft 365 | Offer letters, candidate communications |
-
-See [CONNECTORS.md](CONNECTORS.md) for the full list of supported integrations.
 
 ## Settings
 

@@ -4,11 +4,10 @@ GTM workflows powered by Common Room — account research, contact research, cal
 
 ## Overview
 
-This plugin connects Claude to Common Room's MCP server and equips it with six skills covering the most common rep workflows. Every output is grounded in real Common Room signal data — 1st-party product signals, 2nd-party community signals, 3rd-party intent signals, and enrichment from RoomieAI and Spark.
+This plugin equips Claude with six GTM skills covering the most common rep workflows. Every output is grounded in real Common Room signal data — 1st-party product signals, 2nd-party community signals, 3rd-party intent signals, and enrichment from RoomieAI and Spark.
 
 ## Requirements
 
-- **Common Room MCP** (`mcp.commonroom.io/mcp`) must be connected and authenticated. This is the primary data source for all plugin functionality.
 - **Calendar connector** (optional) — enables automatic meeting lookup in `call-prep` and `weekly-prep-brief`. If not connected, both skills ask the user for meeting details instead.
 
 ## Skills
@@ -35,7 +34,7 @@ Two commands for complex workflows that benefit from explicit invocation:
 
 ## What Each Skill Produces
 
-**Account Research** — Handles four patterns: full overviews, targeted field questions, honest sparse-data responses, and combined MCP data + LLM reasoning. Includes web search for recent news. Automatically scopes to "My Segments."
+**Account Research** — Handles four patterns: full overviews, targeted field questions, honest sparse-data responses, and LLM reasoning. Includes web search for recent news. Automatically scopes to "My Segments."
 
 **Contact Research** — Lookup by email, name+company, or social handle. Returns enriched identity, CRM fields, scores, website visits, activity history, Spark analyses, and conversation starters.
 
@@ -49,8 +48,8 @@ Two commands for complex workflows that benefit from explicit invocation:
 
 ## Setup
 
-1. Ensure the Common Room MCP server is connected and authenticated in your Cowork settings.
-2. (Optional) Connect a calendar MCP server for automatic meeting lookup in call prep and weekly briefings.
+1. Ensure Common Room is connected and authenticated in your settings.
+2. (Optional) Connect a calendar for automatic meeting lookup in call prep and weekly briefings.
 3. Install this plugin. All skills and commands are available immediately.
 
 ## User Context
@@ -61,4 +60,4 @@ When company context is available, skills tailor recommendations to the user's p
 
 ## Customization
 
-See `CONNECTORS.md` for details on the calendar connector and how tool references work.
+See skill docs for details on calendar integration.
